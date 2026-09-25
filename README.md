@@ -5,8 +5,6 @@
     <img src="./assets/banner.svg" alt="Vu Gia Hung Banner" width="100%" />
   </a>
 
-  <br/><br/>
-
   <!-- Dynamic Typing Subtitle -->
   <a href="https://vugiahung.is-a.dev">
     <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" alt="Typing SVG" />
