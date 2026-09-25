@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient (Clean Crisp Light Theme matching Portfolio) -->
+    <linearGradient id="bgLightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+
+    <!-- Accent Gradient for Name (Vibrant Sapphire / Royal Indigo for High Contrast) -->
+    <linearGradient id="textLightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <!-- Border Glow for Light Mode -->
+    <linearGradient id="borderLightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#cbd5e1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Ambient Radial Glows (Soft Subtle Light Reflections) -->
+    <radialGradient id="cyanLightGlow" cx="20%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="indigoLightGlow" cx="80%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </radialGradient>
+
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+      .sans { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      
+      @keyframes pulseDotLight {
+        0%, 100% { opacity: 0.35; transform: scale(0.9); }
+        50% { opacity: 0.85; transform: scale(1.2); }
+      }
+      .twinkle-l { animation: pulseDotLight 3s ease-in-out infinite; }
+      .twinkle-l2 { animation: pulseDotLight 4.5s ease-in-out infinite 1.5s; }
+    </style>
+  </defs>
+
+  <!-- Container Box with Rounded Corners & Soft Drop Shadow Effect -->
+  <rect x="2" y="2" width="876" height="176" rx="16" fill="url(#bgLightGradient)" stroke="url(#borderLightGradient)" stroke-width="1.5" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="160" cy="70" r="140" fill="url(#cyanLightGlow)" />
+  <circle cx="740" cy="110" r="140" fill="url(#indigoLightGlow)" />
+
+  <!-- Subtle Constellation / Starfield Points -->
+  <g fill="#0284c7">
+    <circle cx="90" cy="35" r="1.5" class="twinkle-l" opacity="0.6" />
+    <circle cx="220" cy="28" r="1" class="twinkle-l2" opacity="0.45" />
+    <circle cx="360" cy="45" r="1.5" class="twinkle-l" opacity="0.55" />
+    <circle cx="510" cy="25" r="1" class="twinkle-l2" opacity="0.4" />
+    <circle cx="690" cy="40" r="1.5" class="twinkle-l" opacity="0.6" />
+    <circle cx="810" cy="30" r="1" class="twinkle-l2" opacity="0.45" />
+    <circle cx="75" cy="140" r="1" class="twinkle-l2" opacity="0.45" />
+    <circle cx="280" cy="155" r="1.5" class="twinkle-l" opacity="0.55" />
+    <circle cx="590" cy="145" r="1" class="twinkle-l2" opacity="0.4" />
+    <circle cx="790" cy="150" r="1.5" class="twinkle-l" opacity="0.6" />
+  </g>
+
+  <!-- Decorative Corner Brackets (Crisp Technical Styling) -->
+  <g stroke="#0284c7" stroke-width="2" fill="none" opacity="0.75">
+    <path d="M 16 32 L 16 16 L 32 16" />
+    <path d="M 864 32 L 864 16 L 848 16" />
+    <path d="M 16 148 L 16 164 L 32 164" />
+    <path d="M 864 148 L 864 164 L 848 164" />
+  </g>
+
+  <!-- University Tag (Top Right) -->
+  <g transform="translate(680, 24)">
+    <text x="150" y="16" text-anchor="end" class="mono" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="1.5" opacity="0.95">
+      RMIT VIETNAM ◈ SE (HONS)
+    </text>
+  </g>
+
+  <!-- Main Headline / Name -->
+  <g transform="translate(52, 92)">
+    <text x="0" y="0" class="sans" font-size="46" font-weight="800" fill="url(#textLightGradient)" letter-spacing="-0.5">
+      Vũ Gia Hưng
+    </text>
+    <text x="325" y="-5" class="mono" font-size="19" font-weight="600" fill="#64748b">
+      / Hung Vu Gia
+    </text>
+  </g>
+
+  <!-- Subtitle / Role -->
+  <text x="52" y="132" class="sans" font-size="16.5" font-weight="500" fill="#334155" letter-spacing="0.2">
+    Software Engineering Student @ <tspan fill="#0284c7" font-weight="700">RMIT University Vietnam</tspan> • Class of 2025–2029
+  </text>
+</svg>

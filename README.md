@@ -2,7 +2,11 @@
 
   <!-- Branded Hero Banner -->
   <a href="https://vugiahung.is-a.dev">
-    <img src="./assets/banner.svg" alt="Vu Gia Hung Banner" width="100%" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/banner.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" />
+      <img src="./assets/banner.svg" alt="Vu Gia Hung Banner" width="100%" />
+    </picture>
   </a>
 
   <!-- Dynamic Typing Subtitle -->
