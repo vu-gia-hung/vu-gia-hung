@@ -39,58 +39,53 @@ I am passionate about building resilient, high-performance systems spanning from
 
 <table align="center" width="100%">
   <tr>
-    <td width="20%"><b>Core Languages</b></td>
+    <td width="22%"><b>Programming</b></td>
     <td>
       <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" />
       <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
       <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-      <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" />
     </td>
   </tr>
   <tr>
-    <td><b>AI, ML &amp; Search</b></td>
+    <td><b>Tools &amp; Hardware</b></td>
     <td>
-      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
-      <img src="https://img.shields.io/badge/vLLM-0284c7?style=for-the-badge&logo=fastapi&logoColor=white" alt="vLLM" />
-      <img src="https://img.shields.io/badge/Qdrant%20Vector%20DB-dc2626?style=for-the-badge&logo=databricks&logoColor=white" alt="Qdrant" />
-      <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face" />
-      <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
-      <img src="https://img.shields.io/badge/RAG%20%26%20Agents-7c3aed?style=for-the-badge&logo=openai&logoColor=white" alt="RAG & Agents" />
-    </td>
-  </tr>
-  <tr>
-    <td><b>Embedded &amp; Robotics</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
-      <img src="https://img.shields.io/badge/UART%20%2F%20Bluetooth-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white" alt="Bluetooth" />
-      <img src="https://img.shields.io/badge/PWM%20Motor%20Control-e11d48?style=for-the-badge&logo=speedtest&logoColor=white" alt="PWM" />
-      <img src="https://img.shields.io/badge/H--Bridge%20Circuits-f59e0b?style=for-the-badge&logo=circuitverse&logoColor=white" alt="H-Bridge" />
-      <img src="https://img.shields.io/badge/CAD%20Design-0696D7?style=for-the-badge&logo=autodesk&logoColor=white" alt="CAD" />
-    </td>
-  </tr>
-  <tr>
-    <td><b>Web &amp; Graphics</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
-      <img src="https://img.shields.io/badge/Vite%208-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 8" />
-      <img src="https://img.shields.io/badge/Tailwind%20CSS%20v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-      <img src="https://img.shields.io/badge/Three.js%20(WebGL)-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
-      <img src="https://img.shields.io/badge/GSAP%203-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
-      <img src="https://img.shields.io/badge/Web%20Audio%20API-9333ea?style=for-the-badge&logo=audacity&logoColor=white" alt="Web Audio" />
-      <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-    </td>
-  </tr>
-  <tr>
-    <td><b>Testing &amp; DevOps</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Vitest-729B1B?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest" />
-      <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright" />
-      <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions" />
       <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+      <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
+      <img src="https://img.shields.io/badge/CAD-0696D7?style=for-the-badge&logo=autodesk&logoColor=white" alt="CAD" />
+    </td>
+  </tr>
+  <tr>
+    <td><b>AI &amp; ML Interests</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Generative%20AI%20%26%20LLMs-7c3aed?style=for-the-badge&logo=openai&logoColor=white" alt="Generative AI & LLMs" />
+      <img src="https://img.shields.io/badge/RAG-0284c7?style=for-the-badge&logo=databricks&logoColor=white" alt="RAG" />
+      <img src="https://img.shields.io/badge/Agentic%20AI-2563eb?style=for-the-badge&logo=anthropic&logoColor=white" alt="Agentic AI" />
+      <img src="https://img.shields.io/badge/Prompt%20Engineering-4f46e5?style=for-the-badge&logo=target&logoColor=white" alt="Prompt Engineering" />
+      <img src="https://img.shields.io/badge/Multimodal%20AI-9333ea?style=for-the-badge&logo=google&logoColor=white" alt="Multimodal AI" />
+    </td>
+  </tr>
+  <tr>
+    <td><b>STEM</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Mathematics-10b981?style=for-the-badge&logo=wolfram&logoColor=white" alt="Mathematics" />
+      <img src="https://img.shields.io/badge/Physics-059669?style=for-the-badge&logo=atom&logoColor=white" alt="Physics" />
+    </td>
+  </tr>
+  <tr>
+    <td><b>Languages</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Vietnamese-Native-e11d48?style=for-the-badge&logo=googletranslate&logoColor=white" alt="Vietnamese" />
+      <img src="https://img.shields.io/badge/English-Working%20Proficiency-0284c7?style=for-the-badge&logo=googletranslate&logoColor=white" alt="English" />
+    </td>
+  </tr>
+  <tr>
+    <td><b>Interpersonal</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Teamwork-334155?style=for-the-badge" alt="Teamwork" />
+      <img src="https://img.shields.io/badge/Communication-334155?style=for-the-badge" alt="Communication" />
+      <img src="https://img.shields.io/badge/Problem--solving-334155?style=for-the-badge" alt="Problem-solving" />
+      <img src="https://img.shields.io/badge/Adaptability-334155?style=for-the-badge" alt="Adaptability" />
+      <img src="https://img.shields.io/badge/Time%20Management-334155?style=for-the-badge" alt="Time Management" />
     </td>
   </tr>
 </table>
