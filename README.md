@@ -16,7 +16,6 @@
     <a href="https://vugiahung.is-a.dev"><img src="https://img.shields.io/badge/Live%20Portfolio-vugiahung.is--a.dev-38bdf8?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
     <a href="https://www.rmit.edu.vn/"><img src="https://img.shields.io/badge/RMIT%20Vietnam-Software%20Eng%20(Hons)-e11d48?style=for-the-badge&logo=googlescholar&logoColor=white" alt="RMIT University" /></a>
     <img src="https://img.shields.io/badge/GPA-3.8%20%2F%204.0-10b981?style=for-the-badge&logo=target" alt="GPA" />
-    <a href="https://orcid.org/0009-0009-5704-0162"><img src="https://img.shields.io/badge/ORCID-0009--0009--5704--0162-a6ce39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" /></a>
     <img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%2C%20VN-8b5cf6?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
   </p>
 
