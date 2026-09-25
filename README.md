@@ -23,28 +23,15 @@
 
 ---
 
-```zsh
-  ██╗  ██╗██╗   ██╗███╗   ██╗ ██████╗       hung@rmit-se
-  ██║  ██║██║   ██║████╗  ██║██╔════╝       ---------------------------------------
-  ███████║██║   ██║██╔██╗ ██║██║  ███╗      OS: HungOS 2.9.7-LTS x86_64
-  ██╔══██║██║   ██║██║╚██╗██║██║   ██║      Host: RMIT University Vietnam
-  ██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝      User: Vũ Gia Hưng (Hung Vu Gia)
-  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝       Degree: B.Eng (Software Engineering) (Honours)
-                                            Uptime: 2025 - Present (Class of 2029)
-                                            GPA: 3.8 / 4.0 • Honors: 4 City/District Awards
-                                            Shell: zsh 5.9 (HungOS-CLI)
-                                            Focus: AI/ML, Embedded & Robotics, High Perf Systems
-```
-
----
-
 ### 👨‍💻 About Me
 
-I am a Software Engineering Honours student at **RMIT University Vietnam**, obsessed with building high-performance systems spanning from bare-metal embedded circuits up to modern generative AI architectures and interactive 3D web applications.
+- 🎓 **Education**: Bachelor of Engineering (Software Engineering) (Honours) @ **RMIT University Vietnam** (Class of 2025–2029)
+- 📊 **Academic Performance**: Cumulative GPA **3.8 / 4.0**
+- 💡 **Core Interests**: Generative AI, Large Language Models (LLMs), RAG & Agentic Systems, Embedded Systems & Robotics, Performance Engineering
+- 📍 **Location**: Ho Chi Minh City, Vietnam
+- 🌐 **Live Portfolio**: [**vugiahung.is-a.dev**](https://vugiahung.is-a.dev)
 
-- 🔬 **Current Research & Focus**: Generative AI, Retrieval-Augmented Generation (RAG), Agentic AI workflows, and multimodal video retrieval benchmark engineering.
-- ⚡ **Engineering Principles**: Systems must be resilient, fail-closed, sub-second fast, and aesthetically polished down to every single frame.
-- 🌐 **Interactive Portfolio**: Experience my custom 3D solar volume preloader, real-time Web Audio synthesizer, and HungOS CLI terminal at [**vugiahung.is-a.dev**](https://vugiahung.is-a.dev).
+I am passionate about building resilient, high-performance systems spanning from bare-metal embedded hardware up to modern multimodal AI architectures and interactive web applications.
 
 ---
 
@@ -259,5 +246,5 @@ I am a Software Engineering Honours student at **RMIT University Vietnam**, obse
 </p>
 
 <div align="center">
-  <sub>✨ Designed with cosmic precision, inspired by HungOS &amp; <a href="https://vugiahung.is-a.dev">vugiahung.is-a.dev</a>. Built by Vũ Gia Hưng.</sub>
+  <sub>✨ Designed with cosmic precision &amp; modern engineering standards. Built by <a href="https://vugiahung.is-a.dev">Vũ Gia Hưng</a>.</sub>
 </div>
