@@ -7,7 +7,11 @@
 
   <!-- Dynamic Typing Subtitle -->
   <a href="https://vugiahung.is-a.dev">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" alt="Typing SVG" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
+      <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=0284C7&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
+      <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" alt="Typing SVG" />
+    </picture>
   </a>
 
   <p align="center">
@@ -111,10 +115,18 @@ I am passionate about building resilient, high-performance systems spanning from
   <table border="0">
     <tr>
       <td>
-        <img src="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Stats" height="175" />
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" />
+          <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=default&bg_color=ffffff&title_color=0284c7&text_color=475569&icon_color=0284c7&border_color=e2e8f0&hide_border=false" />
+          <img src="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Stats" height="175" />
+        </picture>
       </td>
       <td>
-        <img src="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&border=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Streak" height="175" />
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&border=1e293b&hide_border=false" />
+          <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=default&background=ffffff&ring=0284c7&fire=0284c7&currStreakLabel=0284c7&sideNums=1e293b&sideLabels=64748b&border=e2e8f0&hide_border=false" />
+          <img src="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&border=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Streak" height="175" />
+        </picture>
       </td>
     </tr>
   </table>
@@ -122,7 +134,11 @@ I am passionate about building resilient, high-performance systems spanning from
   <br/><br/>
 
   <!-- GitHub Trophy Showcase -->
-  <img src="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=tokyonight&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=tokyonight&no-bg=true&margin-w=4&column=7" />
+    <source media="(prefers-color-scheme: light)" srcset="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=flat&no-bg=true&margin-w=4&column=7" />
+    <img src="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=tokyonight&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies" />
+  </picture>
 
   <br/><br/>
 
@@ -136,12 +152,20 @@ I am passionate about building resilient, high-performance systems spanning from
   <br/><br/>
 
   <!-- Contribution Activity Wave Graph -->
-  <img src="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=tokyo-night&bg_color=060913&color=38bdf8&line=38bdf8&point=e11d48&area=true&hide_border=false&border=1e293b" width="100%" alt="Vu Gia Hung Activity Graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=tokyo-night&bg_color=060913&color=38bdf8&line=38bdf8&point=e11d48&area=true&hide_border=false&border=1e293b" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=github-light&bg_color=ffffff&color=0284c7&line=0284c7&point=e11d48&area=true&hide_border=false&border=e2e8f0" />
+    <img src="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=tokyo-night&bg_color=060913&color=38bdf8&line=38bdf8&point=e11d48&area=true&hide_border=false&border=1e293b" width="100%" alt="Vu Gia Hung Activity Graph" />
+  </picture>
 
   <br/><br/>
 
   <!-- 3D Isometric Contribution Graph -->
-  <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Isometric Contribution Graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green.svg" />
+    <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Isometric Contribution Graph" />
+  </picture>
 
 </div>
 
