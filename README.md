@@ -45,11 +45,21 @@ I am passionate about building resilient, high-performance systems spanning from
     </td>
   </tr>
   <tr>
+    <td><b>Computer Science</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Data%20Structures-1e293b?style=for-the-badge" alt="Data Structures" />
+      <img src="https://img.shields.io/badge/Algorithms-1e293b?style=for-the-badge" alt="Algorithms" />
+      <img src="https://img.shields.io/badge/OOP-1e293b?style=for-the-badge" alt="OOP" />
+    </td>
+  </tr>
+  <tr>
     <td><b>Tools &amp; Hardware</b></td>
     <td>
       <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
       <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
       <img src="https://img.shields.io/badge/CAD-0696D7?style=for-the-badge&logo=autodesk&logoColor=white" alt="CAD" />
+      <img src="https://img.shields.io/badge/MATLAB-e16723?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB" />
+      <img src="https://img.shields.io/badge/Simulink-005f9e?style=for-the-badge&logo=mathworks&logoColor=white" alt="Simulink" />
     </td>
   </tr>
   <tr>
