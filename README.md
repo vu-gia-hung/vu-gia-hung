@@ -157,9 +157,9 @@ I am passionate about building resilient, high-performance systems spanning from
 
   <!-- Contribution Activity Wave Graph -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=tokyo-night&bg_color=060913&color=38bdf8&line=38bdf8&point=e11d48&area=true&hide_border=false&border=1e293b" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=github-light&bg_color=ffffff&color=0284c7&line=0284c7&point=e11d48&area=true&hide_border=false&border=e2e8f0" />
-    <img src="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=tokyo-night&bg_color=060913&color=38bdf8&line=38bdf8&point=e11d48&area=true&hide_border=false&border=1e293b" width="100%" alt="Vu Gia Hung Activity Graph" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity-graph-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/activity-graph-light.svg" />
+    <img src="./assets/activity-graph-dark.svg" width="100%" alt="Vu Gia Hung Activity Graph" />
   </picture>
 
   <br/><br/>

@@ -20,10 +20,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update Activity Graph With Point Labels
+        run: node scripts/update-activity-graph.js
+
       - name: Commit & Push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A profile-3d-contrib
-          git commit -m "chore(3d-contrib): auto update 3d contribution graph" || exit 0
+          git add -A profile-3d-contrib assets/activity-graph-dark.svg assets/activity-graph-light.svg
+          git commit -m "chore: auto update 3d graph and activity graph with point labels" || exit 0
           git push
