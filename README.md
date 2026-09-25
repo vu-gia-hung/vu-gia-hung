@@ -135,6 +135,11 @@ I am passionate about building resilient, high-performance systems spanning from
     <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/vu-gia-hung/vu-gia-hung/output/github-contribution-grid-snake-dark.svg" width="100%" />
   </picture>
 
+  <br/>
+
+  <!-- Contribution Activity Wave Graph -->
+  <img src="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=tokyo-night&bg_color=060913&color=38bdf8&line=38bdf8&point=e11d48&area=true&hide_border=false&border=1e293b" width="100%" alt="Vu Gia Hung Activity Graph" />
+
   <br/><br/>
 
   <!-- 3D Isometric Contribution Graph -->
