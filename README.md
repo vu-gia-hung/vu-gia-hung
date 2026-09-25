@@ -108,10 +108,6 @@ I am passionate about building resilient, high-performance systems spanning from
 
   <br/>
 
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=vu-gia-hung&layout=compact&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&border_color=1e293b&hide_border=false" alt="Top Languages" />
-
-  <br/><br/>
-
   <!-- Contribution Grid Snake Animation -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vu-gia-hung/vu-gia-hung/output/github-contribution-grid-snake-dark.svg" />
