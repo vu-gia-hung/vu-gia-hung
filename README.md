@@ -98,17 +98,17 @@ I am passionate about building resilient, high-performance systems spanning from
   <table border="0">
     <tr>
       <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Stats" height="175" />
+        <img src="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Stats" height="175" />
       </td>
       <td>
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&border=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Streak" height="175" />
+        <img src="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&border=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Streak" height="175" />
       </td>
     </tr>
   </table>
 
   <br/>
 
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vu-gia-hung&layout=compact&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&border_color=1e293b&hide_border=false" alt="Top Languages" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=vu-gia-hung&layout=compact&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&border_color=1e293b&hide_border=false" alt="Top Languages" />
 
   <br/><br/>
 
