@@ -150,5 +150,5 @@ I am passionate about building resilient, high-performance systems spanning from
 </div>
 
 <div align="center">
-  <sub>✨ Designed with cosmic precision &amp; modern engineering standards. Built by <a href="https://vugiahung.is-a.dev">Vũ Gia Hưng</a>.</sub>
+  <sub>Built by <a href="https://vugiahung.is-a.dev">Vũ Gia Hưng</a></sub>
 </div>
