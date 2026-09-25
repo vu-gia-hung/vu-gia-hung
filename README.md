@@ -16,6 +16,9 @@
     <br/>
     <img src="https://img.shields.io/badge/GPA-3.8%20%2F%204.0-10b981?style=for-the-badge&logo=target" alt="GPA" />
     <img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%2C%20VN-8b5cf6?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+    <br/>
+    <img src="https://komarev.com/ghpvc/?username=vu-gia-hung&label=Profile%20Views&color=38bdf8&style=for-the-badge" alt="Profile Views" />
+    <a href="https://github.com/vu-gia-hung?tab=repositories"><img src="https://img.shields.io/badge/Open%20Source-Explorer-6366f1?style=for-the-badge&logo=github&logoColor=white" alt="Open Source Explorer" /></a>
   </p>
 
 </div>
@@ -104,6 +107,7 @@ I am passionate about building resilient, high-performance systems spanning from
 ### 📊 GitHub Activity & Metrics
 
 <div align="center">
+  <!-- Core Stats & Streak Cards -->
   <table border="0">
     <tr>
       <td>
@@ -117,12 +121,46 @@ I am passionate about building resilient, high-performance systems spanning from
 
   <br/>
 
+  <!-- GitHub Trophy Showcase -->
+  <p align="center">
+    <img src="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=tokyonight&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies" />
+  </p>
+
+  <br/>
+
   <!-- Contribution Grid Snake Animation -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vu-gia-hung/vu-gia-hung/output/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vu-gia-hung/vu-gia-hung/output/github-contribution-grid-snake.svg" />
     <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/vu-gia-hung/vu-gia-hung/output/github-contribution-grid-snake-dark.svg" width="100%" />
   </picture>
+
+  <br/>
+
+  <!-- Contribution Activity Wave Graph -->
+  <img src="https://github-activity-graph.vercel.app/graph?username=vu-gia-hung&theme=tokyo-night&bg_color=060913&color=38bdf8&line=38bdf8&point=e11d48&area=true&hide_border=false&border=1e293b" width="100%" alt="Vu Gia Hung Activity Graph" />
+
+  <br/><br/>
+
+  <!-- 3D Isometric Contribution Graph -->
+  <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Isometric Contribution Graph" />
+
+</div>
+
+---
+
+### 🎧 Deep Work Audio Station
+
+<div align="center">
+  <img src="./assets/music-player.svg" alt="Now Focusing Music Player" width="100%" />
+</div>
+
+---
+
+### 💡 Daily Engineering Wisdom
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
 </div>
 
 ---
