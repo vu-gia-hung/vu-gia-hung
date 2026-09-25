@@ -25,13 +25,13 @@
 
 ### 👨‍💻 About Me
 
-- 🎓 **Education**: Bachelor of Engineering (Software Engineering) (Honours) @ **RMIT University Vietnam** (Class of 2025–2029)
-- 📊 **Academic Performance**: Cumulative GPA **3.8 / 4.0**
-- 💡 **Core Interests**: Generative AI, Large Language Models (LLMs), RAG & Agentic Systems, Embedded Systems & Robotics, Performance Engineering
-- 📍 **Location**: Ho Chi Minh City, Vietnam
-- 🌐 **Live Portfolio**: [**vugiahung.is-a.dev**](https://vugiahung.is-a.dev)
-
 I am passionate about building resilient, high-performance systems spanning from bare-metal embedded hardware up to modern multimodal AI architectures and interactive web applications.
+
+- **Education**: Bachelor of Engineering (Software Engineering) (Honours) @ **RMIT University Vietnam** (Class of 2025–2029)
+- **Academic Performance**: Cumulative GPA **3.8 / 4.0**
+- **Core Interests**: Generative AI, Large Language Models (LLMs), RAG & Agentic Systems, Embedded Systems & Robotics, Performance Engineering
+- **Location**: Ho Chi Minh City, Vietnam
+- **Live Portfolio**: [**vugiahung.is-a.dev**](https://vugiahung.is-a.dev)
 
 ---
 
