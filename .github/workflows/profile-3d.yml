@@ -2,8 +2,8 @@ name: Generate GitHub Profile 3D Contrib
 
 on:
   schedule:
-    # Run once every 24 hours at 18:00 UTC
-    - cron: "0 18 * * *"
+    # Run once every 24 hours at 17:00 UTC (00:00 AM VN Time)
+    - cron: "0 17 * * *"
   workflow_dispatch:
 
 jobs:
