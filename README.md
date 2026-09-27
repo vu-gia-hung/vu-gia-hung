@@ -20,13 +20,13 @@
 
   <p align="center">
     <a href="https://vugiahung.is-a.dev"><img src="https://img.shields.io/badge/Live%20Portfolio-vugiahung.is--a.dev-38bdf8?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
-    <a href="https://www.rmit.edu.vn/"><img src="https://img.shields.io/badge/RMIT%20Vietnam-Software%20Eng%20(Hons)-e11d48?style=for-the-badge&logo=googlescholar&logoColor=white" alt="RMIT University" /></a>
+    <a href="https://www.rmit.edu.vn/"><img src="https://img.shields.io/badge/RMIT%20Vietnam-Software%20Eng%20(Hons)-1e40af?style=for-the-badge&logo=googlescholar&logoColor=white" alt="RMIT University" /></a>
     <br/>
-    <img src="https://img.shields.io/badge/GPA-3.8%20%2F%204.0-10b981?style=for-the-badge&logo=target" alt="GPA" />
-    <img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%2C%20VN-8b5cf6?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+    <img src="https://img.shields.io/badge/GPA-3.8%20%2F%204.0-0284c7?style=for-the-badge&logo=target" alt="GPA" />
+    <img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%2C%20VN-6366f1?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
     <br/>
     <img src="https://komarev.com/ghpvc/?username=vu-gia-hung&label=Profile%20Views&color=38bdf8&style=for-the-badge" alt="Profile Views" />
-    <a href="https://github.com/vu-gia-hung?tab=repositories"><img src="https://img.shields.io/badge/Open%20Source-Explorer-6366f1?style=for-the-badge&logo=github&logoColor=white" alt="Open Source Explorer" /></a>
+    <a href="https://github.com/vu-gia-hung?tab=repositories"><img src="https://img.shields.io/badge/Open%20Source-Explorer-0369a1?style=for-the-badge&logo=github&logoColor=white" alt="Open Source Explorer" /></a>
   </p>
 
 </div>
@@ -94,7 +94,7 @@ I am passionate about building resilient, high-performance systems spanning from
   <tr>
     <td><b>Languages</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Vietnamese-Native-e11d48?style=for-the-badge&logo=googletranslate&logoColor=white" alt="Vietnamese" />
+      <img src="https://img.shields.io/badge/Vietnamese-Native-0284c7?style=for-the-badge&logo=googletranslate&logoColor=white" alt="Vietnamese" />
       <img src="https://img.shields.io/badge/English-Working%20Proficiency-0284c7?style=for-the-badge&logo=googletranslate&logoColor=white" alt="English" />
     </td>
   </tr>
@@ -120,9 +120,9 @@ I am passionate about building resilient, high-performance systems spanning from
     <tr>
       <td>
         <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" />
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&ring_color=38bdf8&hide_border=false" />
           <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=default&bg_color=ffffff&title_color=0284c7&text_color=475569&icon_color=0284c7&border_color=e2e8f0&hide_border=false" />
-          <img src="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Stats" height="175" />
+          <img src="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&ring_color=38bdf8&hide_border=false" alt="Vu Gia Hung's GitHub Stats" height="175" />
         </picture>
       </td>
       <td>
