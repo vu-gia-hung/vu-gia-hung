@@ -1,0 +1,53 @@
+name: Interactive Profile Widgets
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  handle-interaction:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.issue.title, 'guestbook:') || startsWith(github.event.issue.title, 'coffee:')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Process Issue Interaction
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+          ISSUE_USER_AVATAR: ${{ github.event.issue.user.avatar_url }}
+        run: |
+          node scripts/handle-interactive.js
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ README.md
+          git commit -m "chore(interactive): update profile widgets [skip ci]" || echo "No changes to commit"
+          git push
+
+      - name: Close and comment on issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          if [[ "${ISSUE_TITLE}" =~ ^guestbook: ]]; then
+            gh issue comment "$ISSUE_NUMBER" --body "Cảm ơn **@$ISSUE_USER** đã để lại lời chúc trong Sổ Lưu Bút của Vũ Gia Hưng! Lời chúc của bạn đã được cập nhật trực tiếp lên profile rồi nha! 🚀💙"
+          else
+            gh issue comment "$ISSUE_NUMBER" --body "Cảm ơn **@$ISSUE_USER** đã tiếp thêm một ly caffeine năng lượng cho Vũ Gia Hưng cày deadline và build open-source! Máy pha cà phê đã nhảy số thành công! ☕⚡"
+          fi
+          gh issue close "$ISSUE_NUMBER"
