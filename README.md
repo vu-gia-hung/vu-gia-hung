@@ -139,9 +139,9 @@ I am passionate about building resilient, high-performance systems spanning from
 
   <!-- GitHub Trophy Showcase -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=tokyonight&no-bg=true&margin-w=4&column=7" />
-    <source media="(prefers-color-scheme: light)" srcset="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=flat&no-bg=true&margin-w=4&column=7" />
-    <img src="https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=tokyonight&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/trophies-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/trophies-light.svg" />
+    <img src="./assets/trophies-dark.svg" alt="GitHub Trophies" />
   </picture>
 
   <br/><br/>

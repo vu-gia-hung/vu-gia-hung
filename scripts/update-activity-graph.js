@@ -2,6 +2,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const { recolor3dNightGraph } = require('./recolor-3d-graph');
+const { updateTrophies } = require('./update-trophies');
 
 const fetchSvg = (url) => new Promise((resolve, reject) => {
   https.get(url, res => {
@@ -55,6 +56,9 @@ async function run() {
   // Also sanitize 3D night graph to guarantee 100% cosmic blue consistency
   const nightGraphPath = path.resolve(__dirname, '../profile-3d-contrib/profile-night-view.svg');
   recolor3dNightGraph(nightGraphPath);
+
+  // Also fetch and recolor trophies to 100% cosmic blues
+  await updateTrophies();
 }
 
 run().catch(console.error);
