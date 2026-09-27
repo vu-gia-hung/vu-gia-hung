@@ -47,6 +47,9 @@
     </td>
     <td width="50%" valign="top" align="center">
       <!-- Right 50%: Reserved for Fortune Teller / Bói quẻ -->
+      <img src="./assets/slot-reserved.svg" alt="Reserved for Coder Fortune Teller" width="100%" />
+      <br/><br/>
+      <img src="https://img.shields.io/badge/%F0%9F%94%AE_Coder_Oracle_%26_Tarot-Coming_Soon_%E2%9C%A6-0284c7?style=flat-square&logoColor=white" alt="Coming Soon" />
     </td>
   </tr>
 </table>
