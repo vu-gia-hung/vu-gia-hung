@@ -1,292 +1,257 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
-      <stop offset="0%" stop-color="#0e1e38" />
-      <stop offset="60%" stop-color="#060913" />
-      <stop offset="100%" stop-color="#03050a" />
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#0d1f3b" />
+      <stop offset="55%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#020408" />
     </radialGradient>
 
     <!-- Leather Cover Gradient -->
-    <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="coverLeather" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#090d16" />
+      <stop offset="35%" stop-color="#0f172a" />
+      <stop offset="70%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#020617" />
     </linearGradient>
 
-    <!-- Center Spine Gradient -->
-    <linearGradient id="spineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="25%" stop-color="#0284c7" />
-      <stop offset="50%" stop-color="#38bdf8" />
-      <stop offset="75%" stop-color="#0284c7" />
-      <stop offset="100%" stop-color="#090d16" />
-    </linearGradient>
-
-    <!-- Left Page Parchment Gradient -->
-    <linearGradient id="leftPageGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="15%" stop-color="#131e36" />
-      <stop offset="85%" stop-color="#182542" />
-      <stop offset="100%" stop-color="#0a0f1d" />
-    </linearGradient>
-
-    <!-- Right Page Parchment Gradient -->
-    <linearGradient id="rightPageGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0a0f1d" />
-      <stop offset="15%" stop-color="#182542" />
-      <stop offset="85%" stop-color="#131e36" />
-      <stop offset="100%" stop-color="#0f172a" />
-    </linearGradient>
-
-    <!-- Bookmark Ribbon Gradient -->
-    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Chrome Corner Bracket Gradient -->
+    <linearGradient id="cornerChrome" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="40%" stop-color="#38bdf8" />
+      <stop offset="80%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Center Spine Highlight Gradient -->
+    <linearGradient id="spineHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="20%" stop-color="#0369a1" />
       <stop offset="50%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#0284c7" />
+      <stop offset="80%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#020617" />
     </linearGradient>
 
-    <!-- Button Gradient -->
-    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7" />
-      <stop offset="50%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#0284c7" />
+    <!-- Left Page Parchment Surface Gradient -->
+    <linearGradient id="leftPageSurf" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b1325" />
+      <stop offset="8%" stop-color="#111c33" />
+      <stop offset="30%" stop-color="#16233f" />
+      <stop offset="85%" stop-color="#192847" />
+      <stop offset="100%" stop-color="#080e1b" />
     </linearGradient>
 
-    <!-- Pen Body Gradient -->
-    <linearGradient id="penBody" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#334155" />
-      <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#0284c7" />
+    <!-- Right Page Parchment Surface Gradient -->
+    <linearGradient id="rightPageSurf" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080e1b" />
+      <stop offset="15%" stop-color="#192847" />
+      <stop offset="70%" stop-color="#16233f" />
+      <stop offset="92%" stop-color="#111c33" />
+      <stop offset="100%" stop-color="#0b1325" />
     </linearGradient>
 
-    <!-- Pen Nib Gradient -->
-    <linearGradient id="penNib" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#e0f2fe" />
-      <stop offset="100%" stop-color="#0284c7" />
+    <!-- Silk Bookmark Ribbon Gradient -->
+    <linearGradient id="ribbonSilk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" />
+      <stop offset="30%" stop-color="#38bdf8" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#075985" />
     </linearGradient>
 
-    <!-- Soft Drop Shadow Filter -->
-    <filter id="bookShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.85" />
+    <!-- Fountain Pen Barrel Gradient -->
+    <linearGradient id="penBarrel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="25%" stop-color="#1e293b" />
+      <stop offset="55%" stop-color="#090d16" />
+      <stop offset="75%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Fountain Pen Nib Metallic Gradient -->
+    <linearGradient id="penNibMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="30%" stop-color="#38bdf8" />
+      <stop offset="60%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+
+    <!-- Soft Ambient Glow Filter -->
+    <filter id="cyanAtmosphere" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    <filter id="softContactShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" />
     </filter>
   </defs>
 
   <style>
-    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
-    
-    .interactive-card {
-      transition: all 0.3s ease;
+    .book-container {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
     }
-    .interactive-card:hover .btn-box {
-      fill: #38bdf8;
-      filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.8));
+    .book-container:hover {
+      transform: translateY(-6px);
     }
-    .interactive-card:hover .pen-group {
-      transform: translate(-4px, -4px);
+    .pen-element {
+      transition: transform 0.4s ease;
     }
-    .pen-group {
-      transition: transform 0.3s ease;
+    .book-container:hover .pen-element {
+      transform: translate(-3px, -3px) rotate(-1deg);
     }
-    
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
+    @keyframes gentlePulse {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 0.6; }
     }
-    .glow-pulse {
-      animation: pulseGlow 3s infinite ease-in-out;
+    .ambient-glow {
+      animation: gentlePulse 4s infinite ease-in-out;
     }
   </style>
 
-  <!-- Outer Card Frame -->
-  <rect x="8" y="8" width="784" height="584" rx="20" fill="url(#bgGlow)" stroke="#1e293b" stroke-width="2" />
-  <rect x="12" y="12" width="776" height="576" rx="16" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4" />
+  <!-- Card Background Frame -->
+  <rect x="8" y="8" width="784" height="584" rx="22" fill="url(#bgGlow)" stroke="#1e293b" stroke-width="2" />
+  <rect x="12" y="12" width="776" height="576" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" />
 
-  <!-- Ambient Star Dust Particles in Background -->
-  <g opacity="0.4">
-    <circle cx="90" cy="70" r="1.5" fill="#38bdf8" />
-    <circle cx="160" cy="110" r="1" fill="#7dd3fc" />
-    <circle cx="710" cy="80" r="1.5" fill="#38bdf8" />
-    <circle cx="730" cy="140" r="1" fill="#bae6fd" />
-    <circle cx="80" cy="520" r="1.5" fill="#38bdf8" />
-    <circle cx="720" cy="510" r="1.5" fill="#7dd3fc" />
-    <circle cx="400" cy="45" r="1" fill="#ffffff" />
+  <!-- Ambient Stars in Dark Space -->
+  <g opacity="0.35">
+    <circle cx="85" cy="75" r="1.5" fill="#38bdf8" />
+    <circle cx="150" cy="120" r="1" fill="#7dd3fc" />
+    <circle cx="705" cy="75" r="1.5" fill="#38bdf8" />
+    <circle cx="725" cy="135" r="1" fill="#ffffff" />
+    <circle cx="75" cy="515" r="1.5" fill="#38bdf8" />
+    <circle cx="715" cy="510" r="1.5" fill="#7dd3fc" />
+    <circle cx="400" cy="40" r="1" fill="#ffffff" />
+    <circle cx="400" cy="565" r="1" fill="#38bdf8" />
   </g>
 
-  <!-- Top Ambient Glow under book -->
-  <ellipse cx="400" cy="300" rx="360" ry="240" fill="#0284c7" opacity="0.08" filter="url(#cyanGlow)" />
+  <!-- Ambient Blue Glow behind Book -->
+  <ellipse cx="400" cy="305" rx="350" ry="220" fill="#0284c7" class="ambient-glow" filter="url(#cyanAtmosphere)" />
 
-  <g class="interactive-card">
-    <!-- Under-Book Drop Shadow -->
-    <ellipse cx="400" cy="515" rx="340" ry="24" fill="#000000" opacity="0.75" />
+  <g class="book-container">
+    <!-- Grounding Contact Shadow Beneath the Whole Book -->
+    <ellipse cx="400" cy="520" rx="345" ry="26" fill="#000000" opacity="0.9" filter="url(#softContactShadow)" />
+    <ellipse cx="400" cy="520" rx="320" ry="18" fill="#000000" opacity="0.8" />
 
-    <!-- 1. Outer Hardcover Backing (Book Cover) -->
-    <!-- Left Cover Flap -->
-    <rect x="52" y="70" width="342" height="435" rx="14" fill="url(#coverGrad)" stroke="#0c4a6e" stroke-width="2" filter="url(#bookShadow)" />
-    <!-- Right Cover Flap -->
-    <rect x="406" y="70" width="342" height="435" rx="14" fill="url(#coverGrad)" stroke="#0c4a6e" stroke-width="2" />
+    <!-- ==================== 1. HARDCOVER LEATHER BASE ==================== -->
+    <!-- Left Leather Cover Flap -->
+    <path d="M 52 70 Q 230 64 395 72 L 395 514 Q 230 508 52 514 Z" fill="url(#coverLeather)" stroke="#0c4a6e" stroke-width="2" />
+    <!-- Right Leather Cover Flap -->
+    <path d="M 405 72 Q 570 64 748 70 L 748 514 Q 570 508 405 514 Z" fill="url(#coverLeather)" stroke="#0c4a6e" stroke-width="2" />
 
-    <!-- Outer Leather Stitches (Cosmic Cyan Dashed) -->
-    <rect x="60" y="78" width="326" height="419" rx="10" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="6,4" stroke-opacity="0.5" />
-    <rect x="414" y="78" width="326" height="419" rx="10" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="6,4" stroke-opacity="0.5" />
+    <!-- Handcrafted Leather Stitches (Dashed Cyan Lines) -->
+    <path d="M 62 80 Q 230 74 388 80 L 388 504 Q 230 498 62 504 Z" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,4" stroke-opacity="0.55" />
+    <path d="M 412 80 Q 570 74 738 80 L 738 504 Q 570 498 412 504 Z" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,4" stroke-opacity="0.55" />
 
-    <!-- Metallic Corner Protectors (4 corners) -->
-    <!-- Top-Left -->
-    <path d="M 52 105 L 52 70 L 87 70 Q 70 87 52 105 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
-    <!-- Bottom-Left -->
-    <path d="M 52 470 L 52 505 L 87 505 Q 70 488 52 470 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
-    <!-- Top-Right -->
-    <path d="M 748 105 L 748 70 L 713 70 Q 730 87 748 105 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
-    <!-- Bottom-Right -->
-    <path d="M 748 470 L 748 505 L 713 505 Q 730 488 748 470 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
+    <!-- 4 Metallic Corner Brackets -->
+    <!-- Top-Left Corner -->
+    <path d="M 52 110 L 52 70 L 92 70 Q 72 90 52 110 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="68" cy="86" r="2.5" fill="#020617" />
+    <!-- Bottom-Left Corner -->
+    <path d="M 52 474 L 52 514 L 92 514 Q 72 494 52 474 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="68" cy="498" r="2.5" fill="#020617" />
+    <!-- Top-Right Corner -->
+    <path d="M 748 110 L 748 70 L 708 70 Q 728 90 748 110 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="732" cy="86" r="2.5" fill="#020617" />
+    <!-- Bottom-Right Corner -->
+    <path d="M 748 474 L 748 514 L 708 514 Q 728 494 748 474 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="732" cy="498" r="2.5" fill="#020617" />
 
-    <!-- 2. Stacked Pages (Simulating real 3D page depth) -->
-    <!-- Left stack layers -->
-    <path d="M 68 85 L 390 85 L 390 492 L 68 492 Z" fill="#090d16" />
-    <path d="M 65 88 L 390 88 L 390 489 L 65 489 Z" fill="#0c1322" />
-    <path d="M 62 91 L 390 91 L 390 486 L 62 486 Z" fill="#111a2e" stroke="#1e293b" stroke-width="0.5" />
+    <!-- ==================== 2. MULTI-LAYER STACKED PAGES (PAGE DEPTH) ==================== -->
+    <!-- Left Stacked Pages Layers (Simulating thick block of papers) -->
+    <path d="M 76 80 L 392 82 L 392 502 L 76 502 Z" fill="#060a14" />
+    <path d="M 73 83 L 392 84 L 392 499 L 73 499 Z" fill="#090f1d" />
+    <path d="M 70 86 L 392 86 L 392 496 L 70 496 Z" fill="#0c1426" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 67 89 L 392 88 L 392 493 L 67 493 Z" fill="#101a30" />
+    <path d="M 64 92 L 392 90 L 392 490 L 64 490 Z" fill="#13203b" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 62 95 L 392 92 L 392 487 L 62 487 Z" fill="#172645" />
 
-    <!-- Right stack layers -->
-    <path d="M 410 85 L 732 85 L 732 492 L 410 492 Z" fill="#090d16" />
-    <path d="M 410 88 L 735 88 L 735 489 L 410 489 Z" fill="#0c1322" />
-    <path d="M 410 91 L 738 91 L 738 486 L 410 486 Z" fill="#111a2e" stroke="#1e293b" stroke-width="0.5" />
+    <!-- Right Stacked Pages Layers -->
+    <path d="M 408 82 L 724 80 L 724 502 L 408 502 Z" fill="#060a14" />
+    <path d="M 408 84 L 727 83 L 727 499 L 408 499 Z" fill="#090f1d" />
+    <path d="M 408 86 L 730 86 L 730 496 L 408 496 Z" fill="#0c1426" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 408 88 L 733 89 L 733 493 L 408 493 Z" fill="#101a30" />
+    <path d="M 408 90 L 736 92 L 736 490 L 408 490 Z" fill="#13203b" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 408 92 L 738 95 L 738 487 L 408 487 Z" fill="#172645" />
 
-    <!-- 3. Top Open Pages (Main parchment surface) -->
-    <!-- Left Open Page with arched curve from spine -->
-    <path d="M 395 92 Q 235 84 72 90 L 72 482 Q 235 488 395 482 Z" fill="url(#leftPageGrad)" stroke="#1e293b" stroke-width="1.5" />
-    <!-- Right Open Page with arched curve from spine -->
-    <path d="M 405 92 Q 565 84 728 90 L 728 482 Q 565 488 405 482 Z" fill="url(#rightPageGrad)" stroke="#1e293b" stroke-width="1.5" />
+    <!-- ==================== 3. TOP OPEN PARCHMENT PAGES ==================== -->
+    <!-- Left Top Page (Arched upward from binding) -->
+    <path d="M 395 94 Q 230 84 66 93 L 66 484 Q 230 492 395 484 Z" fill="url(#leftPageSurf)" stroke="#1e293b" stroke-width="1.5" />
+    <!-- Right Top Page (Arched upward from binding) -->
+    <path d="M 405 94 Q 570 84 734 93 L 734 484 Q 570 492 405 484 Z" fill="url(#rightPageSurf)" stroke="#1e293b" stroke-width="1.5" />
 
-    <!-- Center Fold Shadow (Gáy sổ) -->
-    <rect x="390" y="88" width="20" height="396" fill="#060913" opacity="0.85" />
-    <rect x="398" y="70" width="4" height="435" fill="url(#spineGrad)" />
-
-    <!-- Bookmark Ribbon (Ruy băng đánh dấu trang) -->
-    <path d="M 400 70 Q 425 180 435 300 Q 445 420 460 525 L 478 520 L 468 490 L 490 485 Q 460 380 445 260 Q 430 140 404 70 Z" fill="url(#ribbonGrad)" opacity="0.9" filter="url(#cyanGlow)" />
-
-    <!-- ==================== LEFT PAGE CONTENT ==================== -->
-    <g transform="translate(90, 110)">
-      <!-- Page Header -->
-      <rect x="0" y="0" width="135" height="24" rx="12" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1" />
-      <text x="67" y="16" fill="#7dd3fc" font-size="11" font-weight="700" text-anchor="middle" class="font-mono">📖 GUESTBOOK</text>
-
-      <text x="0" y="52" fill="#f8fafc" font-size="20" font-weight="800" class="font-sans">Visitor Archive</text>
-      <text x="0" y="72" fill="#94a3b8" font-size="12" class="font-sans">Official digital guestbook &amp; log</text>
-
-      <!-- Decorative Divider -->
-      <line x1="0" y1="88" x2="270" y2="88" stroke="#1e293b" stroke-width="1.5" />
-      <line x1="0" y1="88" x2="90" y2="88" stroke="#38bdf8" stroke-width="2" />
-      <polygon points="90,85 96,88 90,91 84,88" fill="#38bdf8" />
-
-      <!-- Sample Historical Signatures / Lined Logs -->
-      <g transform="translate(0, 110)">
-        <!-- Entry 1 -->
-        <circle cx="10" cy="10" r="4" fill="#38bdf8" />
-        <text x="24" y="14" fill="#38bdf8" font-size="12" font-weight="700" class="font-mono">@rmit-crew</text>
-        <text x="24" y="32" fill="#cbd5e1" font-size="11.5" font-style="italic" class="font-sans">"Chào đồng môn RMIT! Profile đỉnh quá! 🌟"</text>
-        <line x1="0" y1="46" x2="270" y2="46" stroke="#1e293b" stroke-width="1" stroke-dasharray="3,3" />
-
-        <!-- Entry 2 -->
-        <circle cx="10" cy="66" r="4" fill="#0284c7" />
-        <text x="24" y="70" fill="#38bdf8" font-size="12" font-weight="700" class="font-mono">@open-source</text>
-        <text x="24" y="88" fill="#cbd5e1" font-size="11.5" font-style="italic" class="font-sans">"Awesome AI &amp; embedded engineering! 🚀"</text>
-        <line x1="0" y1="102" x2="270" y2="102" stroke="#1e293b" stroke-width="1" stroke-dasharray="3,3" />
-
-        <!-- Entry 3 -->
-        <circle cx="10" cy="122" r="4" fill="#38bdf8" opacity="0.6" />
-        <text x="24" y="126" fill="#7dd3fc" font-size="12" font-weight="700" class="font-mono">@github-visitor</text>
-        <text x="24" y="144" fill="#94a3b8" font-size="11.5" font-style="italic" class="font-sans">"Left a cosmic star on your repositories! ⭐"</text>
-        <line x1="0" y1="158" x2="270" y2="158" stroke="#1e293b" stroke-width="1" stroke-dasharray="3,3" />
-      </g>
-
-      <!-- Circular Verification Seal (Bottom Left) -->
-      <g transform="translate(180, 305)" opacity="0.75">
-        <circle cx="40" cy="40" r="32" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="5,3" />
-        <circle cx="40" cy="40" r="26" fill="none" stroke="#0284c7" stroke-width="1" />
-        <text x="40" y="36" fill="#38bdf8" font-size="8" font-weight="800" text-anchor="middle" class="font-mono">★ VERIFIED ★</text>
-        <text x="40" y="48" fill="#7dd3fc" font-size="7" font-weight="600" text-anchor="middle" class="font-mono">HUNGS SPACE</text>
-      </g>
+    <!-- Subtle Faint Ruled Lines on Left Page (Pure notebook guidelines, NO text) -->
+    <g opacity="0.18" stroke="#38bdf8" stroke-width="1">
+      <line x1="95" y1="135" x2="365" y2="137" />
+      <line x1="95" y1="165" x2="365" y2="167" />
+      <line x1="95" y1="195" x2="365" y2="197" />
+      <line x1="95" y1="225" x2="365" y2="227" />
+      <line x1="95" y1="255" x2="365" y2="257" />
+      <line x1="95" y1="285" x2="365" y2="287" />
+      <line x1="95" y1="315" x2="365" y2="317" />
+      <line x1="95" y1="345" x2="365" y2="347" />
+      <line x1="95" y1="375" x2="365" y2="377" />
+      <line x1="95" y1="405" x2="365" y2="407" />
+      <line x1="95" y1="435" x2="365" y2="437" />
     </g>
 
-    <!-- ==================== RIGHT PAGE CONTENT ==================== -->
-    <g transform="translate(435, 110)">
-      <!-- Main Call-to-Action Glassmorphic Card -->
-      <rect x="0" y="15" width="275" height="315" rx="16" fill="#080e1a" fill-opacity="0.8" stroke="#0284c7" stroke-width="1.5" />
-      <rect x="4" y="19" width="267" height="307" rx="12" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3" />
-
-      <!-- Top Badge on Card -->
-      <g transform="translate(20, 35)">
-        <rect x="0" y="0" width="105" height="22" rx="11" fill="#0369a1" fill-opacity="0.4" stroke="#38bdf8" stroke-width="1" />
-        <text x="52" y="15" fill="#7dd3fc" font-size="10" font-weight="700" text-anchor="middle" class="font-mono">✦ LIVE ACCESS</text>
-      </g>
-
-      <!-- Main Instruction Text (Requested by user in English) -->
-      <g transform="translate(20, 85)">
-        <text x="0" y="0" fill="#ffffff" font-size="21" font-weight="800" class="font-sans">
-          CLICK HERE TO
-        </text>
-        <text x="0" y="26" fill="#38bdf8" font-size="21" font-weight="800" class="font-sans">
-          SIGN GUESTBOOK
-        </text>
-
-        <text x="0" y="58" fill="#cbd5e1" font-size="13" font-weight="500" class="font-sans">
-          Leave your mark &amp; greeting
-        </text>
-        <text x="0" y="78" fill="#94a3b8" font-size="13" font-weight="400" class="font-sans">
-          on Vũ Gia Hưng's GitHub profile!
-        </text>
-        <text x="0" y="104" fill="#38bdf8" font-size="12" font-style="italic" class="font-mono">
-          ~ Instant automated sync ~
-        </text>
-      </g>
-
-      <!-- Big Glowing Action Button (Interactive Pill) -->
-      <g transform="translate(20, 240)">
-        <!-- Outer glow aura -->
-        <rect x="-2" y="-2" width="239" height="52" rx="26" fill="#38bdf8" opacity="0.3" class="glow-pulse" filter="url(#cyanGlow)" />
-        <!-- Button rectangle -->
-        <rect class="btn-box" x="0" y="0" width="235" height="48" rx="24" fill="url(#btnGrad)" stroke="#bae6fd" stroke-width="1.5" />
-        
-        <!-- Button Text -->
-        <text x="117" y="30" fill="#ffffff" font-size="14" font-weight="800" text-anchor="middle" class="font-sans" letter-spacing="0.5">
-          ✍️ SIGN GUESTBOOK ➔
-        </text>
-      </g>
+    <!-- Subtle Faint Ruled Lines on Right Page (Pure notebook guidelines, NO text) -->
+    <g opacity="0.18" stroke="#38bdf8" stroke-width="1">
+      <line x1="435" y1="137" x2="705" y2="135" />
+      <line x1="435" y1="167" x2="705" y2="165" />
+      <line x1="435" y1="197" x2="705" y2="195" />
+      <line x1="435" y1="227" x2="705" y2="225" />
+      <line x1="435" y1="257" x2="705" y2="255" />
+      <line x1="435" y1="287" x2="705" y2="285" />
+      <line x1="435" y1="317" x2="705" y2="315" />
+      <line x1="435" y1="347" x2="705" y2="345" />
+      <line x1="435" y1="377" x2="705" y2="375" />
+      <line x1="435" y1="407" x2="705" y2="405" />
+      <line x1="435" y1="437" x2="705" y2="435" />
     </g>
 
-    <!-- 4. Realistic Luxury Fountain Pen (Crossing lower right corner) -->
-    <g class="pen-group" transform="translate(620, 390) rotate(-35)">
-      <!-- Pen Shadow on paper -->
-      <rect x="0" y="18" width="180" height="14" rx="7" fill="#000000" opacity="0.6" filter="url(#cyanGlow)" />
+    <!-- Central Deep Binding Gutter & Spine Shadow -->
+    <path d="M 393 92 L 407 92 L 407 486 L 393 486 Z" fill="#04060d" />
+    <path d="M 398 70 L 402 70 L 402 516 L 398 516 Z" fill="url(#spineHighlight)" />
+
+    <!-- Silk Bookmark Ribbon (Draped across binding and right page) -->
+    <path d="M 400 68 Q 425 180 435 300 Q 445 420 460 528 L 478 522 L 468 492 L 492 486 Q 460 380 445 260 Q 430 140 404 68 Z" fill="url(#ribbonSilk)" opacity="0.95" filter="url(#cyanAtmosphere)" />
+
+    <!-- ==================== 4. REALISTIC LUXURY FOUNTAIN PEN ==================== -->
+    <g class="pen-element" transform="translate(615, 360) rotate(-28)">
+      <!-- Pen Cast Shadow on paper -->
+      <rect x="0" y="16" width="220" height="18" rx="9" fill="#000000" opacity="0.55" filter="url(#cyanAtmosphere)" />
       
-      <!-- Pen Barrel (Thân bút) -->
-      <rect x="40" y="0" width="130" height="16" rx="3" fill="url(#penBody)" stroke="#475569" stroke-width="1" />
+      <!-- Pen Cap / Finial End -->
+      <rect x="180" y="0" width="30" height="18" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
       
-      <!-- Gold/Cyan Decorative Bands on Pen -->
-      <rect x="55" y="0" width="4" height="16" fill="#38bdf8" />
-      <rect x="155" y="0" width="6" height="16" fill="#38bdf8" />
-      <rect x="157" y="0" width="2" height="16" fill="#ffffff" />
+      <!-- Pen Barrel (Thân Bút) -->
+      <rect x="50" y="0" width="132" height="18" rx="3" fill="url(#penBarrel)" stroke="#334155" stroke-width="1" />
       
-      <!-- Pen Grip Section -->
-      <path d="M 40 1 L 20 4 L 20 12 L 40 15 Z" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <!-- Chrome & Cyan Accent Rings -->
+      <rect x="62" y="0" width="4" height="18" fill="#38bdf8" />
+      <rect x="66" y="0" width="1.5" height="18" fill="#ffffff" />
+      <rect x="172" y="0" width="8" height="18" fill="url(#cornerChrome)" />
+      <rect x="174" y="0" width="2" height="18" fill="#ffffff" />
       
-      <!-- Metallic Pen Nib (Ngòi bút) -->
-      <path d="M 20 4 L 0 8 L 20 12 Z" fill="url(#penNib)" stroke="#38bdf8" stroke-width="1" />
-      <!-- Nib Breather Hole & Slit -->
-      <line x1="0" y1="8" x2="14" y2="8" stroke="#090d16" stroke-width="1" />
-      <circle cx="14" cy="8" r="1.5" fill="#090d16" />
+      <!-- Pen Metallic Pocket Clip -->
+      <rect x="100" y="-4" width="70" height="4" rx="2" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="0.5" />
+      <circle cx="102" cy="-2" r="3" fill="#38bdf8" />
       
-      <!-- Glowing Cyan Ink Sparkle at Nib Tip -->
-      <circle cx="-2" cy="8" r="3" fill="#38bdf8" filter="url(#cyanGlow)" />
-      <circle cx="-2" cy="8" r="1.5" fill="#ffffff" />
+      <!-- Pen Grip Section (Cổ Bút) -->
+      <path d="M 50 1 L 22 4 L 22 14 L 50 17 Z" fill="#0a0f1d" stroke="#1e293b" stroke-width="1" />
+      <rect x="22" y="4" width="3" height="10" fill="#38bdf8" />
+      
+      <!-- Metallic Pen Nib (Ngòi Bút Chạm Khắc) -->
+      <path d="M 22 4 L 0 9 L 22 14 Z" fill="url(#penNibMetal)" stroke="#7dd3fc" stroke-width="1" />
+      
+      <!-- Nib Breather Hole & Ink Slit -->
+      <line x1="0" y1="9" x2="15" y2="9" stroke="#060913" stroke-width="1.2" />
+      <circle cx="15" cy="9" r="1.6" fill="#060913" />
+      
+      <!-- Glowing Blue Ink Droplet at Nib Tip -->
+      <circle cx="-1" cy="9" r="3.5" fill="#38bdf8" opacity="0.9" filter="url(#cyanAtmosphere)" />
+      <circle cx="-1" cy="9" r="1.5" fill="#ffffff" />
     </g>
   </g>
 </svg>
