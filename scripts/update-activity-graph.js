@@ -1,7 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
-const { recolor3dNightGraph } = require('./recolor-3d-graph');
+const { recolor3dNightGraph, recolor3dLightGraph } = require('./recolor-3d-graph');
 const { updateTrophies } = require('./update-trophies');
 
 const fetchSvg = (url) => new Promise((resolve, reject) => {
@@ -46,16 +46,20 @@ async function run() {
   const [darkSvg, lightSvg] = await Promise.all([fetchSvg(darkUrl), fetchSvg(lightUrl)]);
 
   const enhancedDark = injectNumbers(darkSvg, '#7dd3fc', '#060913');
-  const enhancedLight = injectNumbers(lightSvg, '#0284c7', '#ffffff');
+  let enhancedLight = injectNumbers(lightSvg, '#0284c7', '#ffffff');
+  // Replace GitHub green wave area fill with pure luminous ice blue
+  enhancedLight = enhancedLight.replace(/#9be9a8/gi, '#bae6fd');
 
   fs.mkdirSync('assets', { recursive: true });
   fs.writeFileSync('assets/activity-graph-dark.svg', enhancedDark);
   fs.writeFileSync('assets/activity-graph-light.svg', enhancedLight);
   console.log('Saved enhanced activity graphs to assets/');
 
-  // Also sanitize 3D night graph to guarantee 100% cosmic blue consistency
+  // Also sanitize 3D graphs (both dark and light) to guarantee 100% blue consistency
   const nightGraphPath = path.resolve(__dirname, '../profile-3d-contrib/profile-night-view.svg');
+  const lightGraphPath = path.resolve(__dirname, '../profile-3d-contrib/profile-green.svg');
   recolor3dNightGraph(nightGraphPath);
+  recolor3dLightGraph(lightGraphPath);
 
   // Also fetch and recolor trophies to 100% cosmic blues
   await updateTrophies();

@@ -121,7 +121,7 @@ I am passionate about building resilient, high-performance systems spanning from
       <td>
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&ring_color=38bdf8&hide_border=false" />
-          <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=default&bg_color=ffffff&title_color=0284c7&text_color=475569&icon_color=0284c7&border_color=e2e8f0&hide_border=false" />
+          <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=default&bg_color=ffffff&title_color=0284c7&text_color=475569&icon_color=0284c7&border_color=e2e8f0&ring_color=0284c7&hide_border=false" />
           <img src="https://github-readme-stats-fast.vercel.app/api?username=vu-gia-hung&show_icons=true&theme=tokyonight&bg_color=060913&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&ring_color=38bdf8&hide_border=false" alt="Vu Gia Hung's GitHub Stats" height="175" />
         </picture>
       </td>

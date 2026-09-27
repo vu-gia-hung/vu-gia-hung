@@ -43,16 +43,21 @@ async function updateTrophies() {
   // Replace B cup with radiant ice cyan
   darkSvg = darkSvg.replace(/#8be9fd/gi, '#7dd3fc');
 
-  // Recolor Light Theme Trophies to Crisp Sapphire & Sky Blue
+  // Recolor Light Theme Trophies to Crisp Sapphire & Sky Blue (ZERO brown/gold/green)
   let lightSvg = rawLight;
   lightSvg = lightSvg.replace(/#009366/gi, '#0284c7');
   lightSvg = lightSvg.replace(/#eac200/gi, '#0284c7');
   lightSvg = lightSvg.replace(/#886000/gi, '#0369a1');
   lightSvg = lightSvg.replace(/#B0B0B0/gi, '#38bdf8');
   lightSvg = lightSvg.replace(/#A18D66/gi, '#60a5fa');
+  lightSvg = lightSvg.replace(/#412D06/gi, '#ffffff');
+  lightSvg = lightSvg.replace(/#505050/gi, '#ffffff');
+  lightSvg = lightSvg.replace(/#777777|#777/gi, '#0284c7');
+  lightSvg = lightSvg.replace(/#0366d6/gi, '#0284c7');
   lightSvg = lightSvg.replace(/#e1e4e8/gi, '#e2e8f0');
   lightSvg = lightSvg.replace(/#000000|#000/gi, '#0284c7');
   lightSvg = lightSvg.replace(/#666666|#666/gi, '#475569');
+  lightSvg = lightSvg.replace(/#333333|#333/gi, '#475569');
 
   const assetsDir = path.resolve(__dirname, '../assets');
   fs.mkdirSync(assetsDir, { recursive: true });

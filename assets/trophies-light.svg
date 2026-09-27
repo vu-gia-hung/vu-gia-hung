@@ -57,7 +57,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#505050">A</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#ffffff">A</text>
   
     </svg><svg x="68" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#38bdf8" xmlns="http://www.w3.org/2000/svg">
       
@@ -66,7 +66,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#505050">A</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#ffffff">A</text>
   
     </svg>
   <defs>
@@ -85,7 +85,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#505050">A</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#ffffff">A</text>
   
   </svg>
   
@@ -113,7 +113,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       width="80"
       height="3.2"
       opacity="0.3"
-      fill="#0366d6"
+      fill="#0284c7"
     />
     <rect
       id="Commits-rank-progress"
@@ -121,7 +121,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       y="101"
       rx="1"
       height="3.2"
-      fill="#0366d6"
+      fill="#0284c7"
     />
   
         </svg>
@@ -186,7 +186,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#505050">A</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#ffffff">A</text>
   
   </svg>
   
@@ -214,7 +214,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       width="80"
       height="3.2"
       opacity="0.3"
-      fill="#0366d6"
+      fill="#0284c7"
     />
     <rect
       id="PullRequest-rank-progress"
@@ -222,7 +222,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       y="101"
       rx="1"
       height="3.2"
-      fill="#0366d6"
+      fill="#0284c7"
     />
   
         </svg>
@@ -266,7 +266,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#412D06">B</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#ffffff">B</text>
   
   </svg>
   
@@ -294,7 +294,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       width="80"
       height="3.2"
       opacity="0.3"
-      fill="#0366d6"
+      fill="#0284c7"
     />
     <rect
       id="Reviews-rank-progress"
@@ -302,7 +302,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       y="101"
       rx="1"
       height="3.2"
-      fill="#0366d6"
+      fill="#0284c7"
     />
   
         </svg>
@@ -333,9 +333,9 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   <defs>
     <linearGradient id="C" gradientTransform="rotate(45)">
     
-      <stop offset="0%" stop-color="#777"/>
-      <stop offset="50%" stop-color="#777"/>
-      <stop offset="100%" stop-color="#777"/>
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0284c7"/>
   
     </linearGradient>
   </defs>
@@ -346,7 +346,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#333">C</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#475569">C</text>
   
   </svg>
   
@@ -374,7 +374,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       width="80"
       height="3.2"
       opacity="0.3"
-      fill="#0366d6"
+      fill="#0284c7"
     />
     <rect
       id="Followers-rank-progress"
@@ -382,7 +382,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       y="101"
       rx="1"
       height="3.2"
-      fill="#0366d6"
+      fill="#0284c7"
     />
   
         </svg>
@@ -413,9 +413,9 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   <defs>
     <linearGradient id="C" gradientTransform="rotate(45)">
     
-      <stop offset="0%" stop-color="#777"/>
-      <stop offset="50%" stop-color="#777"/>
-      <stop offset="100%" stop-color="#777"/>
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0284c7"/>
   
     </linearGradient>
   </defs>
@@ -426,7 +426,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#333">C</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#475569">C</text>
   
   </svg>
   
@@ -454,7 +454,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       width="80"
       height="3.2"
       opacity="0.3"
-      fill="#0366d6"
+      fill="#0284c7"
     />
     <rect
       id="Repositories-rank-progress"
@@ -462,7 +462,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       y="101"
       rx="1"
       height="3.2"
-      fill="#0366d6"
+      fill="#0284c7"
     />
   
         </svg>
@@ -493,9 +493,9 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   <defs>
     <linearGradient id="?" gradientTransform="rotate(45)">
     
-      <stop offset="0%" stop-color="#777"/>
-      <stop offset="50%" stop-color="#777"/>
-      <stop offset="100%" stop-color="#777"/>
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0284c7"/>
   
     </linearGradient>
   </defs>
@@ -506,7 +506,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#333">?</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#475569">?</text>
   
   </svg>
   
@@ -534,7 +534,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       width="80"
       height="3.2"
       opacity="0.3"
-      fill="#0366d6"
+      fill="#0284c7"
     />
     <rect
       id="Stars-rank-progress"
@@ -542,7 +542,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       y="101"
       rx="1"
       height="3.2"
-      fill="#0366d6"
+      fill="#0284c7"
     />
   
         </svg>
@@ -573,9 +573,9 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   <defs>
     <linearGradient id="?" gradientTransform="rotate(45)">
     
-      <stop offset="0%" stop-color="#777"/>
-      <stop offset="50%" stop-color="#777"/>
-      <stop offset="100%" stop-color="#777"/>
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0284c7"/>
   
     </linearGradient>
   </defs>
@@ -586,7 +586,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
     <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
     <circle cx="8" cy="6" r="4" fill="#FFF" />
-    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#333">?</text>
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#475569">?</text>
   
   </svg>
   
@@ -614,7 +614,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       width="80"
       height="3.2"
       opacity="0.3"
-      fill="#0366d6"
+      fill="#0284c7"
     />
     <rect
       id="Issues-rank-progress"
@@ -622,7 +622,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       y="101"
       rx="1"
       height="3.2"
-      fill="#0366d6"
+      fill="#0284c7"
     />
   
         </svg>
