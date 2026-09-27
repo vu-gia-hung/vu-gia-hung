@@ -34,9 +34,9 @@
     </td>
         <td width="27%" valign="top">
       <div align="center">
-        <!-- Realistic Clickable Guestbook Widget -->
+        <!-- Realistic Clickable Guestbook Widget (Pure Vector SVG) -->
         <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-          <img src="./assets/guestbook.jpg" alt="Click here to sign my guestbook & leave your mark" width="100%" />
+          <img src="./assets/guestbook.svg" alt="Click here to sign my guestbook & leave your mark" width="100%" />
         </a>
         <br/><br/>
         <!-- Realistic Clickable Fortune Teller Widget -->
