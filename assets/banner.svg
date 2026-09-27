@@ -10,14 +10,14 @@
     <!-- Accent Gradient for Name -->
     <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="50%" stop-color="#7dd3fc" />
       <stop offset="100%" stop-color="#38bdf8" />
     </linearGradient>
 
     <!-- Border Glow -->
     <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.3" />
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6" />
     </linearGradient>
 
@@ -26,9 +26,9 @@
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="indigoGlow" cx="80%" cy="60%" r="50%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    <radialGradient id="blueGlow" cx="80%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
     </radialGradient>
 
     <style>
@@ -49,7 +49,7 @@
 
   <!-- Ambient Light Orbs -->
   <circle cx="160" cy="70" r="140" fill="url(#cyanGlow)" />
-  <circle cx="740" cy="110" r="140" fill="url(#indigoGlow)" />
+  <circle cx="740" cy="110" r="140" fill="url(#blueGlow)" />
 
   <!-- Starfield Points -->
   <g fill="#38bdf8">

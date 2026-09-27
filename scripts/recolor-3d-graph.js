@@ -11,9 +11,9 @@ function recolor3dNightGraph(filePath) {
   // Replace radar chart & count text yellows with radiant cosmic cyan (#38bdf8)
   content = content.replace(/rgb\(\s*255\s*,\s*200\s*,\s*55\s*\)/g, 'rgb(56,189,248)');
 
-  // Replace language breakdown colors with nuanced cosmic blue shades
-  // JavaScript: #f1e05a (yellow) -> #818cf8 (cosmic space indigo)
-  content = content.replace(/#f1e05a/gi, '#818cf8');
+  // Replace language breakdown colors with nuanced pure cosmic blue shades (ZERO purple/red/yellow)
+  // JavaScript: #f1e05a (yellow) -> #0ea5e9 (ocean sky blue)
+  content = content.replace(/#f1e05a|#818cf8/gi, '#0ea5e9');
   // HTML: #e34c26 (red-orange) -> #60a5fa (electric cobalt blue)
   content = content.replace(/#e34c26/gi, '#60a5fa');
   // C++: #f34b7d (pink-red) -> #0284c7 (sapphire blue)
@@ -24,7 +24,7 @@ function recolor3dNightGraph(filePath) {
   content = content.replace(/#3572a5/gi, '#0369a1');
 
   fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Successfully recolored 3D night graph at ${filePath} to pure cosmic blues.`);
+  console.log(`Successfully recolored 3D night graph at ${filePath} to pure cosmic blues (no purple).`);
 }
 
 module.exports = { recolor3dNightGraph };

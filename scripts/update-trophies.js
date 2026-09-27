@@ -20,7 +20,7 @@ async function updateTrophies() {
     fetchSvg(lightTrophyUrl)
   ]);
 
-  // Recolor Dark Theme Trophies to 100% Cosmic Blues & Cyans
+  // Recolor Dark Theme Trophies to 100% PURE Cosmic Blues & Cyans (ZERO purple/lilac/green)
   let darkSvg = rawDark;
   // Replace green laurels with deep sapphire blue
   darkSvg = darkSvg.replace(/#178600/gi, '#0284c7');
@@ -37,6 +37,11 @@ async function updateTrophies() {
   // Replace titles & bars with cyan
   darkSvg = darkSvg.replace(/#70a5fd/gi, '#38bdf8');
   darkSvg = darkSvg.replace(/#00aeff/gi, '#38bdf8');
+  // Replace purplish C & ? cups (#5c75c3, #6272a4) with pure deep ocean sapphire & navy
+  darkSvg = darkSvg.replace(/#5c75c3/gi, '#0284c7');
+  darkSvg = darkSvg.replace(/#6272a4/gi, '#0c4a6e');
+  // Replace B cup with radiant ice cyan
+  darkSvg = darkSvg.replace(/#8be9fd/gi, '#7dd3fc');
 
   // Recolor Light Theme Trophies to Crisp Sapphire & Sky Blue
   let lightSvg = rawLight;
@@ -53,7 +58,7 @@ async function updateTrophies() {
   fs.mkdirSync(assetsDir, { recursive: true });
   fs.writeFileSync(path.join(assetsDir, 'trophies-dark.svg'), darkSvg, 'utf8');
   fs.writeFileSync(path.join(assetsDir, 'trophies-light.svg'), lightSvg, 'utf8');
-  console.log('Successfully updated trophies-dark.svg and trophies-light.svg in assets/');
+  console.log('Successfully updated trophies-dark.svg and trophies-light.svg in assets/ (100% pure blue, zero purple)');
 }
 
 module.exports = { updateTrophies };

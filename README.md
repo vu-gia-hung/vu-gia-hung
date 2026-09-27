@@ -77,11 +77,11 @@ I am passionate about building resilient, high-performance systems spanning from
   <tr>
     <td><b>AI &amp; ML Interests</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Generative%20AI%20%26%20LLMs-6366f1?style=for-the-badge&logo=openai&logoColor=white" alt="Generative AI & LLMs" />
-      <img src="https://img.shields.io/badge/RAG-6366f1?style=for-the-badge&logo=databricks&logoColor=white" alt="RAG" />
-      <img src="https://img.shields.io/badge/Agentic%20AI-6366f1?style=for-the-badge&logo=anthropic&logoColor=white" alt="Agentic AI" />
-      <img src="https://img.shields.io/badge/Prompt%20Engineering-6366f1?style=for-the-badge&logo=target&logoColor=white" alt="Prompt Engineering" />
-      <img src="https://img.shields.io/badge/Multimodal%20AI-6366f1?style=for-the-badge&logo=google&logoColor=white" alt="Multimodal AI" />
+      <img src="https://img.shields.io/badge/Generative%20AI%20%26%20LLMs-2563eb?style=for-the-badge&logo=openai&logoColor=white" alt="Generative AI & LLMs" />
+      <img src="https://img.shields.io/badge/RAG-2563eb?style=for-the-badge&logo=databricks&logoColor=white" alt="RAG" />
+      <img src="https://img.shields.io/badge/Agentic%20AI-2563eb?style=for-the-badge&logo=anthropic&logoColor=white" alt="Agentic AI" />
+      <img src="https://img.shields.io/badge/Prompt%20Engineering-2563eb?style=for-the-badge&logo=target&logoColor=white" alt="Prompt Engineering" />
+      <img src="https://img.shields.io/badge/Multimodal%20AI-2563eb?style=for-the-badge&logo=google&logoColor=white" alt="Multimodal AI" />
     </td>
   </tr>
   <tr>
@@ -127,9 +127,9 @@ I am passionate about building resilient, high-performance systems spanning from
       </td>
       <td>
         <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&border=1e293b&hide_border=false" />
-          <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=default&background=ffffff&ring=0284c7&fire=0284c7&currStreakLabel=0284c7&sideNums=1e293b&sideLabels=64748b&border=e2e8f0&hide_border=false" />
-          <img src="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&border=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Streak" height="175" />
+          <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&currStreakNum=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&dates=94a3b8&border=1e293b&hide_border=false" />
+          <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=default&background=ffffff&ring=0284c7&fire=0284c7&currStreakLabel=0284c7&currStreakNum=0284c7&sideNums=1e293b&sideLabels=64748b&dates=64748b&border=e2e8f0&hide_border=false" />
+          <img src="https://streak-stats.demolab.com/?user=vu-gia-hung&theme=tokyonight&background=060913&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&currStreakNum=38bdf8&sideNums=cbd5e1&sideLabels=94a3b8&dates=94a3b8&border=1e293b&hide_border=false" alt="Vu Gia Hung's GitHub Streak" height="175" />
         </picture>
       </td>
     </tr>
