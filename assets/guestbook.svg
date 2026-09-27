@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 610" width="100%" height="100%">
   <defs>
     <!-- Background Radial Gradient -->
-    <radialGradient id="bgGlow" cx="50%" cy="48%" r="65%">
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
       <stop offset="0%" stop-color="#0d1f3b" />
       <stop offset="55%" stop-color="#060913" />
       <stop offset="100%" stop-color="#020408" />
@@ -41,9 +41,18 @@
       <stop offset="100%" stop-color="#080e1b" />
     </linearGradient>
 
-    <!-- Right Page Parchment Surface Gradient -->
-    <linearGradient id="rightPageSurf" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Right Page Under-layer Gradient -->
+    <linearGradient id="rightUnderPageSurf" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#080e1b" />
+      <stop offset="15%" stop-color="#16243f" />
+      <stop offset="70%" stop-color="#131e36" />
+      <stop offset="92%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#080e1b" />
+    </linearGradient>
+
+    <!-- Right Flipping Page Gradient -->
+    <linearGradient id="flippingPageSurf" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#090f1e" />
       <stop offset="15%" stop-color="#192847" />
       <stop offset="70%" stop-color="#16233f" />
       <stop offset="92%" stop-color="#111c33" />
@@ -77,148 +86,256 @@
 
     <!-- Soft Ambient Glow Filter -->
     <filter id="cyanAtmosphere" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feGaussianBlur stdDeviation="8" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
     <filter id="softContactShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="16" />
+      <feGaussianBlur stdDeviation="14" />
     </filter>
   </defs>
 
   <style>
-    .book-container {
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      cursor: pointer;
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+
+    /* Page Turning / Flutter Animation */
+    @keyframes flipPageCurl {
+      0%, 100% {
+        transform: rotateY(0deg) skewY(0deg) scaleX(1);
+      }
+      20% {
+        transform: rotateY(0deg) skewY(0deg) scaleX(1);
+      }
+      38% {
+        transform: rotateY(-18deg) skewY(-2.5deg) scaleX(0.86) translateY(-6px);
+      }
+      52% {
+        transform: rotateY(-32deg) skewY(-4deg) scaleX(0.72) translateY(-12px);
+      }
+      68% {
+        transform: rotateY(-12deg) skewY(-1.8deg) scaleX(0.90) translateY(-4px);
+      }
+      82% {
+        transform: rotateY(-3deg) skewY(-0.5deg) scaleX(0.98);
+      }
     }
-    .book-container:hover {
-      transform: translateY(-6px);
+
+    .flipping-page-group {
+      transform-origin: 405px 280px;
+      animation: flipPageCurl 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
     }
+
+    /* Dynamic Shadow under curling page */
+    @keyframes pageShadowMove {
+      0%, 20%, 82%, 100% {
+        opacity: 0.2;
+        transform: scaleX(1);
+      }
+      52% {
+        opacity: 0.75;
+        transform: scaleX(0.8);
+      }
+    }
+
+    .curl-shadow {
+      transform-origin: 405px 280px;
+      animation: pageShadowMove 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    }
+
+    /* Floating Fountain Pen Animation */
+    @keyframes penHoverFloat {
+      0%, 100% {
+        transform: translate(615px, 355px) rotate(-28deg);
+      }
+      50% {
+        transform: translate(612px, 347px) rotate(-26deg);
+      }
+    }
+
     .pen-element {
-      transition: transform 0.4s ease;
+      animation: penHoverFloat 4s infinite ease-in-out;
     }
-    .book-container:hover .pen-element {
-      transform: translate(-3px, -3px) rotate(-1deg);
+
+    /* Glowing Ink Sparkle at Nib Tip */
+    @keyframes nibGlow {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.4); }
     }
-    @keyframes gentlePulse {
-      0%, 100% { opacity: 0.25; }
-      50% { opacity: 0.6; }
+
+    .nib-sparkle {
+      transform-origin: -1px 9px;
+      animation: nibGlow 2.5s infinite ease-in-out;
     }
-    .ambient-glow {
-      animation: gentlePulse 4s infinite ease-in-out;
+
+    /* Ribbon Subtle Flutter */
+    @keyframes ribbonFlutter {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(1.2deg); }
+    }
+
+    .ribbon-elem {
+      transform-origin: 400px 65px;
+      animation: ribbonFlutter 6s infinite ease-in-out;
+    }
+
+    /* Bottom Caption Pulsing Glow */
+    @keyframes captionPulse {
+      0%, 100% {
+        stroke-opacity: 0.4;
+        filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.3));
+      }
+      50% {
+        stroke-opacity: 0.9;
+        filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.7));
+      }
+    }
+
+    .caption-box {
+      animation: captionPulse 3s infinite ease-in-out;
+      cursor: pointer;
     }
   </style>
 
   <!-- Card Background Frame -->
-  <rect x="8" y="8" width="784" height="584" rx="22" fill="url(#bgGlow)" stroke="#1e293b" stroke-width="2" />
-  <rect x="12" y="12" width="776" height="576" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" />
+  <rect x="8" y="8" width="784" height="594" rx="22" fill="url(#bgGlow)" stroke="#1e293b" stroke-width="2" />
+  <rect x="12" y="12" width="776" height="586" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" />
 
-  <!-- Ambient Stars in Dark Space -->
+  <!-- Ambient Space Dust Particles -->
   <g opacity="0.35">
-    <circle cx="85" cy="75" r="1.5" fill="#38bdf8" />
-    <circle cx="150" cy="120" r="1" fill="#7dd3fc" />
-    <circle cx="705" cy="75" r="1.5" fill="#38bdf8" />
-    <circle cx="725" cy="135" r="1" fill="#ffffff" />
-    <circle cx="75" cy="515" r="1.5" fill="#38bdf8" />
-    <circle cx="715" cy="510" r="1.5" fill="#7dd3fc" />
-    <circle cx="400" cy="40" r="1" fill="#ffffff" />
-    <circle cx="400" cy="565" r="1" fill="#38bdf8" />
+    <circle cx="85" cy="65" r="1.5" fill="#38bdf8" />
+    <circle cx="150" cy="105" r="1" fill="#7dd3fc" />
+    <circle cx="705" cy="65" r="1.5" fill="#38bdf8" />
+    <circle cx="725" cy="120" r="1" fill="#ffffff" />
+    <circle cx="75" cy="485" r="1.5" fill="#38bdf8" />
+    <circle cx="715" cy="480" r="1.5" fill="#7dd3fc" />
+    <circle cx="400" cy="30" r="1" fill="#ffffff" />
   </g>
 
-  <!-- Ambient Blue Glow behind Book -->
-  <ellipse cx="400" cy="305" rx="350" ry="220" fill="#0284c7" class="ambient-glow" filter="url(#cyanAtmosphere)" />
+  <!-- Ambient Blue Aura behind Book -->
+  <ellipse cx="400" cy="280" rx="350" ry="210" fill="#0284c7" opacity="0.12" filter="url(#cyanAtmosphere)" />
 
-  <g class="book-container">
+  <!-- ==================== MAIN NOTEBOOK GRAPHIC ==================== -->
+  <g>
     <!-- Grounding Contact Shadow Beneath the Whole Book -->
-    <ellipse cx="400" cy="520" rx="345" ry="26" fill="#000000" opacity="0.9" filter="url(#softContactShadow)" />
-    <ellipse cx="400" cy="520" rx="320" ry="18" fill="#000000" opacity="0.8" />
+    <ellipse cx="400" cy="495" rx="345" ry="24" fill="#000000" opacity="0.9" filter="url(#softContactShadow)" />
+    <ellipse cx="400" cy="495" rx="320" ry="16" fill="#000000" opacity="0.8" />
 
-    <!-- ==================== 1. HARDCOVER LEATHER BASE ==================== -->
+    <!-- 1. HARDCOVER LEATHER BASE -->
     <!-- Left Leather Cover Flap -->
-    <path d="M 52 70 Q 230 64 395 72 L 395 514 Q 230 508 52 514 Z" fill="url(#coverLeather)" stroke="#0c4a6e" stroke-width="2" />
+    <path d="M 52 55 Q 230 49 395 57 L 395 488 Q 230 482 52 488 Z" fill="url(#coverLeather)" stroke="#0c4a6e" stroke-width="2" />
     <!-- Right Leather Cover Flap -->
-    <path d="M 405 72 Q 570 64 748 70 L 748 514 Q 570 508 405 514 Z" fill="url(#coverLeather)" stroke="#0c4a6e" stroke-width="2" />
+    <path d="M 405 57 Q 570 49 748 55 L 748 488 Q 570 482 405 488 Z" fill="url(#coverLeather)" stroke="#0c4a6e" stroke-width="2" />
 
     <!-- Handcrafted Leather Stitches (Dashed Cyan Lines) -->
-    <path d="M 62 80 Q 230 74 388 80 L 388 504 Q 230 498 62 504 Z" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,4" stroke-opacity="0.55" />
-    <path d="M 412 80 Q 570 74 738 80 L 738 504 Q 570 498 412 504 Z" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,4" stroke-opacity="0.55" />
+    <path d="M 62 65 Q 230 59 388 65 L 388 478 Q 230 472 62 478 Z" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,4" stroke-opacity="0.55" />
+    <path d="M 412 65 Q 570 59 738 65 L 738 478 Q 570 472 412 478 Z" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,4" stroke-opacity="0.55" />
 
     <!-- 4 Metallic Corner Brackets -->
     <!-- Top-Left Corner -->
-    <path d="M 52 110 L 52 70 L 92 70 Q 72 90 52 110 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
-    <circle cx="68" cy="86" r="2.5" fill="#020617" />
+    <path d="M 52 95 L 52 55 L 92 55 Q 72 75 52 95 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="68" cy="71" r="2.5" fill="#020617" />
     <!-- Bottom-Left Corner -->
-    <path d="M 52 474 L 52 514 L 92 514 Q 72 494 52 474 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
-    <circle cx="68" cy="498" r="2.5" fill="#020617" />
+    <path d="M 52 448 L 52 488 L 92 488 Q 72 468 52 448 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="68" cy="472" r="2.5" fill="#020617" />
     <!-- Top-Right Corner -->
-    <path d="M 748 110 L 748 70 L 708 70 Q 728 90 748 110 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
-    <circle cx="732" cy="86" r="2.5" fill="#020617" />
+    <path d="M 748 95 L 748 55 L 708 55 Q 728 75 748 95 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="732" cy="71" r="2.5" fill="#020617" />
     <!-- Bottom-Right Corner -->
-    <path d="M 748 474 L 748 514 L 708 514 Q 728 494 748 474 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
-    <circle cx="732" cy="498" r="2.5" fill="#020617" />
+    <path d="M 748 448 L 748 488 L 708 488 Q 728 468 748 448 Z" fill="url(#cornerChrome)" stroke="#7dd3fc" stroke-width="1" />
+    <circle cx="732" cy="472" r="2.5" fill="#020617" />
 
-    <!-- ==================== 2. MULTI-LAYER STACKED PAGES (PAGE DEPTH) ==================== -->
-    <!-- Left Stacked Pages Layers (Simulating thick block of papers) -->
-    <path d="M 76 80 L 392 82 L 392 502 L 76 502 Z" fill="#060a14" />
-    <path d="M 73 83 L 392 84 L 392 499 L 73 499 Z" fill="#090f1d" />
-    <path d="M 70 86 L 392 86 L 392 496 L 70 496 Z" fill="#0c1426" stroke="#1e293b" stroke-width="0.5" />
-    <path d="M 67 89 L 392 88 L 392 493 L 67 493 Z" fill="#101a30" />
-    <path d="M 64 92 L 392 90 L 392 490 L 64 490 Z" fill="#13203b" stroke="#1e293b" stroke-width="0.5" />
-    <path d="M 62 95 L 392 92 L 392 487 L 62 487 Z" fill="#172645" />
+    <!-- 2. MULTI-LAYER STACKED PAGES (PAGE DEPTH - THẤY NHIỀU TRANG GIẤY) -->
+    <!-- Left Stacked Pages Layers -->
+    <path d="M 76 65 L 392 67 L 392 477 L 76 477 Z" fill="#060a14" />
+    <path d="M 73 68 L 392 69 L 392 474 L 73 474 Z" fill="#090f1d" />
+    <path d="M 70 71 L 392 71 L 392 471 L 70 471 Z" fill="#0c1426" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 67 74 L 392 73 L 392 468 L 67 468 Z" fill="#101a30" />
+    <path d="M 64 77 L 392 75 L 392 465 L 64 465 Z" fill="#13203b" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 62 80 L 392 77 L 392 462 L 62 462 Z" fill="#172645" />
 
     <!-- Right Stacked Pages Layers -->
-    <path d="M 408 82 L 724 80 L 724 502 L 408 502 Z" fill="#060a14" />
-    <path d="M 408 84 L 727 83 L 727 499 L 408 499 Z" fill="#090f1d" />
-    <path d="M 408 86 L 730 86 L 730 496 L 408 496 Z" fill="#0c1426" stroke="#1e293b" stroke-width="0.5" />
-    <path d="M 408 88 L 733 89 L 733 493 L 408 493 Z" fill="#101a30" />
-    <path d="M 408 90 L 736 92 L 736 490 L 408 490 Z" fill="#13203b" stroke="#1e293b" stroke-width="0.5" />
-    <path d="M 408 92 L 738 95 L 738 487 L 408 487 Z" fill="#172645" />
+    <path d="M 408 67 L 724 65 L 724 477 L 408 477 Z" fill="#060a14" />
+    <path d="M 408 69 L 727 68 L 727 474 L 408 474 Z" fill="#090f1d" />
+    <path d="M 408 71 L 730 71 L 730 471 L 408 471 Z" fill="#0c1426" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 408 73 L 733 74 L 733 468 L 408 468 Z" fill="#101a30" />
+    <path d="M 408 75 L 736 77 L 736 465 L 408 465 Z" fill="#13203b" stroke="#1e293b" stroke-width="0.5" />
+    <path d="M 408 77 L 738 80 L 738 462 L 408 462 Z" fill="#172645" />
 
-    <!-- ==================== 3. TOP OPEN PARCHMENT PAGES ==================== -->
+    <!-- 3. TOP OPEN PARCHMENT PAGES -->
     <!-- Left Top Page (Arched upward from binding) -->
-    <path d="M 395 94 Q 230 84 66 93 L 66 484 Q 230 492 395 484 Z" fill="url(#leftPageSurf)" stroke="#1e293b" stroke-width="1.5" />
-    <!-- Right Top Page (Arched upward from binding) -->
-    <path d="M 405 94 Q 570 84 734 93 L 734 484 Q 570 492 405 484 Z" fill="url(#rightPageSurf)" stroke="#1e293b" stroke-width="1.5" />
+    <path d="M 395 79 Q 230 69 66 78 L 66 459 Q 230 467 395 459 Z" fill="url(#leftPageSurf)" stroke="#1e293b" stroke-width="1.5" />
 
-    <!-- Subtle Faint Ruled Lines on Left Page (Pure notebook guidelines, NO text) -->
+    <!-- Subtle Faint Ruled Lines on Left Page (No text, just lined paper) -->
     <g opacity="0.18" stroke="#38bdf8" stroke-width="1">
-      <line x1="95" y1="135" x2="365" y2="137" />
-      <line x1="95" y1="165" x2="365" y2="167" />
-      <line x1="95" y1="195" x2="365" y2="197" />
-      <line x1="95" y1="225" x2="365" y2="227" />
-      <line x1="95" y1="255" x2="365" y2="257" />
-      <line x1="95" y1="285" x2="365" y2="287" />
-      <line x1="95" y1="315" x2="365" y2="317" />
-      <line x1="95" y1="345" x2="365" y2="347" />
-      <line x1="95" y1="375" x2="365" y2="377" />
-      <line x1="95" y1="405" x2="365" y2="407" />
-      <line x1="95" y1="435" x2="365" y2="437" />
+      <line x1="95" y1="115" x2="365" y2="117" />
+      <line x1="95" y1="145" x2="365" y2="147" />
+      <line x1="95" y1="175" x2="365" y2="177" />
+      <line x1="95" y1="205" x2="365" y2="207" />
+      <line x1="95" y1="235" x2="365" y2="237" />
+      <line x1="95" y1="265" x2="365" y2="267" />
+      <line x1="95" y1="295" x2="365" y2="297" />
+      <line x1="95" y1="325" x2="365" y2="327" />
+      <line x1="95" y1="355" x2="365" y2="357" />
+      <line x1="95" y1="385" x2="365" y2="387" />
+      <line x1="95" y1="415" x2="365" y2="417" />
     </g>
 
-    <!-- Subtle Faint Ruled Lines on Right Page (Pure notebook guidelines, NO text) -->
-    <g opacity="0.18" stroke="#38bdf8" stroke-width="1">
-      <line x1="435" y1="137" x2="705" y2="135" />
-      <line x1="435" y1="167" x2="705" y2="165" />
-      <line x1="435" y1="197" x2="705" y2="195" />
-      <line x1="435" y1="227" x2="705" y2="225" />
-      <line x1="435" y1="257" x2="705" y2="255" />
-      <line x1="435" y1="287" x2="705" y2="285" />
-      <line x1="435" y1="317" x2="705" y2="315" />
-      <line x1="435" y1="347" x2="705" y2="345" />
-      <line x1="435" y1="377" x2="705" y2="375" />
-      <line x1="435" y1="407" x2="705" y2="405" />
-      <line x1="435" y1="437" x2="705" y2="435" />
+    <!-- Right Base Page (Visible underneath when top page curls) -->
+    <path d="M 405 79 Q 570 69 734 78 L 734 459 Q 570 467 405 459 Z" fill="url(#rightUnderPageSurf)" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Lines on Right Base Page -->
+    <g opacity="0.12" stroke="#38bdf8" stroke-width="1">
+      <line x1="435" y1="117" x2="705" y2="115" />
+      <line x1="435" y1="147" x2="705" y2="145" />
+      <line x1="435" y1="177" x2="705" y2="175" />
+      <line x1="435" y1="207" x2="705" y2="205" />
+      <line x1="435" y1="237" x2="705" y2="235" />
+      <line x1="435" y1="267" x2="705" y2="265" />
+      <line x1="435" y1="297" x2="705" y2="295" />
+      <line x1="435" y1="327" x2="705" y2="325" />
+      <line x1="435" y1="357" x2="705" y2="355" />
+      <line x1="435" y1="387" x2="705" y2="385" />
+      <line x1="435" y1="417" x2="705" y2="415" />
     </g>
 
-    <!-- Central Deep Binding Gutter & Spine Shadow -->
-    <path d="M 393 92 L 407 92 L 407 486 L 393 486 Z" fill="#04060d" />
-    <path d="M 398 70 L 402 70 L 402 516 L 398 516 Z" fill="url(#spineHighlight)" />
+    <!-- Moving shadow under curling page -->
+    <path class="curl-shadow" d="M 410 82 Q 570 72 730 81 L 730 456 Q 570 464 410 456 Z" fill="#000000" filter="url(#cyanAtmosphere)" />
 
-    <!-- Silk Bookmark Ribbon (Draped across binding and right page) -->
-    <path d="M 400 68 Q 425 180 435 300 Q 445 420 460 528 L 478 522 L 468 492 L 492 486 Q 460 380 445 260 Q 430 140 404 68 Z" fill="url(#ribbonSilk)" opacity="0.95" filter="url(#cyanAtmosphere)" />
+    <!-- 4. FLIPPING / CURLING TOP RIGHT PAGE (HIỆU ỨNG LẬT GIẤY NHẸ) -->
+    <g class="flipping-page-group">
+      <path d="M 405 79 Q 570 69 734 78 L 734 459 Q 570 467 405 459 Z" fill="url(#flippingPageSurf)" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.8" />
+      
+      <!-- Lined paper on curling page -->
+      <g opacity="0.18" stroke="#38bdf8" stroke-width="1">
+        <line x1="435" y1="117" x2="705" y2="115" />
+        <line x1="435" y1="147" x2="705" y2="145" />
+        <line x1="435" y1="177" x2="705" y2="175" />
+        <line x1="435" y1="207" x2="705" y2="205" />
+        <line x1="435" y1="237" x2="705" y2="235" />
+        <line x1="435" y1="267" x2="705" y2="265" />
+        <line x1="435" y1="297" x2="705" y2="295" />
+        <line x1="435" y1="327" x2="705" y2="325" />
+        <line x1="435" y1="357" x2="705" y2="355" />
+        <line x1="435" y1="387" x2="705" y2="385" />
+        <line x1="435" y1="417" x2="705" y2="415" />
+      </g>
+      
+      <!-- Page outer edge cyan reflection highlight -->
+      <path d="M 734 78 L 734 459" stroke="#7dd3fc" stroke-width="2" stroke-opacity="0.6" />
+    </g>
 
-    <!-- ==================== 4. REALISTIC LUXURY FOUNTAIN PEN ==================== -->
-    <g class="pen-element" transform="translate(615, 360) rotate(-28)">
+    <!-- Central Deep Binding Gutter & Spine Highlight -->
+    <path d="M 393 77 L 407 77 L 407 461 L 393 461 Z" fill="#04060d" />
+    <path d="M 398 55 L 402 55 L 402 490 L 398 490 Z" fill="url(#spineHighlight)" />
+
+    <!-- Silk Bookmark Ribbon (with subtle flutter) -->
+    <g class="ribbon-elem">
+      <path d="M 400 53 Q 425 165 435 285 Q 445 405 460 500 L 478 495 L 468 465 L 492 460 Q 460 365 445 245 Q 430 125 404 53 Z" fill="url(#ribbonSilk)" opacity="0.95" filter="url(#cyanAtmosphere)" />
+    </g>
+
+    <!-- 5. FLOATING FOUNTAIN PEN (CÂY BÚT CHUYỂN ĐỘNG NHẸ) -->
+    <g class="pen-element">
       <!-- Pen Cast Shadow on paper -->
       <rect x="0" y="16" width="220" height="18" rx="9" fill="#000000" opacity="0.55" filter="url(#cyanAtmosphere)" />
       
@@ -249,9 +366,24 @@
       <line x1="0" y1="9" x2="15" y2="9" stroke="#060913" stroke-width="1.2" />
       <circle cx="15" cy="9" r="1.6" fill="#060913" />
       
-      <!-- Glowing Blue Ink Droplet at Nib Tip -->
-      <circle cx="-1" cy="9" r="3.5" fill="#38bdf8" opacity="0.9" filter="url(#cyanAtmosphere)" />
-      <circle cx="-1" cy="9" r="1.5" fill="#ffffff" />
+      <!-- Glowing Blue Ink Droplet at Nib Tip (Pulsing) -->
+      <g class="nib-sparkle">
+        <circle cx="-1" cy="9" r="3.5" fill="#38bdf8" opacity="0.9" filter="url(#cyanAtmosphere)" />
+        <circle cx="-1" cy="9" r="1.5" fill="#ffffff" />
+      </g>
+    </g>
+
+    <!-- ==================== 6. BOTTOM CALL-TO-ACTION CAPTION ==================== -->
+    <!-- "click here to leave your mark on my profile" (Requested by user in English) -->
+    <g transform="translate(400, 552)" class="caption-box">
+      <!-- Background Glass Pill -->
+      <rect x="-240" y="-20" width="480" height="40" rx="20" fill="#090f1d" fill-opacity="0.88" stroke="#38bdf8" stroke-width="1.5" />
+      <rect x="-236" y="-16" width="472" height="32" rx="16" fill="none" stroke="#7dd3fc" stroke-width="0.8" stroke-opacity="0.4" />
+      
+      <!-- English CTA Text -->
+      <text x="0" y="5" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle" class="font-sans" letter-spacing="0.4">
+        ✍️ Click here to leave your mark on my profile ✦
+      </text>
     </g>
   </g>
 </svg>

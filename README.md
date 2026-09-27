@@ -36,7 +36,7 @@
       <div align="center">
         <!-- Realistic Clickable Guestbook Widget (Pure Vector SVG) -->
         <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-          <img src="./assets/guestbook.svg?v=2" alt="Click here to sign my guestbook & leave your mark" width="100%" />
+          <img src="./assets/guestbook.svg?v=3" alt="Click here to leave your mark on my profile" width="100%" />
         </a>
       </div>
     </td>
