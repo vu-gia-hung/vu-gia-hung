@@ -36,7 +36,11 @@
       <div align="center">
         <!-- Realistic Clickable Guestbook Widget (Pure Vector SVG) -->
         <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-          <img src="./assets/guestbook.svg?v=3" alt="Click here to leave your mark on my profile" width="100%" />
+          <img src="./assets/guestbook-v2.svg" alt="Click here to leave your mark on my profile" width="100%" />
+        </a>
+        <br/><br/>
+        <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
+          <img src="https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F_Click_here_to_leave_your_mark-on_my_profile_%E2%9C%A6-38bdf8?style=flat-square&logoColor=white" alt="Click here to leave your mark" />
         </a>
       </div>
     </td>
