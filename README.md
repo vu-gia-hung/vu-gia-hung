@@ -32,43 +32,17 @@
         </p>
       </div>
     </td>
-    <td width="27%" valign="top">
-<!-- GUESTBOOK:START -->
-<div align="center">
-  <b>📖 SỔ LƯU BÚT</b><br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+L%E1%BB%9Di+ch%C3%A0o+c%E1%BB%A7a+b%E1%BA%A1n&body=Nh%E1%BA%ADp+l%E1%BB%9Di+nh%E1%BA%AFn+g%E1%BB%ADi+t%E1%BB%9Bi+V%C5%A9+Gia+H%C6%B0ng+%E1%BB%9F+%C4%91%C3%A2y+nha!+%F0%9F%9A%80"><img src="https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F_K%C3%BD_T%C3%AAn-L%C6%B0u_B%C3%BAt-38bdf8?style=flat-square&logoColor=white" alt="Ký Lưu Bút" /></a>
-</div>
-
-  <p style="margin: 6px 0; font-size: 11px; line-height: 1.4;">
-    <a href="https://github.com/vu-gia-hung"><b>@vu-gia-hung</b></a>: <i>"Chào mừng bạn đã ghé thăm trạm vũ trụ của Hưng! Chúc bạn một ngày code không dính bug! 🚀"</i>
-  </p>
-  <p style="margin: 6px 0; font-size: 11px; line-height: 1.4;">
-    <a href="https://github.com/rmit-se-crew"><b>@rmit-se-crew</b></a>: <i>"Chào đồng môn RMIT! Profile đỉnh chóp quá người anh em! 🌟"</i>
-  </p>
-<!-- GUESTBOOK:END -->
-      <hr style="border: 0; border-top: 1px dashed #1e293b; margin: 10px 0;" />
+        <td width="27%" valign="top">
       <div align="center">
-        <b>🎴 QUẺ BÓI CODER</b><br/>
-        <sub><i>(Daily Fortune Teller)</i></sub>
+        <!-- Realistic Clickable Guestbook Widget -->
+        <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
+          <img src="./assets/guestbook.jpg" alt="Click here to sign my guestbook & leave your mark" width="100%" />
+        </a>
         <br/><br/>
-        <details>
-          <summary><b>🎲 Bốc quẻ hôm nay</b></summary>
-          <br/>
-          <img src="https://img.shields.io/badge/%E2%9C%A8_Qu%E1%BA%BB-Ch%C3%ADnh_T%C3%A2m-38bdf8?style=flat-square" alt="Quẻ Chính Tâm" /><br/>
-          <sub><i>"Code 1 phát compile chạy mượt mà, không dính bug, crush bất ngờ thả tim Story! 🌟"</i></sub>
-        </details>
-        <br/>
-        <details>
-          <summary><b>🔮 Lời khuyên Vũ Trụ</b></summary>
-          <br/>
-          <sub><i>"Sau 17h tuyệt đối cấm push nhánh main, bình tĩnh nhâm nhi cà phê! ☕"</i></sub>
-        </details>
-        <br/>
-        <details>
-          <summary><b>⚡ Tín hiệu Vi Mạch</b></summary>
-          <br/>
-          <sub><i>"Hàn mạch không bốc khói, nạp firmware không đơ bootloader, điểm lab A+! 🚀"</i></sub>
-        </details>
+        <!-- Realistic Clickable Fortune Teller Widget -->
+        <a href="https://github.com/vu-gia-hung/vu-gia-hung/blob/main/data/fortunes.json">
+          <img src="./assets/fortune.jpg" alt="Click here to draw your coder fortune & reveal destiny" width="100%" />
+        </a>
       </div>
     </td>
   </tr>
@@ -89,23 +63,13 @@
         <li><b>Live Portfolio</b>: <a href="https://vugiahung.is-a.dev"><b>vugiahung.is-a.dev</b></a></li>
       </ul>
     </td>
-    <td width="27%" valign="top">
-<!-- COFFEE:START -->
-<div align="center">
-  <b>☕ MÁY PHA CÀ PHÊ</b><br/>
-  <sub><i>(Caffeine Fuel Station)</i></sub>
-  <br/><br/>
-  <table border="0" width="100%">
-    <tr><td>☕ Cà phê sữa:</td><td align="right"><b>128 ly</b></td></tr>
-    <tr><td>⚡ Espresso:</td><td align="right"><b>84 shot</b></td></tr>
-    <tr><td>🥛 Bạc xỉu:</td><td align="right"><b>95 ly</b></td></tr>
-  </table>
-  <br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:suada&body=M%E1%BB%9Di+H%C6%B0ng+1+ly+C%C3%A0+ph%C3%AA+s%E1%BB%AFa+%C4%91%C3%A1+%C4%91%E1%BB%83+ch%E1%BA%A1y+deadline+RMIT!+%E2%98%95"><img src="https://img.shields.io/badge/%E2%98%95_M%E1%BB%9Di_C%C3%A0_Ph%C3%AA_S%E1%BB%AFa-38bdf8?style=flat-square&logoColor=white" alt="Mời Cà Phê Sữa" /></a><br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:espresso&body=B%C6%A1m+cho+H%C6%B0ng+1+shot+Espresso+t%C4%83ng+c%C6%B0%E1%BB%9Dng+%C3%A1p+l%E1%BB%B1c!+%E2%9A%A1"><img src="https://img.shields.io/badge/%E2%9A%A1_B%C6%A1m_Shot_Espresso-0284c7?style=flat-square&logoColor=white" alt="Bơm Espresso" /></a><br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:bacxiu&body=M%E1%BB%9Di+H%C6%B0ng+1+ly+B%E1%BA%A1c+x%E1%BB%89u+ng%E1%BB%8Dt+ng%C3%A0o+%C3%ADt+%C4%91%C6%B0%E1%BB%9Dng!+%F0%9F%A5%9B"><img src="https://img.shields.io/badge/%F0%9F%A5%9B_M%E1%BB%9Di_Ly_B%E1%BA%A1c_X%E1%BB%89u-0369a1?style=flat-square&logoColor=white" alt="Mời Bạc Xỉu" /></a>
-</div>
-<!-- COFFEE:END -->
+        <td width="27%" valign="top">
+      <div align="center">
+        <!-- Realistic Clickable Coffee Machine Widget -->
+        <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:suada&body=Fueling+Hung+with+a+fresh+cup+of+caffeine!+☕⚡">
+          <img src="./assets/coffee-machine.jpg" alt="Click here to brew me a coffee • Caffeine Fuel Station" width="100%" />
+        </a>
+      </div>
     </td>
   </tr>
 </table>
