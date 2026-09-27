@@ -32,16 +32,11 @@
         </p>
       </div>
     </td>
-        <td width="27%" valign="top">
+    <td width="27%" valign="top">
       <div align="center">
         <!-- Realistic Clickable Guestbook Widget (Pure Vector SVG) -->
         <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-          <img src="./assets/guestbook.svg" alt="Click here to sign my guestbook & leave your mark" width="100%" />
-        </a>
-        <br/><br/>
-        <!-- Realistic Clickable Fortune Teller Widget -->
-        <a href="https://github.com/vu-gia-hung/vu-gia-hung/blob/main/data/fortunes.json">
-          <img src="./assets/fortune.jpg" alt="Click here to draw your coder fortune & reveal destiny" width="100%" />
+          <img src="./assets/guestbook.svg?v=2" alt="Click here to sign my guestbook & leave your mark" width="100%" />
         </a>
       </div>
     </td>
@@ -63,13 +58,8 @@
         <li><b>Live Portfolio</b>: <a href="https://vugiahung.is-a.dev"><b>vugiahung.is-a.dev</b></a></li>
       </ul>
     </td>
-        <td width="27%" valign="top">
-      <div align="center">
-        <!-- Realistic Clickable Coffee Machine Widget -->
-        <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:suada&body=Fueling+Hung+with+a+fresh+cup+of+caffeine!+☕⚡">
-          <img src="./assets/coffee-machine.jpg" alt="Click here to brew me a coffee • Caffeine Fuel Station" width="100%" />
-        </a>
-      </div>
+    <td width="27%" valign="top">
+      <!-- Empty slot reserved for future widget -->
     </td>
   </tr>
 </table>
