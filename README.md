@@ -33,26 +33,14 @@
 
 ---
 
-<table border="0" width="100%" cellspacing="0" cellpadding="8">
-  <tr>
-    <td width="50%" valign="top" align="center">
-      <!-- Left 50%: Interactive Guestbook Notebook -->
-      <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-        <img src="./assets/guestbook-v2.svg" alt="Click here to leave your mark on my profile" width="100%" />
-      </a>
-      <br/><br/>
-      <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-        <img src="https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F_Click_here_to_leave_your_mark-on_my_profile_%E2%9C%A6-38bdf8?style=flat-square&logoColor=white" alt="Click here to leave your mark" />
-      </a>
-    </td>
-    <td width="50%" valign="top" align="center">
-      <!-- Right 50%: Reserved for Fortune Teller / Bói quẻ -->
-      <img src="./assets/slot-reserved.svg" alt="Reserved for Coder Fortune Teller" width="100%" />
-      <br/><br/>
-      <img src="https://img.shields.io/badge/%F0%9F%94%AE_Coder_Oracle_%26_Tarot-Coming_Soon_%E2%9C%A6-0284c7?style=flat-square&logoColor=white" alt="Coming Soon" />
-    </td>
-  </tr>
-</table>
+<!-- Interactive Guestbook Notebook (Left 50% Width) -->
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!">
+  <img src="./assets/guestbook-v3.svg" alt="Click here to leave your mark on my profile" width="50%" />
+</a>
+<br/>
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!">
+  <img src="https://img.shields.io/badge/Click_here_to_leave_your_mark-on_my_profile-38bdf8?style=flat-square" alt="Click here to leave your mark on my profile" />
+</a>
 
 ---
 
