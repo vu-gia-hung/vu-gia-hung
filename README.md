@@ -1,72 +1,67 @@
+<div align="center">
+
+  <!-- Branded Hero Banner -->
+  <a href="https://vugiahung.is-a.dev">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/banner.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" />
+      <img src="./assets/banner.svg" alt="Vu Gia Hung Banner" width="100%" />
+    </picture>
+  </a>
+
+  <!-- Dynamic Typing Subtitle -->
+  <a href="https://vugiahung.is-a.dev">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
+      <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=0284C7&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
+      <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" alt="Typing SVG" />
+    </picture>
+  </a>
+
+  <p align="center">
+    <a href="https://vugiahung.is-a.dev"><img src="https://img.shields.io/badge/Live%20Portfolio-vugiahung.is--a.dev-38bdf8?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
+    <a href="https://www.rmit.edu.vn/"><img src="https://img.shields.io/badge/RMIT%20Vietnam-Software%20Eng%20(Hons)-38bdf8?style=for-the-badge&logo=googlescholar&logoColor=white" alt="RMIT University" /></a>
+    <br/>
+    <img src="https://img.shields.io/badge/GPA-3.8%20%2F%204.0-38bdf8?style=for-the-badge&logo=target&logoColor=white" alt="GPA" />
+    <img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%2C%20VN-38bdf8?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+    <br/>
+    <img src="https://komarev.com/ghpvc/?username=vu-gia-hung&label=Profile%20Views&color=38bdf8&style=for-the-badge" alt="Profile Views" />
+    <a href="https://github.com/vu-gia-hung?tab=repositories"><img src="https://img.shields.io/badge/Open%20Source-Explorer-38bdf8?style=for-the-badge&logo=github&logoColor=white" alt="Open Source Explorer" /></a>
+  </p>
+
+</div>
+
+---
+
 <table border="0" width="100%" cellspacing="0" cellpadding="8">
   <tr>
-    <td width="73%" valign="top">
-      <div align="center">
-        <!-- Branded Hero Banner -->
-        <a href="https://vugiahung.is-a.dev">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="./assets/banner.svg" />
-            <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" />
-            <img src="./assets/banner.svg" alt="Vu Gia Hung Banner" width="100%" />
-          </picture>
-        </a>
-        <br/><br/>
-        <!-- Dynamic Typing Subtitle -->
-        <a href="https://vugiahung.is-a.dev">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=530&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
-            <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=3000&pause=1200&color=0284C7&center=true&vCenter=true&random=false&width=530&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
-            <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=530&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" alt="Typing SVG" />
-          </picture>
-        </a>
-        <br/>
-        <p align="center">
-          <a href="https://vugiahung.is-a.dev"><img src="https://img.shields.io/badge/Live%20Portfolio-vugiahung.is--a.dev-38bdf8?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
-          <a href="https://www.rmit.edu.vn/"><img src="https://img.shields.io/badge/RMIT%20Vietnam-Software%20Eng%20(Hons)-38bdf8?style=for-the-badge&logo=googlescholar&logoColor=white" alt="RMIT University" /></a>
-          <br/>
-          <img src="https://img.shields.io/badge/GPA-3.8%20%2F%204.0-38bdf8?style=for-the-badge&logo=target&logoColor=white" alt="GPA" />
-          <img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%2C%20VN-38bdf8?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
-          <br/>
-          <img src="https://komarev.com/ghpvc/?username=vu-gia-hung&label=Profile%20Views&color=38bdf8&style=for-the-badge" alt="Profile Views" />
-          <a href="https://github.com/vu-gia-hung?tab=repositories"><img src="https://img.shields.io/badge/Open%20Source-Explorer-38bdf8?style=for-the-badge&logo=github&logoColor=white" alt="Open Source Explorer" /></a>
-        </p>
-      </div>
+    <td width="50%" valign="top" align="center">
+      <!-- Left 50%: Interactive Guestbook Notebook -->
+      <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
+        <img src="./assets/guestbook-v2.svg" alt="Click here to leave your mark on my profile" width="100%" />
+      </a>
+      <br/><br/>
+      <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
+        <img src="https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F_Click_here_to_leave_your_mark-on_my_profile_%E2%9C%A6-38bdf8?style=flat-square&logoColor=white" alt="Click here to leave your mark" />
+      </a>
     </td>
-    <td width="27%" valign="top">
-      <div align="center">
-        <!-- Realistic Clickable Guestbook Widget (Pure Vector SVG) -->
-        <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-          <img src="./assets/guestbook-v2.svg" alt="Click here to leave your mark on my profile" width="100%" />
-        </a>
-        <br/><br/>
-        <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!+🚀">
-          <img src="https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F_Click_here_to_leave_your_mark-on_my_profile_%E2%9C%A6-38bdf8?style=flat-square&logoColor=white" alt="Click here to leave your mark" />
-        </a>
-      </div>
+    <td width="50%" valign="top" align="center">
+      <!-- Right 50%: Reserved for Fortune Teller / Bói quẻ -->
     </td>
   </tr>
 </table>
 
 ---
 
-<table border="0" width="100%" cellspacing="0" cellpadding="8">
-  <tr>
-    <td width="73%" valign="top">
-      <h3 style="margin-top: 0;">👨‍💻 About Me</h3>
-      <p>I am passionate about building resilient, high-performance systems spanning from bare-metal embedded hardware up to modern multimodal AI architectures and interactive web applications.</p>
-      <ul>
-        <li><b>Education</b>: Bachelor of Engineering (Software Engineering) (Honours) @ <b><a href="https://www.rmit.edu.vn/">RMIT University Vietnam</a></b> (Class of 2025–2029)</li>
-        <li><b>Academic Performance</b>: Cumulative GPA <b>3.8 / 4.0</b></li>
-        <li><b>Core Interests</b>: Generative AI, Large Language Models (LLMs), RAG &amp; Agentic Systems, Embedded Systems &amp; Robotics, Performance Engineering</li>
-        <li><b>Location</b>: Ho Chi Minh City, Vietnam</li>
-        <li><b>Live Portfolio</b>: <a href="https://vugiahung.is-a.dev"><b>vugiahung.is-a.dev</b></a></li>
-      </ul>
-    </td>
-    <td width="27%" valign="top">
-      <!-- Empty slot reserved for future widget -->
-    </td>
-  </tr>
-</table>
+### 👨‍💻 About Me
+
+I am passionate about building resilient, high-performance systems spanning from bare-metal embedded hardware up to modern multimodal AI architectures and interactive web applications.
+
+- **Education**: Bachelor of Engineering (Software Engineering) (Honours) @ **RMIT University Vietnam** (Class of 2025–2029)
+- **Academic Performance**: Cumulative GPA **3.8 / 4.0**
+- **Core Interests**: Generative AI, Large Language Models (LLMs), RAG &amp; Agentic Systems, Embedded Systems &amp; Robotics, Performance Engineering
+- **Location**: Ho Chi Minh City, Vietnam
+- **Live Portfolio**: [**vugiahung.is-a.dev**](https://vugiahung.is-a.dev)
 
 ---
 
