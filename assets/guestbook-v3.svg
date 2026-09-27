@@ -91,6 +91,14 @@
       <stop offset="100%" stop-color="#bae6fd" />
     </linearGradient>
 
+    <!-- Full Blue Solid CTA Gradient ("Khung màu xanh hoàn toàn lun cho nổi lên") -->
+    <linearGradient id="fullBlueCtaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="30%" stop-color="#0ea5e9" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
     <!-- Soft Ambient Glow Filter -->
     <filter id="cyanAtmosphere" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="8" result="blur" />
@@ -305,15 +313,23 @@
     </g>
 
     <!-- ==================== 6. BOTTOM CALL-TO-ACTION CAPTION ==================== -->
-    <g transform="translate(400, 528)">
-      <!-- Background Glass Pill with pulsing glow -->
-      <rect x="-210" y="-18" width="420" height="38" rx="19" fill="#090f1d" fill-opacity="0.9" stroke="#38bdf8" stroke-width="1.5">
-        <animate attributeName="stroke-opacity" values="0.4; 1; 0.4" dur="3s" repeatCount="indefinite" />
+    <!-- Centered in the SVG as an image caption with completely blue solid glowing frame ("khung màu xanh hoàn toàn lun cho nổi lên") -->
+    <g transform="translate(400, 526)">
+      <!-- Soft Outer Cyan Glow for prominence -->
+      <rect x="-240" y="-21" width="480" height="42" rx="21" fill="#38bdf8" opacity="0.35" filter="url(#cyanAtmosphere)">
+        <animate attributeName="opacity" values="0.25; 0.55; 0.25" dur="3s" repeatCount="indefinite" />
       </rect>
-      <rect x="-206" y="-14" width="412" height="30" rx="15" fill="none" stroke="#7dd3fc" stroke-width="0.8" stroke-opacity="0.4" />
-      
-      <!-- English CTA Text (No emojis, no icons) -->
-      <text x="0" y="6" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle" class="font-sans" letter-spacing="0.5">
+
+      <!-- Solid Electric Blue Pill Frame ("khung màu xanh hoàn toàn") -->
+      <rect x="-235" y="-19" width="470" height="38" rx="19" fill="url(#fullBlueCtaGrad)" stroke="#e0f2fe" stroke-width="1.5">
+        <animate attributeName="stroke-opacity" values="0.6; 1; 0.6" dur="2s" repeatCount="indefinite" />
+      </rect>
+
+      <!-- Glossy top reflection highlight -->
+      <path d="M -215 -17 Q 0 -13 215 -17" stroke="#ffffff" stroke-width="1" stroke-opacity="0.6" fill="none" />
+
+      <!-- High-contrast crisp text in horizontal & vertical center -->
+      <text x="0" y="6" fill="#020817" font-size="14.5" font-weight="800" text-anchor="middle" class="font-sans" letter-spacing="0.6">
         Click here to leave your mark on my profile
       </text>
     </g>
