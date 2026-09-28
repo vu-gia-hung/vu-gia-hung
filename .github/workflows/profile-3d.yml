@@ -37,5 +37,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A profile-3d-contrib assets/
-          git commit -m "chore: auto update 3d graph, activity graph and trophies" || exit 0
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto update 3d graph, activity graph and trophies"
+          fi
           git push

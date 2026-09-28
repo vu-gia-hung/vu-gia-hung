@@ -113,7 +113,10 @@ async function processIssueEvent() {
 
 if (require.main === module) {
   if (process.env.ISSUE_TITLE) {
-    processIssueEvent().catch(console.error);
+    processIssueEvent().catch(error => {
+      console.error(error);
+      process.exitCode = 1;
+    });
   } else {
     updateReadmeContent();
   }

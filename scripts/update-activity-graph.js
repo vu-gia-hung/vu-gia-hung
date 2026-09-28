@@ -1,16 +1,8 @@
-const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const fetchSvg = require('./fetch-svg');
 const { recolor3dNightGraph, recolor3dLightGraph } = require('./recolor-3d-graph');
 const { updateTrophies } = require('./update-trophies');
-
-const fetchSvg = (url) => new Promise((resolve, reject) => {
-  https.get(url, res => {
-    let d = '';
-    res.on('data', c => d += c);
-    res.on('end', () => resolve(d));
-  }).on('error', reject);
-});
 
 const injectNumbers = (svg, textColor, strokeColor) => {
   // Regex to match ct-point with x1, y1 and ct:value
@@ -75,4 +67,7 @@ async function run() {
   await updateTrophies();
 }
 
-run().catch(console.error);
+run().catch(error => {
+  console.error(error);
+  process.exitCode = 1;
+});

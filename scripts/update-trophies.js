@@ -1,14 +1,6 @@
-const https = require('https');
 const fs = require('fs');
 const path = require('path');
-
-const fetchSvg = (url) => new Promise((resolve, reject) => {
-  https.get(url, res => {
-    let d = '';
-    res.on('data', c => d += c);
-    res.on('end', () => resolve(d));
-  }).on('error', reject);
-});
+const fetchSvg = require('./fetch-svg');
 
 async function updateTrophies() {
   const darkTrophyUrl = 'https://profile-trophy.vercel.app/?username=vu-gia-hung&theme=tokyonight&no-bg=true&margin-w=4&column=7';
@@ -76,5 +68,8 @@ async function updateTrophies() {
 module.exports = { updateTrophies };
 
 if (require.main === module) {
-  updateTrophies().catch(console.error);
+  updateTrophies().catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
 }
