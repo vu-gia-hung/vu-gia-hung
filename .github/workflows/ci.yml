@@ -1,0 +1,31 @@
+name: Code Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check JavaScript syntax
+        run: |
+          for file in scripts/*.js; do
+            node --check "$file"
+          done
+
+      - name: Run SVG transformation tests
+        run: node --test tests/*.test.js
