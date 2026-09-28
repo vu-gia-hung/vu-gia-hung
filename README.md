@@ -217,7 +217,7 @@ I am passionate about building resilient, high-performance systems spanning from
   <!-- 3D Isometric Contribution Graph -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-blue.svg" />
     <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Isometric Contribution Graph" />
   </picture>
 

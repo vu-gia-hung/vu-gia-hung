@@ -57,9 +57,19 @@ async function run() {
 
   // Also sanitize 3D graphs (both dark and light) to guarantee 100% blue consistency
   const nightGraphPath = path.resolve(__dirname, '../profile-3d-contrib/profile-night-view.svg');
-  const lightGraphPath = path.resolve(__dirname, '../profile-3d-contrib/profile-green.svg');
+  const lightSourcePath = path.resolve(__dirname, '../profile-3d-contrib/profile-green.svg');
+  const lightBluePath = path.resolve(__dirname, '../profile-3d-contrib/profile-blue.svg');
+
   recolor3dNightGraph(nightGraphPath);
-  recolor3dLightGraph(lightGraphPath);
+
+  if (fs.existsSync(lightSourcePath)) {
+    recolor3dLightGraph(lightSourcePath, lightBluePath);
+    if (lightSourcePath !== lightBluePath && fs.existsSync(lightSourcePath)) {
+      fs.unlinkSync(lightSourcePath);
+    }
+  } else if (fs.existsSync(lightBluePath)) {
+    recolor3dLightGraph(lightBluePath, lightBluePath);
+  }
 
   // Also fetch and recolor trophies to 100% cosmic blues
   await updateTrophies();

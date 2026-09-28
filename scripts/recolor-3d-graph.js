@@ -27,7 +27,7 @@ function recolor3dNightGraph(filePath) {
   console.log(`Successfully recolored 3D night graph at ${filePath} to pure cosmic blues (no purple).`);
 }
 
-function recolor3dLightGraph(filePath) {
+function recolor3dLightGraph(filePath, destPath = filePath) {
   if (!fs.existsSync(filePath)) {
     console.log(`File not found: ${filePath}`);
     return;
@@ -68,15 +68,15 @@ function recolor3dLightGraph(filePath) {
   // Number 735 (fill="#111133" -> fill="#0284c7")
   content = content.replace(/fill="#111133">735<\/text>/g, 'fill="#0284c7">735</text>');
 
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Successfully recolored 3D light graph at ${filePath} to pure sapphire/cyan blues.`);
+  fs.writeFileSync(destPath, content, 'utf8');
+  console.log(`Successfully recolored 3D light graph at ${destPath} to pure sapphire/cyan blues.`);
 }
 
 module.exports = { recolor3dNightGraph, recolor3dLightGraph };
 
 if (require.main === module) {
   const nightTarget = path.resolve(__dirname, '../profile-3d-contrib/profile-night-view.svg');
-  const lightTarget = path.resolve(__dirname, '../profile-3d-contrib/profile-green.svg');
+  const lightTarget = path.resolve(__dirname, '../profile-3d-contrib/profile-blue.svg');
   recolor3dNightGraph(nightTarget);
   recolor3dLightGraph(lightTarget);
 }

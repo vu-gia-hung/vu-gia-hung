@@ -43,6 +43,9 @@ async function updateTrophies() {
   // Replace B cup with radiant ice cyan
   darkSvg = darkSvg.replace(/#8be9fd/gi, '#7dd3fc');
 
+  // Make rank letter text inside dark cups bold to match light theme
+  darkSvg = darkSvg.replace(/<text\s+x="6"\s+y="8"\s+font-family="Courier,\s*Monospace"\s+font-size="7"\s+fill="[^"]*">/gi, '<text x="6" y="8" font-family="Courier, Monospace" font-size="7" font-weight="bold" fill="#0d1117">');
+
   // Recolor Light Theme Trophies to Crisp Sapphire & Sky Blue (ZERO brown/gold/green)
   let lightSvg = rawLight;
   lightSvg = lightSvg.replace(/#009366/gi, '#0284c7');
