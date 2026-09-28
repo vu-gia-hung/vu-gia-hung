@@ -34,51 +34,48 @@
 ---
 
 <table border="0" width="100%" cellspacing="0" cellpadding="8">
-  <tr>
-    <!-- Left 50%: Interactive Guestbook Notebook -->
-    <td width="50%" align="center" valign="top">
-      <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20--%3E%0A%0A">
-        <img src="./assets/guestbook-v5.svg" alt="Guestbook Notebook" width="100%" />
-      </a>
-      <br/><br/>
-      <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20--%3E%0A%0A">
-        <img src="https://img.shields.io/badge/Click_here_to_leave_your_mark_on_my_profile-38bdf8?style=for-the-badge" alt="Click here to leave your mark on my profile" />
-      </a>
-    </td>
-
-    <!-- Right 50%: Recent Guestbook Messages Board -->
-    <td width="50%" valign="top">
+<tr>
+<td width="50%" align="center" valign="top">
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20--%3E%0A%0A">
+<img src="./assets/guestbook-v5.svg" alt="Guestbook Notebook" width="100%" />
+</a>
+<br/><br/>
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20--%3E%0A%0A">
+<img src="https://img.shields.io/badge/Click_here_to_leave_your_mark_on_my_profile-38bdf8?style=for-the-badge" alt="Click here to leave your mark on my profile" />
+</a>
+</td>
+<td width="50%" valign="top">
 <!-- GUESTBOOK:START -->
-          <div align="left">
-            <p>
-              <b>RECENT GUESTBOOK ENTRIES</b> &nbsp; <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
-              <br/>
-              <small style="color: #8b949e;">Leave a message on the left to appear here!</small>
-            </p>
-            <hr/>
-            <p>
-              <a href="https://github.com/vu-gia-hung">
-                <img src="https://github.com/vu-gia-hung.png?size=32" width="32" height="32" align="left" />
-              </a>
-              &nbsp;<b><a href="https://github.com/vu-gia-hung">@vu-gia-hung</a></b> <small style="color: #8b949e;">• 2026-09-28</small><br/>
-              &nbsp;💬 <i>"Testing"</i>
-            </p>
-            <hr/>
-            <p>
-              <a href="https://github.com/rmit-se-crew">
-                <img src="https://github.com/rmit-se-crew.png?size=32" width="32" height="32" align="left" />
-              </a>
-              &nbsp;<b><a href="https://github.com/rmit-se-crew">@rmit-se-crew</a></b> <small style="color: #8b949e;">• 2026-09-27</small><br/>
-              &nbsp;💬 <i>"Chào đồng môn RMIT! Profile đỉnh chóp quá người anh em! 🌟"</i>
-            </p>
-            <hr/>
-            <p align="right">
-              <small><a href="https://github.com/vu-gia-hung/vu-gia-hung/issues?q=is%3Aissue">View all messages &rarr;</a></small>
-            </p>
-          </div>
-          <!-- GUESTBOOK:END -->
-    </td>
-  </tr>
+<div align="left">
+<p>
+<b>RECENT GUESTBOOK ENTRIES</b> &nbsp; <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
+<br/>
+<small style="color: #8b949e;">Leave a message on the left to appear here!</small>
+</p>
+<hr/>
+<p>
+<a href="https://github.com/vu-gia-hung">
+<img src="https://github.com/vu-gia-hung.png?size=32" width="32" height="32" align="left" />
+</a>
+&nbsp;<b><a href="https://github.com/vu-gia-hung">@vu-gia-hung</a></b> <small style="color: #8b949e;">• 2026-09-28</small><br/>
+&nbsp;💬 <i>"Testing"</i>
+</p>
+<hr/>
+<p>
+<a href="https://github.com/rmit-se-crew">
+<img src="https://github.com/rmit-se-crew.png?size=32" width="32" height="32" align="left" />
+</a>
+&nbsp;<b><a href="https://github.com/rmit-se-crew">@rmit-se-crew</a></b> <small style="color: #8b949e;">• 2026-09-27</small><br/>
+&nbsp;💬 <i>"Chào đồng môn RMIT! Profile đỉnh chóp quá người anh em! 🌟"</i>
+</p>
+<hr/>
+<p align="right">
+<small><a href="https://github.com/vu-gia-hung/vu-gia-hung/issues?q=is%3Aissue+guestbook">View all messages &rarr;</a></small>
+</p>
+</div>
+<!-- GUESTBOOK:END -->
+</td>
+</tr>
 </table>
 
 ---

@@ -21,29 +21,29 @@ function renderGuestbookHtml(entries) {
     const safeUser = sanitizeText(e.username);
     const safeMsg = sanitizeText(e.message);
     const safeDate = sanitizeText(e.date || 'Recent');
-    listHtml += `            <p>
-              <a href="https://github.com/${safeUser}">
-                <img src="https://github.com/${safeUser}.png?size=32" width="32" height="32" align="left" />
-              </a>
-              &nbsp;<b><a href="https://github.com/${safeUser}">@${safeUser}</a></b> <small style="color: #8b949e;">• ${safeDate}</small><br/>
-              &nbsp;💬 <i>"${safeMsg}"</i>
-            </p>${idx < Math.min(entries.length, 3) - 1 ? '\n            <hr/>' : ''}\n`;
+    listHtml += `<p>
+<a href="https://github.com/${safeUser}">
+<img src="https://github.com/${safeUser}.png?size=32" width="32" height="32" align="left" />
+</a>
+&nbsp;<b><a href="https://github.com/${safeUser}">@${safeUser}</a></b> <small style="color: #8b949e;">• ${safeDate}</small><br/>
+&nbsp;💬 <i>"${safeMsg}"</i>
+</p>${idx < Math.min(entries.length, 3) - 1 ? '\n<hr/>\n' : '\n'}`;
   });
 
   return `<!-- GUESTBOOK:START -->
-          <div align="left">
-            <p>
-              <b>RECENT GUESTBOOK ENTRIES</b> &nbsp; <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
-              <br/>
-              <small style="color: #8b949e;">Leave a message on the left to appear here!</small>
-            </p>
-            <hr/>
-${listHtml}            <hr/>
-            <p align="right">
-              <small><a href="https://github.com/vu-gia-hung/vu-gia-hung/issues?q=is%3Aissue">View all messages &rarr;</a></small>
-            </p>
-          </div>
-          <!-- GUESTBOOK:END -->`;
+<div align="left">
+<p>
+<b>RECENT GUESTBOOK ENTRIES</b> &nbsp; <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
+<br/>
+<small style="color: #8b949e;">Leave a message on the left to appear here!</small>
+</p>
+<hr/>
+${listHtml}<hr/>
+<p align="right">
+<small><a href="https://github.com/vu-gia-hung/vu-gia-hung/issues?q=is%3Aissue+guestbook">View all messages &rarr;</a></small>
+</p>
+</div>
+<!-- GUESTBOOK:END -->`;
 }
 
 function renderCoffeeHtml(coffee) {
