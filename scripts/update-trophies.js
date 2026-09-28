@@ -50,14 +50,18 @@ async function updateTrophies() {
   lightSvg = lightSvg.replace(/#886000/gi, '#0369a1');
   lightSvg = lightSvg.replace(/#B0B0B0/gi, '#38bdf8');
   lightSvg = lightSvg.replace(/#A18D66/gi, '#60a5fa');
-  lightSvg = lightSvg.replace(/#412D06/gi, '#ffffff');
-  lightSvg = lightSvg.replace(/#505050/gi, '#ffffff');
   lightSvg = lightSvg.replace(/#777777|#777/gi, '#0284c7');
   lightSvg = lightSvg.replace(/#0366d6/gi, '#0284c7');
   lightSvg = lightSvg.replace(/#e1e4e8/gi, '#e2e8f0');
   lightSvg = lightSvg.replace(/#000000|#000/gi, '#0284c7');
   lightSvg = lightSvg.replace(/#666666|#666/gi, '#475569');
   lightSvg = lightSvg.replace(/#333333|#333/gi, '#475569');
+
+  // Give rank circle a clean ice-blue outline for crisp definition
+  lightSvg = lightSvg.replace(/<circle\s+cx="8"\s+cy="6"\s+r="4"\s+fill="#FFF"\s*\/>/gi, '<circle cx="8" cy="6" r="4" fill="#ffffff" stroke="#bae6fd" stroke-width="0.6" />');
+
+  // Fix rank letter text inside cups (A, B, C, S, ?) so they are clearly visible and bold in cosmic sapphire blue
+  lightSvg = lightSvg.replace(/<text\s+x="6"\s+y="8"\s+font-family="Courier,\s*Monospace"\s+font-size="7"\s+fill="[^"]*">/gi, '<text x="6" y="8" font-family="Courier, Monospace" font-size="7" font-weight="bold" fill="#0284c7">');
 
   const assetsDir = path.resolve(__dirname, '../assets');
   fs.mkdirSync(assetsDir, { recursive: true });

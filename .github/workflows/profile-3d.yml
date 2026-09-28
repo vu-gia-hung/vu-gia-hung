@@ -28,6 +28,10 @@ jobs:
       - name: Update Activity Graph, 3D Graph & Trophies With Cosmic Blue Theme
         run: node scripts/update-activity-graph.js
 
+      - name: Clean up unused 3D themes
+        run: |
+          find profile-3d-contrib/ -type f ! -name 'profile-night-view.svg' ! -name 'profile-green.svg' -delete
+
       - name: Commit & Push changes
         run: |
           git config user.name "github-actions[bot]"
