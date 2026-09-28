@@ -38,6 +38,7 @@
   <img src="./assets/guestbook-v5.svg" alt="Guestbook Notebook" width="50%" />
 </a>
 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!">
   <img src="https://img.shields.io/badge/Click_here_to_leave_your_mark_on_my_profile-38bdf8?style=for-the-badge" alt="Click here to leave your mark on my profile" />
 </a>
