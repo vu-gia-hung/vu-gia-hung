@@ -56,19 +56,19 @@
 </p>
 <hr/>
 <p>
+<a href="https://github.com/Articial-space">
+<img src="https://github.com/Articial-space.png?size=32" width="32" height="32" align="left" />
+</a>
+&nbsp;<b><a href="https://github.com/Articial-space">@Articial-space</a></b> <small style="color: #8b949e;">• 2026-09-28 14:05</small><br/>
+&nbsp;💬 <i>"Hung was a smart guy, however, he is ga..."</i>
+</p>
+<hr/>
+<p>
 <a href="https://github.com/s4126139">
 <img src="https://github.com/s4126139.png?size=32" width="32" height="32" align="left" />
 </a>
 &nbsp;<b><a href="https://github.com/s4126139">@s4126139</a></b> <small style="color: #8b949e;">• 2026-09-28 14:04</small><br/>
 &nbsp;💬 <i>"He’s the genius of geniuses."</i>
-</p>
-<hr/>
-<p>
-<a href="https://github.com/vu-gia-hung">
-<img src="https://github.com/vu-gia-hung.png?size=32" width="32" height="32" align="left" />
-</a>
-&nbsp;<b><a href="https://github.com/vu-gia-hung">@vu-gia-hung</a></b> <small style="color: #8b949e;">• 2026-09-28 13:44</small><br/>
-&nbsp;💬 <i>"Test Test Test Test Test Test Test Test..."</i>
 </p>
 <hr/>
 <p align="right">
