@@ -1,27 +1,27 @@
 [
   {
-    "type": "ĐẠI CÁT",
+    "type": "GREAT FORTUNE",
     "badge": "38bdf8",
-    "quote": "Code 1 phát compile thành công ngay lần đầu, máy lạnh RMIT chạy êm ru, crush bất ngờ thả tim Story! 🌟"
+    "quote": "Code compiles on the very first try, RMIT air conditioning runs cool and quiet, crush unexpectedly hearts your story! 🌟"
   },
   {
-    "type": "TRUNG BÌNH",
+    "type": "MODERATE FORTUNE",
     "badge": "0284c7",
-    "quote": "Code chạy trơn tru mượt mà, nhưng bạn sẽ mất cả buổi chiều ngồi hoang mang vì không hiểu tại sao nó chạy. 🤔"
+    "quote": "Everything runs flawlessly, but you will spend the entire afternoon in existential confusion wondering WHY it works. 🤔"
   },
   {
-    "type": "CẨN THẬN",
+    "type": "CAUTION",
     "badge": "0369a1",
-    "quote": "Tuyệt đối không đụng vào nhánh main sau 17h, cấm nghe lời đồng đội bảo 'chút nữa tao nộp bài'. ⚠️"
+    "quote": "Never touch the main branch after 5 PM, and never believe your teammate saying 'I will submit in a minute'. ⚠️"
   },
   {
-    "type": "ĐẠI CÁT",
+    "type": "GREAT FORTUNE",
     "badge": "38bdf8",
-    "quote": "Hôm nay hàn mạch không bị bốc khói, nạp firmware không bị treo bootloader, tiền lương đồ án sắp về! ⚡"
+    "quote": "Today solder joints do not smoke, firmware flashes without bricking the bootloader, capstone stipend is arriving! ⚡"
   },
   {
-    "type": "BÌNH AN",
+    "type": "PEACEFUL",
     "badge": "0284c7",
-    "quote": "Mô hình AI hôm nay ngoan ngoãn lạ thường, trả lời chuẩn chỉ 100% không bịa một câu nào. 🤖"
+    "quote": "AI models behave exceptionally well today, answering 100% accurately with zero hallucinations. 🤖"
   }
 ]

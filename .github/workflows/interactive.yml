@@ -46,7 +46,7 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
           if [[ "${ISSUE_TITLE}" =~ ^guestbook ]]; then
-            gh issue comment "$ISSUE_NUMBER" --body "Cảm ơn **@$ISSUE_USER** đã để lại lời chúc trong Sổ Lưu Bút của Vũ Gia Hưng! Lời chúc của bạn đã được cập nhật trực tiếp lên profile rồi nha! 🚀💙"
+            gh issue comment "$ISSUE_NUMBER" --body "Thank you **@$ISSUE_USER** for leaving your mark on Vu Gia Hung's guestbook! Your message has been updated directly on the profile! 🚀💙"
           else
-            gh issue comment "$ISSUE_NUMBER" --body "Cảm ơn **@$ISSUE_USER** đã tiếp thêm một ly caffeine năng lượng cho Vũ Gia Hưng cày deadline và build open-source! Máy pha cà phê đã nhảy số thành công! ☕⚡"
+            gh issue comment "$ISSUE_NUMBER" --body "Thank you **@$ISSUE_USER** for fueling Vu Gia Hung with caffeine energy! The coffee counter has been updated successfully! ☕⚡"
           fi

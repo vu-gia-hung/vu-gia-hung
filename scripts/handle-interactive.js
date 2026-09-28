@@ -49,18 +49,18 @@ ${listHtml}<hr/>
 function renderCoffeeHtml(coffee) {
   return `<!-- COFFEE:START -->
 <div align="center">
-  <b>☕ MÁY PHA CÀ PHÊ</b><br/>
+  <b>☕ COFFEE MACHINE</b><br/>
   <sub><i>(Caffeine Fuel Station)</i></sub>
   <br/><br/>
   <table border="0" width="100%">
-    <tr><td>☕ Cà phê sữa:</td><td align="right"><b>${coffee.suada || 128} ly</b></td></tr>
-    <tr><td>⚡ Espresso:</td><td align="right"><b>${coffee.espresso || 84} shot</b></td></tr>
-    <tr><td>🥛 Bạc xỉu:</td><td align="right"><b>${coffee.bacxiu || 95} ly</b></td></tr>
+    <tr><td>☕ Iced Milk Coffee:</td><td align="right"><b>${coffee.suada || 128} cups</b></td></tr>
+    <tr><td>⚡ Espresso:</td><td align="right"><b>${coffee.espresso || 84} shots</b></td></tr>
+    <tr><td>🥛 White Coffee:</td><td align="right"><b>${coffee.bacxiu || 95} cups</b></td></tr>
   </table>
   <br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:suada&body=M%E1%BB%9Di+H%C6%B0ng+1+ly+C%C3%A0+ph%C3%AA+s%E1%BB%AFa+%C4%91%C3%A1+%C4%91%E1%BB%83+ch%E1%BA%A1y+deadline+RMIT!+%E2%98%95"><img src="https://img.shields.io/badge/%E2%98%95_M%E1%BB%9Di_C%C3%A0_Ph%C3%AA_S%E1%BB%AFa-38bdf8?style=flat-square&logoColor=white" alt="Mời Cà Phê Sữa" /></a><br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:espresso&body=B%C6%A1m+cho+H%C6%B0ng+1+shot+Espresso+t%C4%83ng+c%C6%B0%E1%BB%9Dng+%C3%A1p+l%E1%BB%B1c!+%E2%9A%A1"><img src="https://img.shields.io/badge/%E2%9A%A1_B%C6%A1m_Shot_Espresso-0284c7?style=flat-square&logoColor=white" alt="Bơm Espresso" /></a><br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:bacxiu&body=M%E1%BB%9Di+H%C6%B0ng+1+ly+B%E1%BA%A1c+x%E1%BB%89u+ng%E1%BB%8Dt+ng%C3%A0o+%C3%ADt+%C4%91%C6%B0%E1%BB%9Dng!+%F0%9F%A5%9B"><img src="https://img.shields.io/badge/%F0%9F%A5%9B_M%E1%BB%9Di_Ly_B%E1%BA%A1c_X%E1%BB%89u-0369a1?style=flat-square&logoColor=white" alt="Mời Bạc Xỉu" /></a>
+  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:suada&body=Treat+Hung+to+an+Iced+Milk+Coffee!+%E2%98%95"><img src="https://img.shields.io/badge/%E2%98%95_Treat_Iced_Coffee-38bdf8?style=flat-square&logoColor=white" alt="Treat Iced Coffee" /></a><br/>
+  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:espresso&body=Pump+Hung+with+an+Espresso+shot!+%E2%9A%A1"><img src="https://img.shields.io/badge/%E2%9A%A1_Pump_Espresso_Shot-0284c7?style=flat-square&logoColor=white" alt="Pump Espresso" /></a><br/>
+  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=coffee:bacxiu&body=Treat+Hung+to+a+White+Coffee!+%F0%9F%A5%9B"><img src="https://img.shields.io/badge/%F0%9F%A5%9B_Treat_White_Coffee-0369a1?style=flat-square&logoColor=white" alt="Treat White Coffee" /></a>
 </div>
 <!-- COFFEE:END -->`;
 }
@@ -103,7 +103,7 @@ async function processIssueEvent() {
     if (!msg) {
       msg = issueTitle.replace(/^.*guestbook:?\s*/i, '').trim();
     }
-    msg = sanitizeText(msg) || 'Đã để lại dấu ấn trên profile của Hưng! ✨';
+    msg = sanitizeText(msg) || 'Left a mark on Hung\'s profile! ✨';
 
     const guestbookData = JSON.parse(fs.readFileSync(GUESTBOOK_PATH, 'utf8'));
     guestbookData.unshift({
