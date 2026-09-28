@@ -36,11 +36,11 @@
 <table border="0" width="100%" cellspacing="0" cellpadding="8">
 <tr>
 <td width="50%" align="center" valign="top">
-<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20(Vui%20l%C3%B2ng%20kh%C3%B4ng%20x%C3%B3a%20comment%20n%C3%A0y)%20--%3E%0A%0A">
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20NOTE%3A%20Please%20do%20not%20edit%20or%20delete%20the%20issue%20title!%20Leave%20your%20message%20for%20Hung%20below%3A%20--%3E%0A%0A">
 <img src="./assets/guestbook-v5.svg" alt="Guestbook Notebook" width="100%" />
 </a>
 <br/><br/>
-<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20(Vui%20l%C3%B2ng%20kh%C3%B4ng%20x%C3%B3a%20comment%20n%C3%A0y)%20--%3E%0A%0A">
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20NOTE%3A%20Please%20do%20not%20edit%20or%20delete%20the%20issue%20title!%20Leave%20your%20message%20for%20Hung%20below%3A%20--%3E%0A%0A">
 <img src="https://img.shields.io/badge/Click_here_to_leave_your_mark_on_my_profile-38bdf8?style=for-the-badge" alt="Click here to leave your mark on my profile" />
 </a>
 <br/>
