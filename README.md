@@ -61,14 +61,6 @@
 &nbsp;💬 <i>"Testing"</i>
 </p>
 <hr/>
-<p>
-<a href="https://github.com/rmit-se-crew">
-<img src="https://github.com/rmit-se-crew.png?size=32" width="32" height="32" align="left" />
-</a>
-&nbsp;<b><a href="https://github.com/rmit-se-crew">@rmit-se-crew</a></b> <small style="color: #8b949e;">• 2026-09-27</small><br/>
-&nbsp;💬 <i>"Chào đồng môn RMIT! Profile đỉnh chóp quá người anh em! 🌟"</i>
-</p>
-<hr/>
 <p align="right">
 <small><a href="https://github.com/vu-gia-hung/vu-gia-hung/issues?q=is%3Aissue+guestbook">View all messages &rarr;</a></small>
 </p>

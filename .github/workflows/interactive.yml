@@ -38,7 +38,7 @@ jobs:
           git commit -m "chore(interactive): update profile widgets [skip ci]" || echo "No changes to commit"
           git push
 
-      - name: Close and comment on issue
+      - name: Comment on issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
@@ -50,4 +50,3 @@ jobs:
           else
             gh issue comment "$ISSUE_NUMBER" --body "Cảm ơn **@$ISSUE_USER** đã tiếp thêm một ly caffeine năng lượng cho Vũ Gia Hưng cày deadline và build open-source! Máy pha cà phê đã nhảy số thành công! ☕⚡"
           fi
-          gh issue close "$ISSUE_NUMBER"
