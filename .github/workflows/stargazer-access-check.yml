@@ -1,0 +1,19 @@
+name: Stargazer API Access Check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-stargazer-access:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check stargazer list access without printing identities
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          count="$(gh api "repos/${GH_REPOSITORY}/stargazers?per_page=1" --jq 'length')"
+          echo "GITHUB_TOKEN can read the stargazer endpoint; page result count: ${count}"
