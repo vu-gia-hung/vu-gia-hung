@@ -34,12 +34,12 @@
 ---
 
 <!-- Interactive Guestbook Notebook (Left 50% Width) -->
-<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!">
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20--%3E%0A%0A">
   <img src="./assets/guestbook-v5.svg" alt="Guestbook Notebook" width="50%" />
 </a>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+Hello+from+a+visitor!&body=Leave+your+message+for+Hung+here!">
+<a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20Leave%20your%20message%20for%20Hung%20here%20--%3E%0A%0A">
   <img src="https://img.shields.io/badge/Click_here_to_leave_your_mark_on_my_profile-38bdf8?style=for-the-badge" alt="Click here to leave your mark on my profile" />
 </a>
 
