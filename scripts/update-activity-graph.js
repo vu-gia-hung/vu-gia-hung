@@ -1,32 +1,64 @@
 const fs = require('fs');
 const path = require('path');
 const fetchSvg = require('./fetch-svg');
+const { escapeXmlText, getAttribute, hasClass } = require('./svg-utils');
 const { recolor3dNightGraph, recolor3dLightGraph } = require('./recolor-3d-graph');
 const { updateTrophies } = require('./update-trophies');
 
-const injectNumbers = (svg, textColor, strokeColor) => {
-  // Regex to match ct-point with x1, y1 and ct:value
-  const regex = /<line\s+[^>]*x1="([^"]+)"[^>]*y1="([^"]+)"[^>]*class="ct-point"[^>]*ct:value="([^"]+)"[^>]*>/g;
-  let labels = '\n  <!-- Dynamic Point Value Labels -->\n  <g font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">\n';
-  let count = 0;
+function injectNumbers(svg, textColor, strokeColor) {
+  const pointLines = (svg.match(/<line\b[^>]*>/gi) || []).filter(tag => hasClass(tag, 'ct-point'));
+  if (pointLines.length === 0) {
+    throw new Error('Activity graph SVG contains no ct-point elements to label.');
+  }
 
-  let match;
-  while ((match = regex.exec(svg)) !== null) {
-    count++;
-    const x = parseFloat(match[1]);
-    const y = parseFloat(match[2]);
-    const val = match[3];
+  let labels = '\n  <!-- Dynamic Point Value Labels -->\n  <g font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">\n';
+  for (const tag of pointLines) {
+    const xValue = getAttribute(tag, 'x1');
+    const yValue = getAttribute(tag, 'y1');
+    const value = getAttribute(tag, 'ct:value');
+    const x = Number(xValue);
+    const y = Number(yValue);
+
+    if (xValue === null || yValue === null || value === null || !Number.isFinite(x) || !Number.isFinite(y)) {
+      throw new Error(`Activity graph contains a ct-point with missing or invalid coordinates: ${tag}`);
+    }
 
     // Place text 9px above the dot with clean background outline for crisp contrast
-    labels += `    <text x="${x.toFixed(1)}" y="${(y - 9).toFixed(1)}" fill="${textColor}" stroke="${strokeColor}" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill">${val}</text>\n`;
+    labels += `    <text x="${x.toFixed(1)}" y="${(y - 9).toFixed(1)}" fill="${textColor}" stroke="${strokeColor}" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill">${escapeXmlText(value)}</text>\n`;
   }
   labels += '  </g>\n';
 
-  console.log('Injected labels count:', count);
-  const lastIndex = svg.lastIndexOf('</svg>');
-  if (lastIndex === -1) return svg + labels;
-  return svg.slice(0, lastIndex) + labels + svg.slice(lastIndex);
-};
+  const closingTags = [...svg.matchAll(/<\/svg\s*>/gi)];
+  const lastClosingTag = closingTags[closingTags.length - 1];
+  if (!lastClosingTag) {
+    throw new Error('Activity graph response has no closing </svg> tag.');
+  }
+
+  console.log('Injected labels count:', pointLines.length);
+  return svg.slice(0, lastClosingTag.index) + labels + svg.slice(lastClosingTag.index);
+}
+
+function recolorActivityArea(svg) {
+  let replacements = 0;
+  const recolored = svg.replace(/([^{}]+)\{([^{}]*)\}/g, (rule, selector, declarations) => {
+    if (!/\.ct-area\b/i.test(selector)) return rule;
+
+    let ruleReplacements = 0;
+    const updatedDeclarations = declarations.replace(/(\bfill\s*:\s*)[^;]+/gi, (_match, prefix) => {
+      ruleReplacements += 1;
+      return `${prefix}#bae6fd`;
+    });
+    if (ruleReplacements === 0) return rule;
+
+    replacements += ruleReplacements;
+    return `${selector}{${updatedDeclarations}}`;
+  });
+
+  if (replacements === 0) {
+    throw new Error('Activity graph SVG contains no fill rule for its .ct-area region.');
+  }
+  return recolored;
+}
 
 async function run() {
   // 100% Cosmic Blue palette for Dark Mode (Sky cyan #38bdf8, Ice cyan #7dd3fc, Void #060913) - ZERO red/yellow
@@ -38,9 +70,7 @@ async function run() {
   const [darkSvg, lightSvg] = await Promise.all([fetchSvg(darkUrl), fetchSvg(lightUrl)]);
 
   const enhancedDark = injectNumbers(darkSvg, '#7dd3fc', '#060913');
-  let enhancedLight = injectNumbers(lightSvg, '#0284c7', '#ffffff');
-  // Replace GitHub green wave area fill with pure luminous ice blue
-  enhancedLight = enhancedLight.replace(/#9be9a8/gi, '#bae6fd');
+  const enhancedLight = recolorActivityArea(injectNumbers(lightSvg, '#0284c7', '#ffffff'));
 
   fs.mkdirSync('assets', { recursive: true });
   fs.writeFileSync('assets/activity-graph-dark.svg', enhancedDark);
@@ -67,7 +97,11 @@ async function run() {
   await updateTrophies();
 }
 
-run().catch(error => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (require.main === module) {
+  run().catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
+
+module.exports = { injectNumbers, recolorActivityArea };
