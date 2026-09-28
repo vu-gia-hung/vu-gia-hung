@@ -232,23 +232,23 @@ I am passionate about building resilient, high-performance systems spanning from
   <!-- Direct Emails & Live Portfolio -->
   <p>
     <a href="mailto:29vu07gia07hung@gmail.com"><img src="https://img.shields.io/badge/Personal%20Email-29vu07gia07hung%40gmail.com-38bdf8?style=for-the-badge&logo=gmail&logoColor=white" alt="Personal Email" /></a>
-    <a href="mailto:s4189753@rmit.edu.vn"><img src="https://img.shields.io/badge/RMIT%20Email-s4189753%40rmit.edu.vn-38bdf8?style=for-the-badge&logo=gmail&logoColor=white" alt="School Email" /></a>
+    <a href="mailto:s4189753@rmit.edu.vn"><img src="https://img.shields.io/badge/RMIT%20Email-s4189753%40rmit.edu.vn-38bdf8?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik03Ljg4IDEyLjA0cTAgLjQ1LS4xMS44Ny0uMS40MS0uMzMuNzQtLjIyLjMzLS41OC41Mi0uMzcuMi0uODcuMnQtLjg1LS4ycS0uMzUtLjIxLS41Ny0uNTUtLjIyLS4zMy0uMzMtLjc1LS4xLS40Mi0uMS0uODZ0LjEtLjg3cS4xLS40My4zNC0uNzYuMjItLjM0LjU5LS41NC4zNi0uMi44Ny0uMnQuODYuMnEuMzUuMjEuNTcuNTUuMjIuMzQuMzEuNzcuMS40My4xLjg4ek0yNCAxMnY5LjM4cTAgLjQ2LS4zMy44LS4zMy4zMi0uOC4zMkg3LjEzcS0uNDYgMC0uOC0uMzMtLjMyLS4zMy0uMzItLjhWMThIMXEtLjQxIDAtLjctLjMtLjMtLjI5LS4zLS43VjdxMC0uNDEuMy0uN1EuNTggNiAxIDZoNi41VjIuNTVxMC0uNDQuMy0uNzUuMy0uMy43NS0uM2gxMi45cS40NCAwIC43NS4zLjMuMy4zLjc1VjEwLjg1bDEuMjQuNzJoLjAxcS4xLjA3LjE4LjE4LjA3LjEyLjA3LjI1em0tNi04LjI1djNoM3YtM3ptMCA0LjV2M2gzdi0zem0wIDQuNXYxLjgzbDMuMDUtMS44M3ptLTUuMjUtOXYzaDMuNzV2LTN6bTAgNC41djNoMy43NXYtM3ptMCA0LjV2Mi4wM2wyLjQxIDEuNSAxLjM0LS44di0yLjczek05IDMuNzVWNmgybC4xMy4wMS4xMi4wNHYtMi4zek01Ljk4IDE1Ljk4cS45IDAgMS42LS4zLjctLjMyIDEuMTktLjg2LjQ4LS41NS43My0xLjI4LjI1LS43NC4yNS0xLjYxIDAtLjgzLS4yNS0xLjU1LS4yNC0uNzEtLjcxLTEuMjR0LTEuMTUtLjgzcS0uNjgtLjMtMS41NS0uMy0uOTIgMC0xLjY0LjMtLjcxLjMtMS4yLjg1LS41LjU0LS43NSAxLjMtLjI1Ljc0LS4yNSAxLjYzIDAgLjg1LjI2IDEuNTYuMjYuNzIuNzQgMS4yMy40OC41MiAxLjE3LjgxLjY5LjMgMS41Ni4zek03LjUgMjFoMTIuMzlMMTIgMTYuMDhWMTdxMCAuNDEtLjMuNy0uMjkuMy0uNy4zSDcuNXptMTUtLjEzdi03LjI0bC01LjkgMy41NFoiLz48L3N2Zz4%3D" alt="School Email" /></a>
     <a href="https://vugiahung.is-a.dev"><img src="https://img.shields.io/badge/Portfolio-vugiahung.is--a.dev-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
   </p>
 
   <!-- Professional & Academic Presence (Matches Portfolio Top Row) -->
   <p>
     <a href="https://github.com/vu-gia-hung"><img src="https://img.shields.io/badge/GitHub-vu--gia--hung-38bdf8?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-    <a href="https://linkedin.com/in/hung-vu-gia"><img src="https://img.shields.io/badge/LinkedIn-hung--vu--gia-38bdf8?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+    <a href="https://linkedin.com/in/hung-vu-gia"><img src="https://img.shields.io/badge/LinkedIn-hung--vu--gia-38bdf8?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NSAyMC40NWgtMy41NXYtNS41N2MwLTEuMzMtLjAzLTMuMDQtMS44NS0zLjA0LTEuODYgMC0yLjE0IDEuNDUtMi4xNCAyLjk0djUuNjdIOS4zNVY5aDMuNDF2MS41NmguMDVjLjQ4LS45IDEuNjQtMS44NSAzLjM3LTEuODUgMy42IDAgNC4yNyAyLjM3IDQuMjcgNS40NnY2LjI4Wk01LjM0IDcuNDNhMi4wNiAyLjA2IDAgMSAxIDAtNC4xMiAyLjA2IDIuMDYgMCAwIDEgMCA0LjEyWk03LjEyIDIwLjQ1SDMuNTVWOWgzLjU3djExLjQ1WiIvPjwvc3ZnPg%3D%3D" alt="LinkedIn" /></a>
     <a href="https://orcid.org/0009-0009-5704-0162"><img src="https://img.shields.io/badge/ORCID-0009--0009--5704--0162-38bdf8?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" /></a>
   </p>
 
   <!-- Casual Socials (Matches Portfolio Bottom Row) -->
   <p>
-    <a href="https://www.facebook.com/jae.hun.vu"><img src="https://img.shields.io/badge/Facebook-jae.hun.vu-38bdf8?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
+    <a href="https://www.facebook.com/jae.hun.vu"><img src="https://img.shields.io/badge/FB-jae.hun.vu-38bdf8?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
     <a href="https://zalo.me/84938133039"><img src="https://img.shields.io/badge/Zalo-0938%20133%20039-38bdf8?style=for-the-badge&logo=zalo&logoColor=white" alt="Zalo" /></a>
-    <a href="https://www.instagram.com/jae.hun_vu"><img src="https://img.shields.io/badge/Instagram-jae.hun__vu-38bdf8?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-    <a href="https://www.threads.net/@jae.hun_vu"><img src="https://img.shields.io/badge/Threads-%40jae.hun__vu-38bdf8?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
+    <a href="https://www.instagram.com/jae.hun_vu"><img src="https://img.shields.io/badge/Ins-jae.hun__vu-38bdf8?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+    <a href="https://www.threads.net/@jae.hun_vu"><img src="https://img.shields.io/badge/Threads-jae.hun__vu-38bdf8?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
     <br/>
     <a href="https://www.tiktok.com/@jae.hun_vu"><img src="https://img.shields.io/badge/TikTok-%40jae.hun__vu-38bdf8?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok" /></a>
     <a href="https://x.com/JaeHunWu"><img src="https://img.shields.io/badge/X-JaeHunWu-38bdf8?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
