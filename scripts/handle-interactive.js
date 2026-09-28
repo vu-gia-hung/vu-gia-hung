@@ -6,21 +6,33 @@ const GUESTBOOK_PATH = path.join(ROOT_DIR, 'data/guestbook.json');
 const COFFEE_PATH = path.join(ROOT_DIR, 'data/coffee.json');
 const README_PATH = path.join(ROOT_DIR, 'README.md');
 
-function sanitizeText(str) {
+function sanitizeText(str, maxLength = 100) {
   if (!str) return '';
   return str
     .replace(/[<>]/g, '')
     .replace(/[\r\n]+/g, ' ')
     .trim()
-    .slice(0, 100);
+    .slice(0, maxLength);
+}
+
+function truncateMessage(str, maxLen = 42) {
+  if (!str) return '';
+  const clean = str
+    .replace(/[<>]/g, '')
+    .replace(/[\r\n]+/g, ' ')
+    .trim();
+  if (clean.length > maxLen) {
+    return clean.slice(0, maxLen - 3).trim() + '...';
+  }
+  return clean;
 }
 
 function renderGuestbookHtml(entries) {
   let listHtml = '';
   entries.slice(0, 3).forEach((e, idx) => {
-    const safeUser = sanitizeText(e.username);
-    const safeMsg = sanitizeText(e.message);
-    const safeDate = sanitizeText(e.date || 'Recent');
+    const safeUser = sanitizeText(e.username, 30);
+    const safeMsg = truncateMessage(e.message, 42);
+    const safeDate = sanitizeText(e.date || 'Recent', 20);
     listHtml += `<p>
 <a href="https://github.com/${safeUser}">
 <img src="https://github.com/${safeUser}.png?size=32" width="32" height="32" align="left" />

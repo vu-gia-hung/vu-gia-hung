@@ -60,7 +60,7 @@
 <img src="https://github.com/vu-gia-hung.png?size=32" width="32" height="32" align="left" />
 </a>
 &nbsp;<b><a href="https://github.com/vu-gia-hung">@vu-gia-hung</a></b> <small style="color: #8b949e;">• 2026-09-28</small><br/>
-&nbsp;💬 <i>"Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test"</i>
+&nbsp;💬 <i>"Test Test Test Test Test Test Test Test..."</i>
 </p>
 <hr/>
 <p>
