@@ -17,19 +17,33 @@ function sanitizeText(str) {
 
 function renderGuestbookHtml(entries) {
   let listHtml = '';
-  entries.slice(0, 2).forEach(e => {
+  entries.slice(0, 3).forEach((e, idx) => {
     const safeUser = sanitizeText(e.username);
     const safeMsg = sanitizeText(e.message);
-    listHtml += `  <p style="margin: 6px 0; font-size: 11px; line-height: 1.4;">\n    <a href="https://github.com/${safeUser}"><b>@${safeUser}</b></a>: <i>"${safeMsg}"</i>\n  </p>\n`;
+    const safeDate = sanitizeText(e.date || 'Recent');
+    listHtml += `            <p>
+              <a href="https://github.com/${safeUser}">
+                <img src="https://github.com/${safeUser}.png?size=32" width="32" height="32" align="left" />
+              </a>
+              &nbsp;<b><a href="https://github.com/${safeUser}">@${safeUser}</a></b> <small style="color: #8b949e;">• ${safeDate}</small><br/>
+              &nbsp;💬 <i>"${safeMsg}"</i>
+            </p>${idx < Math.min(entries.length, 3) - 1 ? '\n            <hr/>' : ''}\n`;
   });
 
   return `<!-- GUESTBOOK:START -->
-<div align="center">
-  <b>📖 SỔ LƯU BÚT</b><br/>
-  <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook:+L%E1%BB%9Di+ch%C3%A0o+c%E1%BB%A7a+b%E1%BA%A1n&body=Nh%E1%BA%ADp+l%E1%BB%9Di+nh%E1%BA%AFn+g%E1%BB%ADi+t%E1%BB%9Bi+V%C5%A9+Gia+H%C6%B0ng+%E1%BB%9F+%C4%91%C3%A2y+nha!+%F0%9F%9A%80"><img src="https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F_K%C3%BD_T%C3%AAn-L%C6%B0u_B%C3%BAt-38bdf8?style=flat-square&logoColor=white" alt="Ký Lưu Bút" /></a>
-</div>
-
-${listHtml}<!-- GUESTBOOK:END -->`;
+          <div align="left">
+            <p>
+              <b>RECENT GUESTBOOK ENTRIES</b> &nbsp; <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
+              <br/>
+              <small style="color: #8b949e;">Leave a message on the left to appear here!</small>
+            </p>
+            <hr/>
+${listHtml}            <hr/>
+            <p align="right">
+              <small><a href="https://github.com/vu-gia-hung/vu-gia-hung/issues?q=is%3Aissue">View all messages &rarr;</a></small>
+            </p>
+          </div>
+          <!-- GUESTBOOK:END -->`;
 }
 
 function renderCoffeeHtml(coffee) {
@@ -83,12 +97,13 @@ async function processIssueEvent() {
   let updated = false;
 
   // Case 1: Guestbook Entry
-  if (/guestbook:/i.test(issueTitle)) {
-    let msg = issueTitle.replace(/^.*guestbook:\s*/i, '').trim();
-    if (!msg || msg.toLowerCase() === 'lời chào của bạn' || msg.toLowerCase() === 'nhập lời nhắn ở đây') {
-      msg = issueBody.trim();
+  if (/^guestbook/i.test(issueTitle)) {
+    // Strip HTML comments <!-- ... -->
+    let msg = issueBody.replace(/<!--[\s\S]*?-->/g, '').trim();
+    if (!msg) {
+      msg = issueTitle.replace(/^.*guestbook:?\s*/i, '').trim();
     }
-    msg = sanitizeText(msg) || 'Đã ghé thăm profile của Hưng! 🚀';
+    msg = sanitizeText(msg) || 'Đã để lại dấu ấn trên profile của Hưng! ✨';
 
     const guestbookData = JSON.parse(fs.readFileSync(GUESTBOOK_PATH, 'utf8'));
     guestbookData.unshift({
