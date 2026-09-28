@@ -27,5 +27,8 @@ jobs:
             node --check "$file"
           done
 
+      - name: Check push helper syntax
+        run: bash -n scripts/push-main.sh
+
       - name: Run SVG transformation tests
         run: node --test tests/*.test.js
