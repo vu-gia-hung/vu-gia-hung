@@ -11,7 +11,7 @@ permissions:
 jobs:
   handle-interaction:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.issue.title, 'guestbook') || startsWith(github.event.issue.title, 'coffee:')
+    if: startsWith(github.event.issue.title, 'guestbook')
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -43,10 +43,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_USER: ${{ github.event.issue.user.login }}
-          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
-          if [[ "${ISSUE_TITLE}" =~ ^guestbook ]]; then
-            gh issue comment "$ISSUE_NUMBER" --body "Thank you **@$ISSUE_USER** for leaving your mark on Vu Gia Hung's guestbook! Your message has been updated directly on the profile! 🚀💙"
-          else
-            gh issue comment "$ISSUE_NUMBER" --body "Thank you **@$ISSUE_USER** for fueling Vu Gia Hung with caffeine energy! The coffee counter has been updated successfully! ☕⚡"
-          fi
+          gh issue comment "$ISSUE_NUMBER" --body "Thank you **@$ISSUE_USER** for leaving your mark on Vu Gia Hung's guestbook! Your message has been updated directly on the profile! 🚀💙"
