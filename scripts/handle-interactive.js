@@ -29,7 +29,7 @@ function truncateMessage(str, maxLen = 42) {
 
 function renderGuestbookHtml(entries) {
   let listHtml = '';
-  entries.slice(0, 3).forEach((e, idx) => {
+  entries.slice(0, 2).forEach((e, idx) => {
     const safeUser = sanitizeText(e.username, 30);
     const safeMsg = truncateMessage(e.message, 42);
     const safeDate = sanitizeText(e.date || 'Recent', 20);
@@ -39,13 +39,13 @@ function renderGuestbookHtml(entries) {
 </a>
 &nbsp;<b><a href="https://github.com/${safeUser}">@${safeUser}</a></b> <small style="color: #8b949e;">• ${safeDate}</small><br/>
 &nbsp;💬 <i>"${safeMsg}"</i>
-</p>${idx < Math.min(entries.length, 3) - 1 ? '\n<hr/>\n' : '\n'}`;
+</p>${idx < Math.min(entries.length, 2) - 1 ? '\n<hr/>\n' : '\n'}`;
   });
 
   return `<!-- GUESTBOOK:START -->
 <div align="left">
 <p>
-<b>RECENT GUESTBOOK ENTRIES</b> &nbsp; <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
+<img src="https://img.shields.io/badge/RECENT_GUESTBOOK_ENTRIES-0284c7?style=flat-square" alt="Recent Guestbook Entries" /> <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
 <br/>
 <small style="color: #8b949e;">Leave a message on the left to appear here!</small>
 </p>
@@ -123,7 +123,7 @@ async function processIssueEvent() {
       name: issueUser,
       avatar: issueUserAvatar,
       message: msg,
-      date: new Date().toISOString().split('T')[0]
+      date: new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh' }).slice(0, 16)
     });
 
     // Keep top 10
