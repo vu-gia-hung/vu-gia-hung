@@ -90,7 +90,7 @@
 <p><small>1 currently starring · 1 Hall of Fame member · 4 public repositories scanned</small></p>
 <p><img src="https://cdn.jsdelivr.net/gh/vu-gia-hung/vu-gia-hung@main/assets/stargazers/hall-of-fame.svg?v=15a0a890d617" width="100%" alt="Top five stargazers arranged as a pyramid" /></p>
 <p><small>Ranks update when a new star is detected. Other star statuses (for example, when someone unstars) refresh hourly.</small></p>
-<table width="100%" cellspacing="0" cellpadding="8"><tbody><tr><td width="50%" align="center" valign="top"><details><summary>View rank ladder</summary><p><img src="https://cdn.jsdelivr.net/gh/vu-gia-hung/vu-gia-hung@main/assets/stargazers/rank-ladder.svg?v=eaa0c4ac44ad" width="100%" alt="Military rank ladder with aligned insignia, rank, and title columns" /></p></details></td><td width="50%" align="center" valign="top"><details><summary>View all ranks (1)</summary><p><small>No additional stargazers yet.</small></p></details></td></tr></tbody></table>
+<table width="100%" cellspacing="0" cellpadding="8"><tbody><tr><td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="480" height="1" align="left" alt="" /><details><summary>View rank ladder</summary><p><img src="https://cdn.jsdelivr.net/gh/vu-gia-hung/vu-gia-hung@main/assets/stargazers/rank-ladder.svg?v=eaa0c4ac44ad" width="100%" alt="Military rank ladder with aligned insignia, rank, and title columns" /></p></details></td><td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="480" height="1" align="left" alt="" /><details><summary>View all ranks (1)</summary><p><small>No additional stargazers yet.</small></p></details></td></tr></tbody></table>
 </div>
 <!-- STARGAZERS:END -->
 
