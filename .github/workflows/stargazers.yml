@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/stargazers.json README.md
+          git add data/stargazers.json README.md assets/stargazers/
           if git diff --cached --quiet; then
             echo "No stargazer changes to commit"
           else

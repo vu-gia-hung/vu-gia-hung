@@ -6,6 +6,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const OWNER = 'vu-gia-hung';
 const README_PATH = path.join(ROOT_DIR, 'README.md');
 const DATA_PATH = path.join(ROOT_DIR, 'data/stargazers.json');
+const AVATAR_ASSETS_DIR = path.join(ROOT_DIR, 'assets/stargazers');
 const API_VERSION = '2026-03-10';
 const PER_PAGE = 100;
 const MAX_DISPLAYED_MEMBERS = 5;
@@ -93,6 +94,23 @@ function avatarWithSize(url, size) {
   return `${url}${url.includes('?') ? '&' : '?'}s=${size}`;
 }
 
+function avatarAssetKey(member) {
+  return String(member.id || member.login).replace(/[^a-zA-Z0-9_-]/g, '-');
+}
+
+function avatarAssetPath(member) {
+  return `./assets/stargazers/stargazer-${avatarAssetKey(member)}.svg`;
+}
+
+function writeAvatarAssets(snapshot) {
+  fs.mkdirSync(AVATAR_ASSETS_DIR, { recursive: true });
+  for (const member of snapshot.members) {
+    const avatarUrl = escapeHtml(member.avatarUrl);
+    const asset = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="@${escapeHtml(member.login)} avatar"><defs><clipPath id="avatar-circle"><circle cx="48" cy="48" r="42"/></clipPath></defs><image href="${avatarUrl}" x="6" y="6" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatar-circle)"/><circle cx="48" cy="48" r="43" fill="none" stroke="#38bdf8" stroke-width="4"/></svg>`;
+    fs.writeFileSync(path.join(AVATAR_ASSETS_DIR, `stargazer-${avatarAssetKey(member)}.svg`), `${asset}\n`, 'utf8');
+  }
+}
+
 function insigniaImage(rank, fixedSize = null) {
   const role = roleForRank(rank);
   const size = fixedSize || (rank === 1 ? 42 : rank <= 3 ? 38 : 34);
@@ -174,14 +192,14 @@ function renderMember(member, rank, horizontalMargin = 4) {
     ? `⭐ ${repositoryCount} stars`
     : '🕰️ Former stargazer';
   return `<div style="display:inline-block; width:112px; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
-    `<a href="${escapeHtml(member.htmlUrl)}" title="${escapeHtml(`Star #${rank} · ${member.login} · ${role.title}`)}"><img src="${escapeHtml(avatarWithSize(member.avatarUrl, 72))}" width="64" height="64" alt="@${escapeHtml(member.login)}" style="border-radius:50%; border:2px solid #38bdf8;" /></a>` +
+    `<a href="${escapeHtml(member.htmlUrl)}" title="${escapeHtml(`Star #${rank} · ${member.login} · ${role.title}`)}"><img src="${avatarAssetPath(member)}" width="72" height="72" alt="@${escapeHtml(member.login)}" /></a>` +
     `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>@${escapeHtml(member.login)}</small><br/><small>${escapeHtml(role.title)}</small><br/><small style="display:block; text-align:center; white-space:nowrap;">${state}</small></div>`;
 }
 
 function renderEmptyMember(rank, horizontalMargin = 4) {
   const role = roleForRank(rank);
   return `<div style="display:inline-block; width:112px; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
-    `<div title="Awaiting stargazer" style="display:inline-flex; width:64px; height:64px; align-items:center; justify-content:center; border:2px dashed #475569; border-radius:50%; color:#64748b; font-size:24px;">?</div>` +
+    `<img src="./assets/stargazers/open-slot.svg" width="64" height="64" alt="Open stargazer slot" />` +
     `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>Open slot</small><br/><small>Awaiting star</small></div>`;
 }
 
@@ -197,13 +215,14 @@ function renderPyramid(members) {
 
       if (rowIndex >= 1) {
         const firstRank = rowIndex === 1 ? 2 : 4;
+        const renderCell = (member, rank, width) => `<div style="display:inline-block; width:${width}; vertical-align:top; text-align:center;">${renderSlot(member, rank, 0)}</div>`;
         if (rowIndex === 1) {
-          return `<table data-hall-row="2" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="25%"></td><td width="25%" align="center">${renderSlot(row[0], firstRank, 0)}</td><td width="25%" align="center">${renderSlot(row[1], firstRank + 1, 0)}</td><td width="25%"></td></tr></tbody></table>`;
+          return `<div data-hall-row="2" style="text-align:center; white-space:nowrap;"><div style="display:inline-block; width:25%;"></div>${renderCell(row[0], firstRank, '25%')}${renderCell(row[1], firstRank + 1, '25%')}<div style="display:inline-block; width:25%;"></div></div>`;
         }
-        return `<table data-hall-row="3" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="50%" align="center">${renderSlot(row[0], firstRank, 0)}</td><td width="50%" align="center">${renderSlot(row[1], firstRank + 1, 0)}</td></tr></tbody></table>`;
+        return `<div data-hall-row="3" style="text-align:center; white-space:nowrap;">${renderCell(row[0], firstRank, '50%')}${renderCell(row[1], firstRank + 1, '50%')}</div>`;
       }
 
-      return `<div data-hall-row="${rowIndex + 1}">${row.map((member, index) => {
+      return `<div data-hall-row="${rowIndex + 1}" style="text-align:center;">${row.map((member, index) => {
         const rank = rowIndex === 0 ? 1 : index + 2;
         const horizontalMargin = rowIndex === 1 ? 18 : 4;
         return renderSlot(member, rank, horizontalMargin);
@@ -243,16 +262,16 @@ function renderRankLadder() {
   ];
   const rows = ranges.map(([range, rank]) => {
     const role = roleForRank(rank);
-    return `<tr><td width="20%" align="right">${insigniaImage(rank, 30)}</td><td width="25%" align="left"><b>${range}</b></td><td width="55%" align="left"> · ${escapeHtml(role.title)}</td></tr>`;
+    return `<div style="display:block; white-space:nowrap; text-align:left;"><span style="display:inline-block; width:40px; text-align:right; vertical-align:middle;">${insigniaImage(rank, 30)}</span><span style="display:inline-block; width:82px; margin-left:8px; vertical-align:middle;"><b>${range}</b></span><span style="vertical-align:middle;">· ${escapeHtml(role.title)}</span></div>`;
   }).join('');
-  return `<details><summary>View rank ladder</summary><table width="100%" border="0" cellpadding="2" cellspacing="0"><tbody>${rows}</tbody></table></details>`;
+  return `<details><summary>View rank ladder</summary><div style="text-align:left;">${rows}</div></details>`;
 }
 
 function renderRankControls(members) {
-  return `<table width="100%" border="0" cellpadding="4" cellspacing="0"><tbody><tr>` +
-    `<td width="50%" align="center">${renderRankLadder()}</td>` +
-    `<td width="50%" align="center">${renderRemainingMembers(members)}</td>` +
-    `</tr></tbody></table>`;
+  return `<div style="text-align:center; white-space:normal;">` +
+    `<div style="display:inline-block; width:48%; vertical-align:top; text-align:center;">${renderRankLadder()}</div>` +
+    `<div style="display:inline-block; width:48%; vertical-align:top; text-align:center;">${renderRemainingMembers(members)}</div>` +
+    `</div>`;
 }
 
 function renderStargazerHtml(snapshot) {
@@ -320,6 +339,7 @@ async function syncStargazers({ token, owner = OWNER } = {}) {
     ? { ...candidate, updatedAt: previous.updatedAt }
     : candidate;
   fs.writeFileSync(DATA_PATH, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
+  writeAvatarAssets(snapshot);
   updateReadme(process.env.STARGAZER_PREVIEW === '1' ? createPreviewSnapshot(snapshot) : snapshot);
   console.log(`Scanned ${repositories.length} public repositories and ${observedMembers.length} current star records.`);
   console.log(`Hall of Fame contains ${snapshot.members.length} unique users (${snapshot.members.filter(member => member.isCurrentlyStarred).length} currently starring).`);
