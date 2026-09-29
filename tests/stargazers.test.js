@@ -1,0 +1,115 @@
+const assert = require('node:assert/strict');
+const test = require('node:test');
+
+const { createPreviewSnapshot, mergeSnapshot, renderStargazerHtml } = require('../scripts/update-stargazers');
+
+const repo = { name: 'demo', url: 'https://github.com/vu-gia-hung/demo' };
+
+test('stargazer snapshots keep first rank while reflecting current status', () => {
+  const first = mergeSnapshot(
+    { version: 1, updatedAt: null, repositories: [], members: [] },
+    [repo],
+    [{
+      id: 7,
+      login: 'alice',
+      avatarUrl: 'https://github.com/alice.png',
+      htmlUrl: 'https://github.com/alice',
+      starredAt: '2026-09-01T00:00:00Z',
+      repository: repo
+    }],
+    '2026-09-02T00:00:00Z'
+  );
+  const second = mergeSnapshot(first, [repo], [], '2026-09-03T00:00:00Z');
+  const restored = mergeSnapshot(second, [repo], [{
+    id: 7,
+    login: 'alice',
+    avatarUrl: 'https://github.com/alice.png',
+    htmlUrl: 'https://github.com/alice',
+    starredAt: '2026-09-04T00:00:00Z',
+    repository: repo
+  }], '2026-09-04T01:00:00Z');
+
+  assert.equal(second.members[0].isCurrentlyStarred, false);
+  assert.equal(restored.members[0].isCurrentlyStarred, true);
+  assert.equal(restored.members[0].firstStarredAt, '2026-09-01T00:00:00.000Z');
+});
+
+test('Hall of Fame renders an honest empty state', () => {
+  const html = renderStargazerHtml({
+    repositories: [{ name: 'demo', url: repo.url }],
+    members: []
+  });
+
+  assert.match(html, /Stargazers Hall of Fame/);
+  assert.match(html, /No stargazers yet/);
+  assert.match(html, /1 public repository scanned/);
+});
+
+test('Hall of Fame escapes user supplied profile fields', () => {
+  const html = renderStargazerHtml({
+    repositories: [repo],
+    members: [{
+      id: 8,
+      login: '<script>alert(1)</script>',
+      avatarUrl: 'https://github.com/avatar.png',
+      htmlUrl: 'https://github.com/example?a=1&b=2',
+      firstStarredAt: '2026-09-01T00:00:00Z',
+      lastSeenAt: '2026-09-01T00:00:00Z',
+      isCurrentlyStarred: true,
+      repositories: [repo]
+    }]
+  });
+
+  assert.doesNotMatch(html, /<script>/i);
+  assert.match(html, /&lt;script&gt;/i);
+});
+
+test('Hall of Fame arranges five members as a three-row pyramid', () => {
+  const preview = createPreviewSnapshot({
+    repositories: [],
+    members: [{
+      id: 7,
+      login: 'alice',
+      avatarUrl: 'https://github.com/alice.png',
+      htmlUrl: 'https://github.com/alice',
+      firstStarredAt: '2026-09-01T00:00:00Z',
+      lastSeenAt: '2026-09-01T00:00:00Z',
+      isCurrentlyStarred: true,
+      repositories: []
+    }]
+  });
+  const html = renderStargazerHtml(preview);
+
+  assert.equal((html.match(/data-hall-row="1"/g) || []).length, 1);
+  assert.equal((html.match(/data-hall-row="2"/g) || []).length, 1);
+  assert.equal((html.match(/data-hall-row="3"/g) || []).length, 1);
+  assert.match(html, /@alice/);
+  assert.equal((html.match(/Open slot/g) || []).length, 4);
+});
+
+test('Hall of Fame exposes ranks after the pyramid in a collapsed list', () => {
+  const members = Array.from({ length: 6 }, (_, index) => ({
+    id: index + 1,
+    login: `user-${index + 1}`,
+    avatarUrl: 'https://github.com/avatar.png',
+    htmlUrl: `https://github.com/user-${index + 1}`,
+    firstStarredAt: `2026-09-${String(index + 1).padStart(2, '0')}T00:00:00Z`,
+    lastSeenAt: '2026-09-10T00:00:00Z',
+    isCurrentlyStarred: true,
+    repositories: []
+  }));
+  const html = renderStargazerHtml({ repositories: [], members });
+
+  assert.match(html, /View all remaining ranks \(1\)/);
+  assert.match(html, /@user-6/);
+});
+
+test('Hall of Fame exposes the complete rank ladder separately', () => {
+  const html = renderStargazerHtml({ repositories: [], members: [] });
+
+  assert.match(html, /View rank ladder/);
+  assert.match(html, /Sergeant Major of the Army/);
+  assert.match(html, /Corporal/);
+  assert.doesNotMatch(html, /Specialist/);
+  assert.match(html, /Private E-1/);
+});

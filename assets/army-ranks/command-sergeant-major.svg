@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" role="img" aria-label="Command Sergeant Major insignia">
+  <defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-color="#38bdf8" flood-opacity=".8" result="color"/><feComposite in="color" in2="blur" operator="in" result="shadow"/><feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <g filter="url(#glow)">
+    <circle cx="40" cy="32" r="29" fill="none" stroke="#bae6fd" stroke-width="2" opacity=".25"><animate attributeName="r" values="24;32;24" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".25;.75;.25" dur="2.5s" repeatCount="indefinite"/></circle>
+    <path d="M13 5 40 24 67 5M13 17 40 36 67 17M13 29 40 48 67 29" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15 50Q40 56 65 50M15 57Q40 63 65 57" fill="none" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round"/>
+    <path d="m40 7 7 7-7 7-7-7Z" fill="#bae6fd" stroke="#0369a1" stroke-width="2"/>
+    <path d="M27 14q13-12 26 0" fill="none" stroke="#bae6fd" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

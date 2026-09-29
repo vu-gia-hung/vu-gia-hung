@@ -1,0 +1,47 @@
+name: Update Stargazers Hall of Fame
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  watch:
+    types: [started]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stargazers-hall-of-fame
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.event_name != 'watch' || github.event.repository.owner.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update Hall of Fame
+        env:
+          STARGAZER_TOKEN: ${{ secrets.STARGAZER_TOKEN }}
+        run: node scripts/update-stargazers.js
+
+      - name: Commit and push update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/stargazers.json README.md
+          if git diff --cached --quiet; then
+            echo "No stargazer changes to commit"
+          else
+            git commit -m "chore: update stargazers hall of fame [skip ci]"
+            bash scripts/push-main.sh
+          fi

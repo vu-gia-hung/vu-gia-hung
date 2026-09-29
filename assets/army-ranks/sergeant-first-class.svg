@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" role="img" aria-label="Sergeant First Class insignia">
+  <circle cx="40" cy="32" r="25" fill="none" stroke="#38bdf8" stroke-width="2" opacity=".08"><animate attributeName="r" values="22;28;22" dur="3.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".08;.3;.08" dur="3.4s" repeatCount="indefinite"/></circle>
+  <path d="M13 5 40 25 67 5M13 17 40 37 67 17M13 29 40 49 67 29" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15 51Q40 58 65 51M15 59Q40 65 65 59" fill="none" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round"/>
+</svg>
