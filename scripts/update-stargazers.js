@@ -400,9 +400,9 @@ function renderRankLadder() {
 }
 
 function renderRankControls(members) {
-  return `<table width="100%" cellspacing="0" cellpadding="8"><tbody><tr>` +
-    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="450" height="1" align="left" alt="" />${renderRankLadder()}</td>` +
-    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="450" height="1" align="left" alt="" />${renderAllMembers(members)}</td>` +
+  return `<table width="100%" align="center" cellspacing="0" cellpadding="8"><tbody><tr>` +
+    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="380" height="1" align="left" alt="" />${renderRankLadder()}</td>` +
+    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="380" height="1" align="left" alt="" />${renderAllMembers(members)}</td>` +
     `</tr></tbody></table>`;
 }
 
