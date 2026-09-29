@@ -6,7 +6,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const OWNER = 'vu-gia-hung';
 const README_PATH = path.join(ROOT_DIR, 'README.md');
 const DATA_PATH = path.join(ROOT_DIR, 'data/stargazers.json');
-const API_VERSION = '2022-11-28';
+const API_VERSION = '2026-03-10';
 const PER_PAGE = 100;
 const MAX_DISPLAYED_MEMBERS = 5;
 
