@@ -91,7 +91,7 @@ test('Hall of Fame renders a fixed five-slot pyramid in one SVG', () => {
   assert.doesNotMatch(html, /data-hall-row/);
 });
 
-test('Hall of Fame exposes ranks after the pyramid in a collapsed list', () => {
+test('Hall of Fame exposes every member from rank one in a collapsed list', () => {
   const members = Array.from({ length: 6 }, (_, index) => ({
     id: index + 1,
     login: `user-${index + 1}`,
@@ -104,8 +104,10 @@ test('Hall of Fame exposes ranks after the pyramid in a collapsed list', () => {
   }));
   const html = renderStargazerHtml({ repositories: [], members });
 
-  assert.match(html, /View all remaining ranks \(1\)/);
+  assert.match(html, /View all ranks \(6\)/);
+  assert.match(html, /@user-1/);
   assert.match(html, /@user-6/);
+  assert.doesNotMatch(html, /No additional stargazers/);
 });
 
 test('Hall of Fame exposes the complete rank ladder separately', () => {

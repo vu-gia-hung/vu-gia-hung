@@ -355,18 +355,17 @@ function mergeSnapshot(previous, repositories, observedMembers, updatedAt) {
   };
 }
 
-function renderRemainingMembers(members) {
-  const remainingMembers = members.slice(MAX_DISPLAYED_MEMBERS);
-  if (remainingMembers.length === 0) {
-    return `<details><summary>View all ranks (${members.length})</summary><p><small>No additional stargazers yet.</small></p></details>`;
+function renderAllMembers(members) {
+  if (members.length === 0) {
+    return '<details><summary>View all ranks (0)</summary><p><small>No stargazers yet.</small></p></details>';
   }
-  const rows = remainingMembers.map((member, index) => {
-    const rank = index + MAX_DISPLAYED_MEMBERS + 1;
+  const rows = members.map((member, index) => {
+    const rank = index + 1;
     const role = roleForRank(rank);
     const state = member.isCurrentlyStarred ? `⭐ ${member.repositories.length} stars` : '🕰️ Former stargazer';
-    return `<li><a href="${escapeHtml(member.htmlUrl)}">@${escapeHtml(member.login)}</a> · <b>#${rank}</b> · ${insigniaImage(rank)} ${escapeHtml(role.title)} · ${state}</li>`;
+    return `<p align="left">${insigniaImage(rank, 28)} <b><span>#</span>${rank}</b> · <a href="${escapeHtml(member.htmlUrl)}">@${escapeHtml(member.login)}</a><br/><small>${escapeHtml(role.title)} · ${state}</small></p>`;
   }).join('');
-  return `<details><summary>View all remaining ranks (${remainingMembers.length})</summary><ul>${rows}</ul></details>`;
+  return `<details><summary>View all ranks (${members.length})</summary>${rows}</details>`;
 }
 
 function renderRankLadderSvg() {
@@ -403,7 +402,7 @@ function renderRankLadder() {
 function renderRankControls(members) {
   return `<table width="100%" cellspacing="0" cellpadding="8"><tbody><tr>` +
     `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="480" height="1" align="left" alt="" />${renderRankLadder()}</td>` +
-    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="480" height="1" align="left" alt="" />${renderRemainingMembers(members)}</td>` +
+    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="480" height="1" align="left" alt="" />${renderAllMembers(members)}</td>` +
     `</tr></tbody></table>`;
 }
 
