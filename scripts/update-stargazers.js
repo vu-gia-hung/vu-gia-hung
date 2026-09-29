@@ -191,16 +191,16 @@ function renderMember(member, rank, horizontalMargin = 4) {
   const state = current
     ? `⭐ ${repositoryCount} stars`
     : '🕰️ Former stargazer';
-  return `<div style="display:inline-block; width:112px; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
+  return `<span style="display:inline-block; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
     `<a href="${escapeHtml(member.htmlUrl)}" title="${escapeHtml(`Star #${rank} · ${member.login} · ${role.title}`)}"><img src="${avatarAssetPath(member)}" width="72" height="72" alt="@${escapeHtml(member.login)}" /></a>` +
-    `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>@${escapeHtml(member.login)}</small><br/><small>${escapeHtml(role.title)}</small><br/><small style="display:block; text-align:center; white-space:nowrap;">${state}</small></div>`;
+    `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>@${escapeHtml(member.login)}</small><br/><small>${escapeHtml(role.title)}</small><br/><small style="display:block; text-align:center; white-space:nowrap;">${state}</small></span>`;
 }
 
 function renderEmptyMember(rank, horizontalMargin = 4) {
   const role = roleForRank(rank);
-  return `<div style="display:inline-block; width:112px; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
+  return `<span style="display:inline-block; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
     `<img src="./assets/stargazers/open-slot.svg" width="64" height="64" alt="Open stargazer slot" />` +
-    `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>Open slot</small><br/><small>Awaiting star</small></div>`;
+    `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>Open slot</small><br/><small>Awaiting star</small></span>`;
 }
 
 function renderPyramid(members) {
@@ -213,20 +213,9 @@ function renderPyramid(members) {
         ? renderMember(member, rank, horizontalMargin)
         : renderEmptyMember(rank, horizontalMargin);
 
-      if (rowIndex >= 1) {
-        const firstRank = rowIndex === 1 ? 2 : 4;
-        const renderCell = (member, rank, width) => `<div style="display:inline-block; width:${width}; vertical-align:top; text-align:center;">${renderSlot(member, rank, 0)}</div>`;
-        if (rowIndex === 1) {
-          return `<div data-hall-row="2" style="text-align:center; white-space:nowrap;"><div style="display:inline-block; width:25%;"></div>${renderCell(row[0], firstRank, '25%')}${renderCell(row[1], firstRank + 1, '25%')}<div style="display:inline-block; width:25%;"></div></div>`;
-        }
-        return `<div data-hall-row="3" style="text-align:center; white-space:nowrap;">${renderCell(row[0], firstRank, '50%')}${renderCell(row[1], firstRank + 1, '50%')}</div>`;
-      }
-
-      return `<div data-hall-row="${rowIndex + 1}" style="text-align:center;">${row.map((member, index) => {
-        const rank = rowIndex === 0 ? 1 : index + 2;
-        const horizontalMargin = rowIndex === 1 ? 18 : 4;
-        return renderSlot(member, rank, horizontalMargin);
-      }).join('')}</div>`;
+      if (rowIndex === 0) return `<p data-hall-row="1" align="center">${renderSlot(row[0], 1, 0)}</p>`;
+      if (rowIndex === 1) return `<p data-hall-row="2" align="center">&emsp;&emsp;${renderSlot(row[0], 2, 0)}&emsp;&emsp;${renderSlot(row[1], 3, 0)}</p>`;
+      return `<p data-hall-row="3" align="center">${renderSlot(row[0], 4, 0)}&emsp;&emsp;&emsp;&emsp;&emsp;${renderSlot(row[1], 5, 0)}</p>`;
     })
     .join('\n');
 }
