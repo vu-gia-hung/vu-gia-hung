@@ -219,7 +219,6 @@ function renderHallOfFameSvg(snapshot, avatarDataUris = new Map()) {
   <title id="hall-title">Stargazers Hall of Fame top five</title>
   <desc id="hall-description">Five ranks arranged as a pyramid, with rank one at the top.</desc>
   <style>
-    .guide{fill:none;stroke:#38bdf8;stroke-width:1.5;stroke-dasharray:5 9;opacity:.13}
     .avatar-ring{fill:none;stroke:#38bdf8;stroke-width:3}
     .avatar-fallback{fill:#0f172a;stroke:#38bdf8;stroke-width:3}
     .empty-slot{fill:#0f172a;stroke:#64748b;stroke-width:3;stroke-dasharray:7 6}
@@ -235,7 +234,6 @@ function renderHallOfFameSvg(snapshot, avatarDataUris = new Map()) {
       .rank-number,.label,.title{fill:#24292f}.muted,.question{fill:#57606a}.avatar-fallback,.empty-slot{fill:#f6f8fa}
     }
   </style>
-  <path class="guide" d="M500 54 L250 488 M500 54 L750 488"/>
   ${cards}
 </svg>`;
 }

@@ -83,7 +83,7 @@ test('Hall of Fame renders a fixed five-slot pyramid in one SVG', () => {
   const html = renderStargazerHtml(preview);
 
   assert.equal((svg.match(/data-rank="[1-5]"/g) || []).length, 5);
-  assert.match(svg, /M500 54 L250 488 M500 54 L750 488/);
+  assert.doesNotMatch(svg, /class="guide"/);
   assert.match(svg, /@alice/);
   assert.match(svg, /data:image\/png;base64,aGVsbG8=/);
   assert.equal((svg.match(/Open slot/g) || []).length, 4);
