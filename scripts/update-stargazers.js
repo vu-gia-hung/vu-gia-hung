@@ -1,4 +1,5 @@
 const fs = require('fs');
+const crypto = require('crypto');
 const https = require('https');
 const path = require('path');
 
@@ -9,9 +10,25 @@ const DATA_PATH = path.join(ROOT_DIR, 'data/stargazers.json');
 const AVATAR_ASSETS_DIR = path.join(ROOT_DIR, 'assets/stargazers');
 const HALL_ASSET_PATH = path.join(AVATAR_ASSETS_DIR, 'hall-of-fame.svg');
 const HALL_ASSET_URL = 'https://cdn.jsdelivr.net/gh/vu-gia-hung/vu-gia-hung@main/assets/stargazers/hall-of-fame.svg';
+const RANK_LADDER_ASSET_PATH = path.join(AVATAR_ASSETS_DIR, 'rank-ladder.svg');
+const RANK_LADDER_ASSET_URL = 'https://cdn.jsdelivr.net/gh/vu-gia-hung/vu-gia-hung@main/assets/stargazers/rank-ladder.svg';
 const API_VERSION = '2026-03-10';
 const PER_PAGE = 100;
 const MAX_DISPLAYED_MEMBERS = 5;
+const RANK_RANGES = [
+  ['#1', 1],
+  ['#2', 2],
+  ['#3', 3],
+  ['#4', 4],
+  ['#5', 5],
+  ['#6–10', 6],
+  ['#11–20', 11],
+  ['#21–50', 21],
+  ['#51–100', 51],
+  ['#101–200', 101],
+  ['#201–500', 201],
+  ['#501+', 501]
+];
 
 function requestJson(apiPath, token) {
   return new Promise((resolve, reject) => {
@@ -94,6 +111,11 @@ function roleForRank(rank) {
 
 function avatarWithSize(url, size) {
   return `${url}${url.includes('?') ? '&' : '?'}s=${size}`;
+}
+
+function assetVersion(assetPath, fallback = '1') {
+  if (!fs.existsSync(assetPath)) return encodeURIComponent(fallback);
+  return crypto.createHash('sha256').update(fs.readFileSync(assetPath)).digest('hex').slice(0, 12);
 }
 
 function requestImage(url, redirectCount = 0) {
@@ -347,37 +369,49 @@ function renderRemainingMembers(members) {
   return `<details><summary>View all remaining ranks (${remainingMembers.length})</summary><ul>${rows}</ul></details>`;
 }
 
-function renderRankLadder() {
-  const ranges = [
-    ['#1', 1],
-    ['#2', 2],
-    ['#3', 3],
-    ['#4', 4],
-    ['#5', 5],
-    ['#6–10', 6],
-    ['#11–20', 11],
-    ['#21–50', 21],
-    ['#51–100', 51],
-    ['#101–200', 101],
-    ['#201–500', 201],
-    ['#501+', 501]
-  ];
-  const rows = ranges.map(([range, rank]) => {
+function renderRankLadderSvg() {
+  const rowHeight = 48;
+  const rows = RANK_RANGES.map(([range, rank], index) => {
     const role = roleForRank(rank);
-    return `<div style="display:block; white-space:nowrap; text-align:left;"><span style="display:inline-block; width:40px; text-align:right; vertical-align:middle;">${insigniaImage(rank, 30)}</span><span style="display:inline-block; width:82px; margin-left:8px; vertical-align:middle;"><b>${range}</b></span><span style="vertical-align:middle;">· ${escapeHtml(role.title)}</span></div>`;
+    const top = 8 + index * rowHeight;
+    return `<g data-ladder-rank="${rank}">${readInsigniaSvg(rank, `ladder-${rank}`, 20, top + 4, 42, 34)}<text x="88" y="${top + 28}" class="range">${escapeHtml(range)}</text><text x="190" y="${top + 28}" class="title">${escapeHtml(role.title)}</text></g>`;
   }).join('');
-  return `<details><summary>View rank ladder</summary><div style="text-align:left;">${rows}</div></details>`;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 592" role="img" aria-labelledby="ladder-title ladder-description">
+  <title id="ladder-title">Military rank ladder</title>
+  <desc id="ladder-description">Rank insignia, position ranges, and military titles shown in three aligned columns.</desc>
+  <style>
+    .range,.title{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;dominant-baseline:middle;fill:#c9d1d9;font-size:17px}
+    .range{font-weight:700;text-anchor:start}
+    .title{text-anchor:start}
+    @media (prefers-color-scheme:light){.range,.title{fill:#24292f}}
+  </style>
+  ${rows}
+</svg>`;
+}
+
+function writeRankLadderAsset() {
+  fs.mkdirSync(AVATAR_ASSETS_DIR, { recursive: true });
+  fs.writeFileSync(RANK_LADDER_ASSET_PATH, `${renderRankLadderSvg()}\n`, 'utf8');
+}
+
+function renderRankLadder() {
+  const version = assetVersion(RANK_LADDER_ASSET_PATH);
+  return `<details><summary>View rank ladder</summary><p><img src="${RANK_LADDER_ASSET_URL}?v=${version}" width="100%" alt="Military rank ladder with aligned insignia, rank, and title columns" /></p></details>`;
 }
 
 function renderRankControls(members) {
-  return `${renderRankLadder()}\n${renderRemainingMembers(members)}`;
+  return `<table width="100%" cellspacing="0" cellpadding="8"><tbody><tr>` +
+    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="480" height="1" alt="" />${renderRankLadder()}</td>` +
+    `<td width="50%" align="center" valign="top"><img src="./assets/spacer.svg" width="480" height="1" alt="" />${renderRemainingMembers(members)}</td>` +
+    `</tr></tbody></table>`;
 }
 
 function renderStargazerHtml(snapshot) {
   const members = snapshot.members;
   const currentMembers = members.filter(member => member.isCurrentlyStarred);
-  const assetVersion = encodeURIComponent(snapshot.updatedAt || '1');
-  const wallHtml = `${members.length === 0 ? '<p><b>No stargazers yet.</b><br/><small>Be the first person to star one of Hung\'s repositories.</small></p>' : ''}<p><img src="${HALL_ASSET_URL}?v=${assetVersion}" width="100%" alt="Top five stargazers arranged as a pyramid" /></p>`;
+  const hallVersion = assetVersion(HALL_ASSET_PATH, snapshot.updatedAt || '1');
+  const wallHtml = `${members.length === 0 ? '<p><b>No stargazers yet.</b><br/><small>Be the first person to star one of Hung\'s repositories.</small></p>' : ''}<p><img src="${HALL_ASSET_URL}?v=${hallVersion}" width="100%" alt="Top five stargazers arranged as a pyramid" /></p>`;
 
   return `<!-- STARGAZERS:START -->
 <div align="center">
@@ -439,6 +473,7 @@ async function syncStargazers({ token, owner = OWNER } = {}) {
     : candidate;
   fs.writeFileSync(DATA_PATH, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
   await writeHallAsset(snapshot);
+  writeRankLadderAsset();
   updateReadme(process.env.STARGAZER_PREVIEW === '1' ? createPreviewSnapshot(snapshot) : snapshot);
   console.log(`Scanned ${repositories.length} public repositories and ${observedMembers.length} current star records.`);
   console.log(`Hall of Fame contains ${snapshot.members.length} unique users (${snapshot.members.filter(member => member.isCurrentlyStarred).length} currently starring).`);
@@ -452,4 +487,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { createPreviewSnapshot, mergeSnapshot, renderHallOfFameSvg, renderStargazerHtml, syncStargazers };
+module.exports = { createPreviewSnapshot, mergeSnapshot, renderHallOfFameSvg, renderRankLadderSvg, renderStargazerHtml, syncStargazers };

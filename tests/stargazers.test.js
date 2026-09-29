@@ -1,7 +1,7 @@
 const assert = require('node:assert/strict');
 const test = require('node:test');
 
-const { createPreviewSnapshot, mergeSnapshot, renderHallOfFameSvg, renderStargazerHtml } = require('../scripts/update-stargazers');
+const { createPreviewSnapshot, mergeSnapshot, renderHallOfFameSvg, renderRankLadderSvg, renderStargazerHtml } = require('../scripts/update-stargazers');
 
 const repo = { name: 'demo', url: 'https://github.com/vu-gia-hung/demo' };
 
@@ -110,10 +110,12 @@ test('Hall of Fame exposes ranks after the pyramid in a collapsed list', () => {
 
 test('Hall of Fame exposes the complete rank ladder separately', () => {
   const html = renderStargazerHtml({ repositories: [], members: [] });
+  const svg = renderRankLadderSvg();
 
   assert.match(html, /View rank ladder/);
-  assert.match(html, /Sergeant Major of the Army/);
-  assert.match(html, /Corporal/);
-  assert.doesNotMatch(html, /Specialist/);
-  assert.match(html, /Private E-1/);
+  assert.match(html, /rank-ladder\.svg/);
+  assert.match(svg, /Sergeant Major of the Army/);
+  assert.match(svg, /Corporal/);
+  assert.doesNotMatch(svg, /Specialist/);
+  assert.match(svg, /Private E-1/);
 });

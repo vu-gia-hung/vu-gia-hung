@@ -44,4 +44,10 @@ jobs:
           else
             git commit -m "chore: update stargazers hall of fame [skip ci]"
             bash scripts/push-main.sh
+            curl --fail --silent --show-error --retry 3 \
+              "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/assets/stargazers/hall-of-fame.svg" >/dev/null \
+              || echo "Warning: Hall of Fame CDN purge failed"
+            curl --fail --silent --show-error --retry 3 \
+              "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/assets/stargazers/rank-ladder.svg" >/dev/null \
+              || echo "Warning: rank ladder CDN purge failed"
           fi
