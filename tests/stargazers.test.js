@@ -1,7 +1,7 @@
 const assert = require('node:assert/strict');
 const test = require('node:test');
 
-const { createPreviewSnapshot, mergeSnapshot, renderStargazerHtml } = require('../scripts/update-stargazers');
+const { createPreviewSnapshot, mergeSnapshot, renderHallOfFameSvg, renderStargazerHtml } = require('../scripts/update-stargazers');
 
 const repo = { name: 'demo', url: 'https://github.com/vu-gia-hung/demo' };
 
@@ -46,7 +46,7 @@ test('Hall of Fame renders an honest empty state', () => {
 });
 
 test('Hall of Fame escapes user supplied profile fields', () => {
-  const html = renderStargazerHtml({
+  const svg = renderHallOfFameSvg({
     repositories: [repo],
     members: [{
       id: 8,
@@ -60,11 +60,11 @@ test('Hall of Fame escapes user supplied profile fields', () => {
     }]
   });
 
-  assert.doesNotMatch(html, /<script>/i);
-  assert.match(html, /&lt;script&gt;/i);
+  assert.doesNotMatch(svg, /<script>/i);
+  assert.match(svg, /&lt;script&gt;/i);
 });
 
-test('Hall of Fame arranges five members as a three-row pyramid', () => {
+test('Hall of Fame renders a fixed five-slot pyramid in one SVG', () => {
   const preview = createPreviewSnapshot({
     repositories: [],
     members: [{
@@ -78,13 +78,17 @@ test('Hall of Fame arranges five members as a three-row pyramid', () => {
       repositories: []
     }]
   });
+  const avatarData = 'data:image/png;base64,aGVsbG8=';
+  const svg = renderHallOfFameSvg(preview, new Map([['7', avatarData]]));
   const html = renderStargazerHtml(preview);
 
-  assert.equal((html.match(/data-hall-row="1"/g) || []).length, 1);
-  assert.equal((html.match(/data-hall-row="2"/g) || []).length, 1);
-  assert.equal((html.match(/data-hall-row="3"/g) || []).length, 1);
-  assert.match(html, /@alice/);
-  assert.equal((html.match(/Open slot/g) || []).length, 4);
+  assert.equal((svg.match(/data-rank="[1-5]"/g) || []).length, 5);
+  assert.match(svg, /M500 54 L250 488 M500 54 L750 488/);
+  assert.match(svg, /@alice/);
+  assert.match(svg, /data:image\/png;base64,aGVsbG8=/);
+  assert.equal((svg.match(/Open slot/g) || []).length, 4);
+  assert.match(html, /assets\/stargazers\/hall-of-fame\.svg/);
+  assert.doesNotMatch(html, /data-hall-row/);
 });
 
 test('Hall of Fame exposes ranks after the pyramid in a collapsed list', () => {

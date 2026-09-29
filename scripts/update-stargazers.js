@@ -7,6 +7,8 @@ const OWNER = 'vu-gia-hung';
 const README_PATH = path.join(ROOT_DIR, 'README.md');
 const DATA_PATH = path.join(ROOT_DIR, 'data/stargazers.json');
 const AVATAR_ASSETS_DIR = path.join(ROOT_DIR, 'assets/stargazers');
+const HALL_ASSET_PATH = path.join(AVATAR_ASSETS_DIR, 'hall-of-fame.svg');
+const HALL_ASSET_URL = 'https://cdn.jsdelivr.net/gh/vu-gia-hung/vu-gia-hung@main/assets/stargazers/hall-of-fame.svg';
 const API_VERSION = '2026-03-10';
 const PER_PAGE = 100;
 const MAX_DISPLAYED_MEMBERS = 5;
@@ -94,20 +96,169 @@ function avatarWithSize(url, size) {
   return `${url}${url.includes('?') ? '&' : '?'}s=${size}`;
 }
 
+function requestImage(url, redirectCount = 0) {
+  return new Promise((resolve, reject) => {
+    if (redirectCount > 5) {
+      reject(new Error(`Too many redirects while downloading ${url}`));
+      return;
+    }
+
+    const request = https.get(url, {
+      headers: { 'User-Agent': 'vu-gia-hung-profile-stargazers' }
+    }, response => {
+      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
+        response.resume();
+        const redirectedUrl = new URL(response.headers.location, url).toString();
+        requestImage(redirectedUrl, redirectCount + 1).then(resolve, reject);
+        return;
+      }
+      if (response.statusCode < 200 || response.statusCode >= 300) {
+        response.resume();
+        reject(new Error(`Avatar request returned HTTP ${response.statusCode}`));
+        return;
+      }
+
+      const contentType = String(response.headers['content-type'] || '').split(';')[0].trim().toLowerCase();
+      if (!/^image\/(?:png|jpe?g|gif|webp)$/.test(contentType)) {
+        response.resume();
+        reject(new Error(`Avatar request returned unsupported content type: ${contentType || 'unknown'}`));
+        return;
+      }
+
+      const chunks = [];
+      let length = 0;
+      response.on('data', chunk => {
+        length += chunk.length;
+        if (length > 5 * 1024 * 1024) {
+          request.destroy(new Error('Avatar image exceeded 5 MB'));
+          return;
+        }
+        chunks.push(chunk);
+      });
+      response.on('end', () => resolve({ contentType, buffer: Buffer.concat(chunks) }));
+      response.on('error', reject);
+    });
+    request.setTimeout(20_000, () => request.destroy(new Error(`Avatar request timed out for ${url}`)));
+    request.on('error', reject);
+  });
+}
+
 function avatarAssetKey(member) {
   return String(member.id || member.login).replace(/[^a-zA-Z0-9_-]/g, '-');
 }
 
-function avatarAssetPath(member) {
-  return `./assets/stargazers/stargazer-${avatarAssetKey(member)}.svg`;
+function readInsigniaSvg(rank, instanceId, x, y, width, height) {
+  const role = roleForRank(rank);
+  const source = fs.readFileSync(path.join(ROOT_DIR, 'assets', 'army-ranks', `${role.insignia}.svg`), 'utf8');
+  const viewBox = source.match(/viewBox="([^"]+)"/)?.[1] || '0 0 80 64';
+  const prefix = `rank-${instanceId}-`;
+  const inner = source
+    .replace(/^[\s\S]*?<svg[^>]*>/, '')
+    .replace(/<\/svg>\s*$/, '')
+    .replace(/id="([^"]+)"/g, (_, id) => `id="${prefix}${id}"`)
+    .replace(/url\(#([^)]+)\)/g, (_, id) => `url(#${prefix}${id})`);
+  return `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="${viewBox}" overflow="visible" aria-hidden="true">${inner}</svg>`;
 }
 
-function writeAvatarAssets(snapshot) {
+function renderSlotAura(rank, centerX, centerY) {
+  if (rank > 5) return '';
+  const duration = rank === 1 ? '2.2s' : rank <= 3 ? '2.7s' : '3.2s';
+  const maxRadius = rank === 1 ? 54 : rank <= 3 ? 50 : 47;
+  const opacity = rank === 1 ? '.65' : rank <= 3 ? '.42' : '.24';
+  const secondRing = rank === 1
+    ? `<circle cx="${centerX}" cy="${centerY}" r="45" fill="none" stroke="#bae6fd" stroke-width="1.5" opacity=".3"><animate attributeName="r" values="45;59;45" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".32;.05;.32" dur="3s" repeatCount="indefinite"/></circle>`
+    : '';
+  return `<circle cx="${centerX}" cy="${centerY}" r="44" fill="none" stroke="#38bdf8" stroke-width="2" opacity="${opacity}"><animate attributeName="r" values="44;${maxRadius};44" dur="${duration}" repeatCount="indefinite"/><animate attributeName="opacity" values="${opacity};.06;${opacity}" dur="${duration}" repeatCount="indefinite"/></circle>${secondRing}`;
+}
+
+function renderHallSlot(member, rank, centerX, top, avatarDataUri) {
+  const role = roleForRank(rank);
+  const avatarCenterY = top + 46;
+  const insigniaWidth = rank === 1 ? 46 : rank <= 3 ? 42 : 38;
+  const insigniaHeight = Math.round(insigniaWidth * 0.8);
+  const insigniaX = centerX + 8;
+  const insigniaY = top + 93;
+  const rankX = centerX - 18;
+  const clipId = `avatar-clip-${rank}`;
+  const aura = renderSlotAura(rank, centerX, avatarCenterY);
+
+  if (!member) {
+    return `<g data-rank="${rank}">${aura}<circle cx="${centerX}" cy="${avatarCenterY}" r="42" class="empty-slot"/><text x="${centerX}" y="${avatarCenterY + 12}" class="question">?</text><text x="${rankX}" y="${top + 119}" class="rank-number">#${rank}</text>${readInsigniaSvg(rank, `slot-${rank}`, insigniaX, insigniaY, insigniaWidth, insigniaHeight)}<text x="${centerX}" y="${top + 153}" class="label">Open slot</text><text x="${centerX}" y="${top + 181}" class="muted">Awaiting star</text></g>`;
+  }
+
+  const login = `@${member.login}`;
+  const loginSizing = login.length > 21
+    ? ` textLength="190" lengthAdjust="spacingAndGlyphs"`
+    : '';
+  const repositoryCount = Array.isArray(member.repositories) ? member.repositories.length : 0;
+  const status = member.isCurrentlyStarred ? `★ ${repositoryCount} stars` : 'Former stargazer';
+  const statusClass = member.isCurrentlyStarred ? 'status' : 'muted';
+  const avatar = avatarDataUri
+    ? `<image href="${avatarDataUri}" x="${centerX - 40}" y="${top + 6}" width="80" height="80" preserveAspectRatio="xMidYMid slice" clip-path="url(#${clipId})"/>`
+    : `<circle cx="${centerX}" cy="${avatarCenterY}" r="40" class="avatar-fallback"/><text x="${centerX}" y="${avatarCenterY + 11}" class="fallback-letter">${escapeHtml(String(member.login || '?').charAt(0).toUpperCase())}</text>`;
+
+  return `<g data-rank="${rank}"><defs><clipPath id="${clipId}"><circle cx="${centerX}" cy="${avatarCenterY}" r="40"/></clipPath></defs>${aura}${avatar}<circle cx="${centerX}" cy="${avatarCenterY}" r="41" class="avatar-ring"/><text x="${rankX}" y="${top + 119}" class="rank-number">#${rank}</text>${readInsigniaSvg(rank, `member-${rank}`, insigniaX, insigniaY, insigniaWidth, insigniaHeight)}<text x="${centerX}" y="${top + 153}" class="label"${loginSizing}>${escapeHtml(login)}</text><text x="${centerX}" y="${top + 178}" class="title">${escapeHtml(role.title)}</text><text x="${centerX}" y="${top + 203}" class="${statusClass}">${escapeHtml(status)}</text></g>`;
+}
+
+function renderHallOfFameSvg(snapshot, avatarDataUris = new Map()) {
+  const slots = [
+    { rank: 1, centerX: 500, top: 8 },
+    { rank: 2, centerX: 375, top: 225 },
+    { rank: 3, centerX: 625, top: 225 },
+    { rank: 4, centerX: 250, top: 442 },
+    { rank: 5, centerX: 750, top: 442 }
+  ];
+  const members = snapshot.members.slice(0, MAX_DISPLAYED_MEMBERS);
+  const cards = slots.map(({ rank, centerX, top }, index) => {
+    const member = members[index] || null;
+    const avatarDataUri = member ? avatarDataUris.get(avatarAssetKey(member)) : null;
+    return renderHallSlot(member, rank, centerX, top, avatarDataUri);
+  }).join('');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 655" role="img" aria-labelledby="hall-title hall-description">
+  <title id="hall-title">Stargazers Hall of Fame top five</title>
+  <desc id="hall-description">Five ranks arranged as a pyramid, with rank one at the top.</desc>
+  <style>
+    .guide{fill:none;stroke:#38bdf8;stroke-width:1.5;stroke-dasharray:5 9;opacity:.13}
+    .avatar-ring{fill:none;stroke:#38bdf8;stroke-width:3}
+    .avatar-fallback{fill:#0f172a;stroke:#38bdf8;stroke-width:3}
+    .empty-slot{fill:#0f172a;stroke:#64748b;stroke-width:3;stroke-dasharray:7 6}
+    .label,.title,.rank-number,.muted,.status,.question,.fallback-letter{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;text-anchor:middle}
+    .rank-number{fill:#c9d1d9;font-size:18px;font-weight:700}
+    .label{fill:#c9d1d9;font-size:16px;font-weight:600}
+    .title{fill:#c9d1d9;font-size:15px}
+    .muted{fill:#8b949e;font-size:15px}
+    .status{fill:#e3b341;font-size:15px;font-weight:600}
+    .question{fill:#8b949e;font-size:36px}
+    .fallback-letter{fill:#e6edf3;font-size:32px;font-weight:700}
+    @media (prefers-color-scheme:light){
+      .rank-number,.label,.title{fill:#24292f}.muted,.question{fill:#57606a}.avatar-fallback,.empty-slot{fill:#f6f8fa}
+    }
+  </style>
+  <path class="guide" d="M500 54 L250 488 M500 54 L750 488"/>
+  ${cards}
+</svg>`;
+}
+
+async function writeHallAsset(snapshot) {
   fs.mkdirSync(AVATAR_ASSETS_DIR, { recursive: true });
-  for (const member of snapshot.members) {
-    const avatarUrl = escapeHtml(member.avatarUrl);
-    const asset = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="@${escapeHtml(member.login)} avatar"><defs><clipPath id="avatar-circle"><circle cx="48" cy="48" r="42"/></clipPath></defs><image href="${avatarUrl}" x="6" y="6" width="84" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#avatar-circle)"/><circle cx="48" cy="48" r="43" fill="none" stroke="#38bdf8" stroke-width="4"/></svg>`;
-    fs.writeFileSync(path.join(AVATAR_ASSETS_DIR, `stargazer-${avatarAssetKey(member)}.svg`), `${asset}\n`, 'utf8');
+  const avatarDataUris = new Map();
+  const displayedMembers = snapshot.members.slice(0, MAX_DISPLAYED_MEMBERS);
+
+  await Promise.all(displayedMembers.map(async member => {
+    try {
+      const { contentType, buffer } = await requestImage(avatarWithSize(member.avatarUrl, 192));
+      avatarDataUris.set(avatarAssetKey(member), `data:${contentType};base64,${buffer.toString('base64')}`);
+    } catch (error) {
+      console.warn(`Could not embed @${member.login}'s avatar: ${error.message}`);
+    }
+  }));
+
+  fs.writeFileSync(HALL_ASSET_PATH, `${renderHallOfFameSvg(snapshot, avatarDataUris)}\n`, 'utf8');
+  for (const assetName of fs.readdirSync(AVATAR_ASSETS_DIR)) {
+    if (/^stargazer-.+\.svg$/.test(assetName)) {
+      fs.unlinkSync(path.join(AVATAR_ASSETS_DIR, assetName));
+    }
   }
 }
 
@@ -184,42 +335,6 @@ function mergeSnapshot(previous, repositories, observedMembers, updatedAt) {
   };
 }
 
-function renderMember(member, rank, horizontalMargin = 4) {
-  const role = roleForRank(rank);
-  const current = member.isCurrentlyStarred;
-  const repositoryCount = member.repositories.length;
-  const state = current
-    ? `⭐ ${repositoryCount} stars`
-    : '🕰️ Former stargazer';
-  return `<span style="display:inline-block; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
-    `<a href="${escapeHtml(member.htmlUrl)}" title="${escapeHtml(`Star #${rank} · ${member.login} · ${role.title}`)}"><img src="${avatarAssetPath(member)}" width="72" height="72" alt="@${escapeHtml(member.login)}" /></a>` +
-    `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>@${escapeHtml(member.login)}</small><br/><small>${escapeHtml(role.title)}</small><br/><small style="display:block; text-align:center; white-space:nowrap;">${state}</small></span>`;
-}
-
-function renderEmptyMember(rank, horizontalMargin = 4) {
-  const role = roleForRank(rank);
-  return `<span style="display:inline-block; vertical-align:top; margin:8px ${horizontalMargin}px; text-align:center;">` +
-    `<img src="./assets/stargazers/open-slot.svg" width="64" height="64" alt="Open stargazer slot" />` +
-    `<br/><b>#${rank} ${insigniaImage(rank)}</b><br/><small>Open slot</small><br/><small>Awaiting star</small></span>`;
-}
-
-function renderPyramid(members) {
-  const slots = Array.from({ length: MAX_DISPLAYED_MEMBERS }, (_, index) => members[index] || null);
-  const rows = [slots.slice(0, 1), slots.slice(1, 3), slots.slice(3, 5)];
-  return rows
-    .filter(row => row.length > 0)
-    .map((row, rowIndex) => {
-      const renderSlot = (member, rank, horizontalMargin = 4) => member
-        ? renderMember(member, rank, horizontalMargin)
-        : renderEmptyMember(rank, horizontalMargin);
-
-      if (rowIndex === 0) return `<p data-hall-row="1" align="center">${renderSlot(row[0], 1, 0)}</p>`;
-      if (rowIndex === 1) return `<p data-hall-row="2" align="center">&emsp;&emsp;${renderSlot(row[0], 2, 0)}&emsp;&emsp;${renderSlot(row[1], 3, 0)}</p>`;
-      return `<p data-hall-row="3" align="center">${renderSlot(row[0], 4, 0)}&emsp;&emsp;&emsp;&emsp;&emsp;${renderSlot(row[1], 5, 0)}</p>`;
-    })
-    .join('\n');
-}
-
 function renderRemainingMembers(members) {
   const remainingMembers = members.slice(MAX_DISPLAYED_MEMBERS);
   if (remainingMembers.length === 0) {
@@ -257,17 +372,14 @@ function renderRankLadder() {
 }
 
 function renderRankControls(members) {
-  return `<div style="text-align:center; white-space:normal;">` +
-    `<div style="display:inline-block; width:48%; vertical-align:top; text-align:center;">${renderRankLadder()}</div>` +
-    `<div style="display:inline-block; width:48%; vertical-align:top; text-align:center;">${renderRemainingMembers(members)}</div>` +
-    `</div>`;
+  return `${renderRankLadder()}\n${renderRemainingMembers(members)}`;
 }
 
 function renderStargazerHtml(snapshot) {
   const members = snapshot.members;
   const currentMembers = members.filter(member => member.isCurrentlyStarred);
-  const displayedMembers = members.slice(0, MAX_DISPLAYED_MEMBERS);
-  const wallHtml = `${members.length === 0 ? '<p><b>No stargazers yet.</b><br/><small>Be the first person to star one of Hung\'s repositories.</small></p>' : ''}${renderPyramid(displayedMembers)}`;
+  const assetVersion = encodeURIComponent(snapshot.updatedAt || '1');
+  const wallHtml = `${members.length === 0 ? '<p><b>No stargazers yet.</b><br/><small>Be the first person to star one of Hung\'s repositories.</small></p>' : ''}<p><img src="${HALL_ASSET_URL}?v=${assetVersion}" width="100%" alt="Top five stargazers arranged as a pyramid" /></p>`;
 
   return `<!-- STARGAZERS:START -->
 <div align="center">
@@ -328,7 +440,7 @@ async function syncStargazers({ token, owner = OWNER } = {}) {
     ? { ...candidate, updatedAt: previous.updatedAt }
     : candidate;
   fs.writeFileSync(DATA_PATH, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
-  writeAvatarAssets(snapshot);
+  await writeHallAsset(snapshot);
   updateReadme(process.env.STARGAZER_PREVIEW === '1' ? createPreviewSnapshot(snapshot) : snapshot);
   console.log(`Scanned ${repositories.length} public repositories and ${observedMembers.length} current star records.`);
   console.log(`Hall of Fame contains ${snapshot.members.length} unique users (${snapshot.members.filter(member => member.isCurrentlyStarred).length} currently starring).`);
@@ -342,4 +454,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { createPreviewSnapshot, mergeSnapshot, renderStargazerHtml, syncStargazers };
+module.exports = { createPreviewSnapshot, mergeSnapshot, renderHallOfFameSvg, renderStargazerHtml, syncStargazers };
