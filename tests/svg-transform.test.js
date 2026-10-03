@@ -1,31 +1,33 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { injectNumbers, recolorActivityArea } = require('../scripts/update-activity-graph');
+const { generateMonthlyActivitySvg } = require('../scripts/update-activity-graph');
 const { transform3dLightSvg, transform3dNightSvg } = require('../scripts/recolor-3d-graph');
 const { transformTrophies } = require('../scripts/update-trophies');
 
-test('activity point labels work when SVG attributes are reordered', () => {
-  const svg = '<svg><line ct:value="7" class="ct-grid ct-point" y1="20" x1="10"></line></svg>';
-  const result = injectNumbers(svg, '#123456', '#ffffff');
+test('generateMonthlyActivitySvg creates valid dark and light SVGs with correct metadata', () => {
+  const dark = generateMonthlyActivitySvg({
+    year: 2026,
+    authorName: 'Vu Gia Hung',
+    monthlyData: [10, 20, 30, 0, 5, 0, 0, 0, 0, 0, 0, 0],
+    total: 65,
+    isDark: true
+  });
+  assert.match(dark, /Vu Gia Hung's Monthly Contribution Activity \(2026\)/);
+  assert.match(dark, /65 Total Contributions/);
+  assert.match(dark, /#060913/);
+  assert.match(dark, /MONTHS/);
+  assert.match(dark, /CONTRIBUTIONS/);
 
-  assert.match(result, /<text x="10\.0" y="11\.0"[^>]*>7<\/text>/);
-});
-
-test('activity transformation fails clearly when required graph structure is missing', () => {
-  assert.throws(
-    () => injectNumbers('<svg></svg>', '#123456', '#ffffff'),
-    /no ct-point elements/i
-  );
-  assert.throws(
-    () => recolorActivityArea('<svg><style>.ct-area{stroke:none;}</style></svg>'),
-    /no fill rule/i
-  );
-});
-
-test('activity area recoloring follows its selector instead of a specific source color', () => {
-  const svg = '<svg><style>.ct-area{fill:#123456;}</style></svg>';
-  assert.match(recolorActivityArea(svg), /\.ct-area\{fill:#bae6fd;\}/);
+  const light = generateMonthlyActivitySvg({
+    year: 2026,
+    authorName: 'Vu Gia Hung',
+    monthlyData: [10, 20, 30, 0, 5, 0, 0, 0, 0, 0, 0, 0],
+    total: 65,
+    isDark: false
+  });
+  assert.match(light, /Vu Gia Hung's Monthly Contribution Activity \(2026\)/);
+  assert.match(light, /#ffffff/);
 });
 
 test('3D recoloring supports new counts and is safe to run more than once', () => {
