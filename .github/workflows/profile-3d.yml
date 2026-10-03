@@ -28,6 +28,8 @@ jobs:
           node-version: 20
 
       - name: Update Activity Graph, 3D Graph & Trophies With Cosmic Blue Theme
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-activity-graph.js
 
       - name: Clean up unused 3D themes
