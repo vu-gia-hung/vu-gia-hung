@@ -195,13 +195,13 @@ function generateMonthlyActivitySvg({
 
   <!-- Header Title & Subtitle (100% English) -->
   <text x="${width / 2}" y="38" fill="${titleColor}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" letter-spacing="0.5">${authorName}'s Monthly Contribution Activity (${year})</text>
-  <text x="${width / 2}" y="58" fill="${subtitleColor}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">${totalCount.toLocaleString()} Total Contributions in ${year}</text>
+  <text x="${width / 2}" y="58" fill="${subtitleColor}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">${totalCount.toLocaleString()} Total Contributions</text>
 
   <!-- Y-Axis Label -->
   <text transform="translate(24, ${(topMargin + baseY) / 2}) rotate(-90)" fill="${axisTextColor}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1">CONTRIBUTIONS</text>
 
   <!-- X-Axis Label -->
-  <text x="${width / 2}" y="${height - 16}" fill="${axisTextColor}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1">MONTHS (${year})</text>
+  <text x="${width / 2}" y="${height - 16}" fill="${axisTextColor}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1">MONTHS</text>
 
   <!-- Grid Lines -->
   <g>
