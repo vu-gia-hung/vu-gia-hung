@@ -11,7 +11,7 @@
 
   <!-- Header Title & Subtitle (100% English) -->
   <text x="600" y="38" fill="#0284c7" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" letter-spacing="0.5">Vu Gia Hung's Monthly Contribution Activity (2026)</text>
-  <text x="600" y="58" fill="#64748b" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">857 Total Contributions</text>
+  <text x="600" y="58" fill="#64748b" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">866 Total Contributions</text>
 
   <!-- Y-Axis Label -->
   <text transform="translate(24, 217.5) rotate(-90)" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1">CONTRIBUTIONS</text>
@@ -62,10 +62,10 @@
   </g>
 
   <!-- Gradient Area Fill -->
-  <path d="M 85.0 350.0 C 101.0 350.0, 148.9 350.0, 180.9 350.0 C 212.9 350.0, 244.8 350.0, 276.8 350.0 C 308.8 350.0, 340.8 350.0, 372.7 350.0 C 404.7 350.0, 436.7 350.0, 468.6 350.0 C 500.6 349.9, 532.6 350.0, 564.5 349.5 C 596.5 347.7, 628.5 350.0, 660.5 339.4 C 692.4 312.5, 724.4 230.2, 756.4 187.8 C 788.3 145.4, 820.3 60.6, 852.3 85.0 C 884.2 109.4, 916.2 289.9, 948.2 334.1 C 980.2 350.0, 1012.1 347.4, 1044.1 350.0 C 1076.1 350.0, 1124.0 350.0, 1140.0 350.0 L 1140.0 350 L 85.0 350 Z" fill="url(#areaGradLight)" />
+  <path d="M 85.0 350.0 C 101.0 350.0, 148.9 350.0, 180.9 350.0 C 212.9 350.0, 244.8 350.0, 276.8 350.0 C 308.8 350.0, 340.8 350.0, 372.7 350.0 C 404.7 350.0, 436.7 350.0, 468.6 350.0 C 500.6 349.9, 532.6 350.0, 564.5 349.5 C 596.5 347.7, 628.5 350.0, 660.5 339.4 C 692.4 312.5, 724.4 230.2, 756.4 187.8 C 788.3 145.4, 820.3 61.4, 852.3 85.0 C 884.2 108.6, 916.2 285.2, 948.2 329.3 C 980.2 350.0, 1012.1 346.6, 1044.1 350.0 C 1076.1 350.0, 1124.0 350.0, 1140.0 350.0 L 1140.0 350 L 85.0 350 Z" fill="url(#areaGradLight)" />
 
   <!-- Wave Line -->
-  <path d="M 85.0 350.0 C 101.0 350.0, 148.9 350.0, 180.9 350.0 C 212.9 350.0, 244.8 350.0, 276.8 350.0 C 308.8 350.0, 340.8 350.0, 372.7 350.0 C 404.7 350.0, 436.7 350.0, 468.6 350.0 C 500.6 349.9, 532.6 350.0, 564.5 349.5 C 596.5 347.7, 628.5 350.0, 660.5 339.4 C 692.4 312.5, 724.4 230.2, 756.4 187.8 C 788.3 145.4, 820.3 60.6, 852.3 85.0 C 884.2 109.4, 916.2 289.9, 948.2 334.1 C 980.2 350.0, 1012.1 347.4, 1044.1 350.0 C 1076.1 350.0, 1124.0 350.0, 1140.0 350.0" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 85.0 350.0 C 101.0 350.0, 148.9 350.0, 180.9 350.0 C 212.9 350.0, 244.8 350.0, 276.8 350.0 C 308.8 350.0, 340.8 350.0, 372.7 350.0 C 404.7 350.0, 436.7 350.0, 468.6 350.0 C 500.6 349.9, 532.6 350.0, 564.5 349.5 C 596.5 347.7, 628.5 350.0, 660.5 339.4 C 692.4 312.5, 724.4 230.2, 756.4 187.8 C 788.3 145.4, 820.3 61.4, 852.3 85.0 C 884.2 108.6, 916.2 285.2, 948.2 329.3 C 980.2 350.0, 1012.1 346.6, 1044.1 350.0 C 1076.1 350.0, 1124.0 350.0, 1140.0 350.0" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
 
   <!-- Data Points and Values -->
   <g>
@@ -82,8 +82,8 @@
     <text x="756.4" y="177.8" fill="#0284c7" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">306</text>
     <circle cx="852.3" cy="85.0" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" />
     <text x="852.3" y="75.0" fill="#0284c7" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">500</text>
-    <circle cx="948.2" cy="334.1" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" />
-    <text x="948.2" y="324.1" fill="#0284c7" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">30</text>
+    <circle cx="948.2" cy="329.3" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" />
+    <text x="948.2" y="319.3" fill="#0284c7" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">39</text>
     <circle cx="1044.1" cy="350.0" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" />
     <circle cx="1140.0" cy="350.0" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" />
 
