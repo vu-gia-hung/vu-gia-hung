@@ -19,14 +19,14 @@
   </a>
 
   <p align="center">
-    <a href="https://vugiahung.is-a.dev"><img src="https://img.shields.io/badge/Live%20Portfolio-vugiahung.is--a.dev-38bdf8?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
-    <a href="https://www.rmit.edu.vn/"><img src="https://img.shields.io/badge/RMIT%20Vietnam-Software%20Eng%20(Hons)-38bdf8?style=for-the-badge&logo=googlescholar&logoColor=white" alt="RMIT University" /></a>
+    <a href="https://vugiahung.is-a.dev"><img src="./assets/badges/live-portfolio.svg" alt="Live Portfolio" /></a>
+    <a href="https://www.rmit.edu.vn/"><img src="./assets/badges/rmit-university.svg" alt="RMIT University" /></a>
     <br/>
-    <img src="https://img.shields.io/badge/GPA-3.8%20%2F%204.0-38bdf8?style=for-the-badge&logo=target&logoColor=white" alt="GPA" />
-    <img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%2C%20VN-38bdf8?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+    <img src="./assets/badges/gpa.svg" alt="GPA" />
+    <img src="./assets/badges/location.svg" alt="Location" />
     <br/>
     <img src="https://komarev.com/ghpvc/?username=vu-gia-hung&label=Profile%20Views&color=38bdf8&style=for-the-badge" alt="Profile Views" />
-    <a href="https://github.com/vu-gia-hung?tab=repositories"><img src="https://img.shields.io/badge/Open%20Source-Explorer-38bdf8?style=for-the-badge&logo=github&logoColor=white" alt="Open Source Explorer" /></a>
+    <a href="https://github.com/vu-gia-hung?tab=repositories"><img src="./assets/badges/open-source-explorer.svg" alt="Open Source Explorer" /></a>
   </p>
 
 </div>
@@ -41,7 +41,7 @@
 </a>
 <br/><br/>
 <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20NOTE%3A%20Please%20do%20not%20edit%20or%20delete%20the%20issue%20title!%20Leave%20your%20message%20for%20Hung%20below%3A%20--%3E%0A%0A">
-<img src="https://img.shields.io/badge/Click_here_to_leave_your_mark_on_my_profile-38bdf8?style=for-the-badge" alt="Click here to leave your mark on my profile" />
+<img src="./assets/badges/click-here-to-leave-your-mark-on-my-profile.svg" alt="Click here to leave your mark on my profile" />
 </a>
 <br/>
 <img src="./assets/spacer.svg" width="480" height="1" />
@@ -50,7 +50,7 @@
 <!-- GUESTBOOK:START -->
 <div align="left">
 <p>
-<img src="https://img.shields.io/badge/RECENT_GUESTBOOK_ENTRIES-0284c7?style=flat-square" alt="Recent Guestbook Entries" /> <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
+<img src="./assets/badges/recent-guestbook-entries.svg" alt="Recent Guestbook Entries" /> <img src="./assets/badges/live.svg" alt="Live" />
 <br/>
 <small style="color: #8b949e;">Leave a message on the left to appear here!</small>
 </p>
@@ -114,61 +114,61 @@ I am passionate about building resilient, high-performance systems spanning from
   <tr>
     <td width="22%"><b>Programming</b></td>
     <td>
-      <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge" alt="C" />
-      <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge" alt="C++" />
-      <img src="https://img.shields.io/badge/Python-00599C?style=for-the-badge" alt="Python" />
+      <img src="./assets/badges/c.svg" alt="C" />
+      <img src="./assets/badges/c-2.svg" alt="C++" />
+      <img src="./assets/badges/python.svg" alt="Python" />
     </td>
   </tr>
   <tr>
     <td><b>Computer Science</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Data%20Structures-1e293b?style=for-the-badge" alt="Data Structures" />
-      <img src="https://img.shields.io/badge/Algorithms-1e293b?style=for-the-badge" alt="Algorithms" />
-      <img src="https://img.shields.io/badge/OOP-1e293b?style=for-the-badge" alt="OOP" />
+      <img src="./assets/badges/data-structures.svg" alt="Data Structures" />
+      <img src="./assets/badges/algorithms.svg" alt="Algorithms" />
+      <img src="./assets/badges/oop.svg" alt="OOP" />
     </td>
   </tr>
   <tr>
     <td><b>Tools &amp; Hardware</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Git-0284c7?style=for-the-badge" alt="Git" />
-      <img src="https://img.shields.io/badge/Arduino-0284c7?style=for-the-badge" alt="Arduino" />
-      <img src="https://img.shields.io/badge/CAD-0284c7?style=for-the-badge" alt="CAD" />
-      <img src="https://img.shields.io/badge/MATLAB-0284c7?style=for-the-badge" alt="MATLAB" />
-      <img src="https://img.shields.io/badge/Simulink-0284c7?style=for-the-badge" alt="Simulink" />
+      <img src="./assets/badges/git.svg" alt="Git" />
+      <img src="./assets/badges/arduino.svg" alt="Arduino" />
+      <img src="./assets/badges/cad.svg" alt="CAD" />
+      <img src="./assets/badges/matlab.svg" alt="MATLAB" />
+      <img src="./assets/badges/simulink.svg" alt="Simulink" />
     </td>
   </tr>
   <tr>
     <td><b>AI &amp; ML Interests</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Generative%20AI%20%26%20LLMs-2563eb?style=for-the-badge" alt="Generative AI & LLMs" />
-      <img src="https://img.shields.io/badge/RAG-2563eb?style=for-the-badge" alt="RAG" />
-      <img src="https://img.shields.io/badge/Agentic%20AI-2563eb?style=for-the-badge" alt="Agentic AI" />
-      <img src="https://img.shields.io/badge/Prompt%20Engineering-2563eb?style=for-the-badge" alt="Prompt Engineering" />
-      <img src="https://img.shields.io/badge/Multimodal%20AI-2563eb?style=for-the-badge" alt="Multimodal AI" />
+      <img src="./assets/badges/generative-ai-llms.svg" alt="Generative AI & LLMs" />
+      <img src="./assets/badges/rag.svg" alt="RAG" />
+      <img src="./assets/badges/agentic-ai.svg" alt="Agentic AI" />
+      <img src="./assets/badges/prompt-engineering.svg" alt="Prompt Engineering" />
+      <img src="./assets/badges/multimodal-ai.svg" alt="Multimodal AI" />
     </td>
   </tr>
   <tr>
     <td><b>STEM</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Mathematics-0369a1?style=for-the-badge" alt="Mathematics" />
-      <img src="https://img.shields.io/badge/Physics-0369a1?style=for-the-badge" alt="Physics" />
+      <img src="./assets/badges/mathematics.svg" alt="Mathematics" />
+      <img src="./assets/badges/physics.svg" alt="Physics" />
     </td>
   </tr>
   <tr>
     <td><b>Languages</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Vietnamese-Native-38bdf8?style=for-the-badge" alt="Vietnamese" />
-      <img src="https://img.shields.io/badge/English-Working%20Proficiency-38bdf8?style=for-the-badge" alt="English" />
+      <img src="./assets/badges/vietnamese.svg" alt="Vietnamese" />
+      <img src="./assets/badges/english.svg" alt="English" />
     </td>
   </tr>
   <tr>
     <td><b>Interpersonal</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Teamwork-334155?style=for-the-badge" alt="Teamwork" />
-      <img src="https://img.shields.io/badge/Communication-334155?style=for-the-badge" alt="Communication" />
-      <img src="https://img.shields.io/badge/Problem--solving-334155?style=for-the-badge" alt="Problem-solving" />
-      <img src="https://img.shields.io/badge/Adaptability-334155?style=for-the-badge" alt="Adaptability" />
-      <img src="https://img.shields.io/badge/Time%20Management-334155?style=for-the-badge" alt="Time Management" />
+      <img src="./assets/badges/teamwork.svg" alt="Teamwork" />
+      <img src="./assets/badges/communication.svg" alt="Communication" />
+      <img src="./assets/badges/problem-solving.svg" alt="Problem-solving" />
+      <img src="./assets/badges/adaptability.svg" alt="Adaptability" />
+      <img src="./assets/badges/time-management.svg" alt="Time Management" />
     </td>
   </tr>
 </table>
@@ -244,29 +244,29 @@ I am passionate about building resilient, high-performance systems spanning from
 
   <!-- Direct Emails & Live Portfolio -->
   <p>
-    <a href="mailto:29vu07gia07hung@gmail.com"><img src="https://img.shields.io/badge/Personal%20Email-29vu07gia07hung%40gmail.com-38bdf8?style=for-the-badge&logo=gmail&logoColor=white" alt="Personal Email" /></a>
-    <a href="mailto:s4189753@rmit.edu.vn"><img src="https://img.shields.io/badge/RMIT%20Email-s4189753%40rmit.edu.vn-38bdf8?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik03Ljg4IDEyLjA0cTAgLjQ1LS4xMS44Ny0uMS40MS0uMzMuNzQtLjIyLjMzLS41OC41Mi0uMzcuMi0uODcuMnQtLjg1LS4ycS0uMzUtLjIxLS41Ny0uNTUtLjIyLS4zMy0uMzMtLjc1LS4xLS40Mi0uMS0uODZ0LjEtLjg3cS4xLS40My4zNC0uNzYuMjItLjM0LjU5LS41NC4zNi0uMi44Ny0uMnQuODYuMnEuMzUuMjEuNTcuNTUuMjIuMzQuMzEuNzcuMS40My4xLjg4ek0yNCAxMnY5LjM4cTAgLjQ2LS4zMy44LS4zMy4zMi0uOC4zMkg3LjEzcS0uNDYgMC0uOC0uMzMtLjMyLS4zMy0uMzItLjhWMThIMXEtLjQxIDAtLjctLjMtLjMtLjI5LS4zLS43VjdxMC0uNDEuMy0uN1EuNTggNiAxIDZoNi41VjIuNTVxMC0uNDQuMy0uNzUuMy0uMy43NS0uM2gxMi45cS40NCAwIC43NS4zLjMuMy4zLjc1VjEwLjg1bDEuMjQuNzJoLjAxcS4xLjA3LjE4LjE4LjA3LjEyLjA3LjI1em0tNi04LjI1djNoM3YtM3ptMCA0LjV2M2gzdi0zem0wIDQuNXYxLjgzbDMuMDUtMS44M3ptLTUuMjUtOXYzaDMuNzV2LTN6bTAgNC41djNoMy43NXYtM3ptMCA0LjV2Mi4wM2wyLjQxIDEuNSAxLjM0LS44di0yLjczek05IDMuNzVWNmgybC4xMy4wMS4xMi4wNHYtMi4zek01Ljk4IDE1Ljk4cS45IDAgMS42LS4zLjctLjMyIDEuMTktLjg2LjQ4LS41NS43My0xLjI4LjI1LS43NC4yNS0xLjYxIDAtLjgzLS4yNS0xLjU1LS4yNC0uNzEtLjcxLTEuMjR0LTEuMTUtLjgzcS0uNjgtLjMtMS41NS0uMy0uOTIgMC0xLjY0LjMtLjcxLjMtMS4yLjg1LS41LjU0LS43NSAxLjMtLjI1Ljc0LS4yNSAxLjYzIDAgLjg1LjI2IDEuNTYuMjYuNzIuNzQgMS4yMy40OC41MiAxLjE3LjgxLjY5LjMgMS41Ni4zek03LjUgMjFoMTIuMzlMMTIgMTYuMDhWMTdxMCAuNDEtLjMuNy0uMjkuMy0uNy4zSDcuNXptMTUtLjEzdi03LjI0bC01LjkgMy41NFoiLz48L3N2Zz4%3D" alt="School Email" /></a>
-    <a href="https://vugiahung.is-a.dev"><img src="https://img.shields.io/badge/Portfolio-vugiahung.is--a.dev-38bdf8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
+    <a href="mailto:29vu07gia07hung@gmail.com"><img src="./assets/badges/personal-email.svg" alt="Personal Email" /></a>
+    <a href="mailto:s4189753@rmit.edu.vn"><img src="./assets/badges/school-email.svg" alt="School Email" /></a>
+    <a href="https://vugiahung.is-a.dev"><img src="./assets/badges/portfolio.svg" alt="Portfolio" /></a>
   </p>
 
   <!-- Professional & Academic Presence (Matches Portfolio Top Row) -->
   <p>
-    <a href="https://github.com/vu-gia-hung"><img src="https://img.shields.io/badge/GitHub-vu--gia--hung-38bdf8?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-    <a href="https://linkedin.com/in/hung-vu-gia"><img src="https://img.shields.io/badge/LinkedIn-hung--vu--gia-38bdf8?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NSAyMC40NWgtMy41NXYtNS41N2MwLTEuMzMtLjAzLTMuMDQtMS44NS0zLjA0LTEuODYgMC0yLjE0IDEuNDUtMi4xNCAyLjk0djUuNjdIOS4zNVY5aDMuNDF2MS41NmguMDVjLjQ4LS45IDEuNjQtMS44NSAzLjM3LTEuODUgMy42IDAgNC4yNyAyLjM3IDQuMjcgNS40NnY2LjI4Wk01LjM0IDcuNDNhMi4wNiAyLjA2IDAgMSAxIDAtNC4xMiAyLjA2IDIuMDYgMCAwIDEgMCA0LjEyWk03LjEyIDIwLjQ1SDMuNTVWOWgzLjU3djExLjQ1WiIvPjwvc3ZnPg%3D%3D" alt="LinkedIn" /></a>
-    <a href="https://orcid.org/0009-0009-5704-0162"><img src="https://img.shields.io/badge/ORCID-0009--0009--5704--0162-38bdf8?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" /></a>
+    <a href="https://github.com/vu-gia-hung"><img src="./assets/badges/github.svg" alt="GitHub" /></a>
+    <a href="https://linkedin.com/in/hung-vu-gia"><img src="./assets/badges/linkedin.svg" alt="LinkedIn" /></a>
+    <a href="https://orcid.org/0009-0009-5704-0162"><img src="./assets/badges/orcid.svg" alt="ORCID" /></a>
   </p>
 
   <!-- Casual Socials (Matches Portfolio Bottom Row) -->
   <p>
-    <a href="https://www.facebook.com/jae.hun.vu"><img src="https://img.shields.io/badge/FB-jae.hun.vu-38bdf8?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
-    <a href="https://zalo.me/84938133039"><img src="https://img.shields.io/badge/Zalo-0938%20133%20039-38bdf8?style=for-the-badge&logo=zalo&logoColor=white" alt="Zalo" /></a>
-    <a href="https://www.instagram.com/jae.hun_vu"><img src="https://img.shields.io/badge/Ins-jae.hun__vu-38bdf8?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-    <a href="https://www.threads.net/@jae.hun_vu"><img src="https://img.shields.io/badge/Threads-jae.hun__vu-38bdf8?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
+    <a href="https://www.facebook.com/jae.hun.vu"><img src="./assets/badges/facebook.svg" alt="Facebook" /></a>
+    <a href="https://zalo.me/84938133039"><img src="./assets/badges/zalo.svg" alt="Zalo" /></a>
+    <a href="https://www.instagram.com/jae.hun_vu"><img src="./assets/badges/instagram.svg" alt="Instagram" /></a>
+    <a href="https://www.threads.net/@jae.hun_vu"><img src="./assets/badges/threads.svg" alt="Threads" /></a>
     <br/>
-    <a href="https://www.tiktok.com/@jae.hun_vu"><img src="https://img.shields.io/badge/TikTok-%40jae.hun__vu-38bdf8?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok" /></a>
-    <a href="https://x.com/JaeHunWu"><img src="https://img.shields.io/badge/X-JaeHunWu-38bdf8?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
-    <a href="https://www.youtube.com/@jaehunwu"><img src="https://img.shields.io/badge/YouTube-%40jaehunwu-38bdf8?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" /></a>
-    <a href="https://discord.com/users/1417894213521244210"><img src="https://img.shields.io/badge/Discord-Hung%20Vu%20Gia-38bdf8?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+    <a href="https://www.tiktok.com/@jae.hun_vu"><img src="./assets/badges/tiktok.svg" alt="TikTok" /></a>
+    <a href="https://x.com/JaeHunWu"><img src="./assets/badges/x.svg" alt="X" /></a>
+    <a href="https://www.youtube.com/@jaehunwu"><img src="./assets/badges/youtube.svg" alt="YouTube" /></a>
+    <a href="https://discord.com/users/1417894213521244210"><img src="./assets/badges/discord.svg" alt="Discord" /></a>
   </p>
 
 </div>

@@ -44,7 +44,7 @@ function renderGuestbookHtml(entries) {
   return `<!-- GUESTBOOK:START -->
 <div align="left">
 <p>
-<img src="https://img.shields.io/badge/RECENT_GUESTBOOK_ENTRIES-0284c7?style=flat-square" alt="Recent Guestbook Entries" /> <img src="https://img.shields.io/badge/Live-38bdf8?style=flat-square" alt="Live" />
+<img src="./assets/badges/recent-guestbook-entries.svg" alt="Recent Guestbook Entries" /> <img src="./assets/badges/live.svg" alt="Live" />
 <br/>
 <small style="color: #8b949e;">Leave a message on the left to appear here!</small>
 </p>
