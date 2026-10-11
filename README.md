@@ -37,7 +37,11 @@
 <tr>
 <td width="50%" align="center" valign="top">
 <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20NOTE%3A%20Please%20do%20not%20edit%20or%20delete%20the%20issue%20title!%20Leave%20your%20message%20for%20Hung%20below%3A%20--%3E%0A%0A">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="./assets/guestbook-v5.svg" />
+<source media="(prefers-color-scheme: light)" srcset="./assets/guestbook-v5-light.svg" />
 <img src="./assets/guestbook-v5.svg" alt="Guestbook Notebook" width="100%" />
+</picture>
 </a>
 <br/><br/>
 <a href="https://github.com/vu-gia-hung/vu-gia-hung/issues/new?title=guestbook&body=%3C!--%20NOTE%3A%20Please%20do%20not%20edit%20or%20delete%20the%20issue%20title!%20Leave%20your%20message%20for%20Hung%20below%3A%20--%3E%0A%0A">
