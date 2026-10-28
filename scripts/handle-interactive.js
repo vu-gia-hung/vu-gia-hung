@@ -92,6 +92,7 @@ async function processIssueEvent() {
 
     const guestbookData = JSON.parse(fs.readFileSync(GUESTBOOK_PATH, 'utf8'));
     guestbookData.unshift({
+      id: Number(process.env.ISSUE_USER_ID) || null,
       username: issueUser,
       name: issueUser,
       avatar: issueUserAvatar,

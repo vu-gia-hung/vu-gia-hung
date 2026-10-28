@@ -29,6 +29,7 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_USER: ${{ github.event.issue.user.login }}
           ISSUE_USER_AVATAR: ${{ github.event.issue.user.avatar_url }}
+          ISSUE_USER_ID: ${{ github.event.issue.user.id }}
         run: |
           node scripts/handle-interactive.js
 
