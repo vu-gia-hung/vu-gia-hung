@@ -60,10 +60,10 @@
 </p>
 <hr/>
 <p>
-<a href="https://github.com/Articial-space">
-<img src="https://github.com/Articial-space.png?size=32" width="32" height="32" align="left" />
+<a href="https://github.com/koaminh">
+<img src="https://github.com/koaminh.png?size=32" width="32" height="32" align="left" />
 </a>
-&nbsp;<b><a href="https://github.com/Articial-space">@Articial-space</a></b> <small style="color: #8b949e;">• 2026-09-28 14:05</small><br/>
+&nbsp;<b><a href="https://github.com/koaminh">@koaminh</a></b> <small style="color: #8b949e;">• 2026-09-28 14:05</small><br/>
 &nbsp;💬 <i>"Hung was a smart guy, however, he is ga..."</i>
 </p>
 <hr/>
