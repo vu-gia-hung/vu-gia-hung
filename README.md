@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- Branded Hero Banner -->
-  <a href="https://vugiahung.is-a.dev">
+  <a href="https://vugiahung.tech">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/banner.svg" />
       <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" />
@@ -10,7 +10,7 @@
   </a>
 
   <!-- Dynamic Typing Subtitle -->
-  <a href="https://vugiahung.is-a.dev">
+  <a href="https://vugiahung.tech">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
       <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1200&color=0284C7&center=true&vCenter=true&random=false&width=750&lines=Software+Engineering+(Honours)+%40+RMIT+University+Vietnam;AI%2C+Large+Language+Models+%26+Agentic+Systems;Embedded+Firmware%2C+Robotics+%26+Circuit+Design;Performance+%26+Benchmark+Engineer+(AEGIS+VBS+2027);Interactive+3D+WebGL+%26+Modern+Full-Stack+Architect" />
@@ -19,7 +19,7 @@
   </a>
 
   <p align="center">
-    <a href="https://vugiahung.is-a.dev"><img src="./assets/badges/live-portfolio.svg" alt="Live Portfolio" /></a>
+    <a href="https://vugiahung.tech"><img src="./assets/badges/live-portfolio.svg" alt="Live Portfolio" /></a>
     <a href="https://www.rmit.edu.vn/"><img src="./assets/badges/rmit-university.svg" alt="RMIT University" /></a>
     <br/>
     <img src="./assets/badges/gpa.svg" alt="GPA" />
@@ -108,7 +108,7 @@ I am passionate about building resilient, high-performance systems spanning from
 - **Academic Performance**: Cumulative GPA **3.9 / 4.0**
 - **Core Interests**: Generative AI, Large Language Models (LLMs), RAG &amp; Agentic Systems, Embedded Systems &amp; Robotics, Performance Engineering
 - **Location**: Ho Chi Minh City, Vietnam
-- **Live Portfolio**: [**vugiahung.is-a.dev**](https://vugiahung.is-a.dev)
+- **Live Portfolio**: [**vugiahung.tech**](https://vugiahung.tech)
 
 ---
 
@@ -250,7 +250,7 @@ I am passionate about building resilient, high-performance systems spanning from
   <p>
     <a href="mailto:29vu07gia07hung@gmail.com"><img src="./assets/badges/personal-email.svg" alt="Personal Email" /></a>
     <a href="mailto:s4189753@rmit.edu.vn"><img src="./assets/badges/school-email.svg" alt="School Email" /></a>
-    <a href="https://vugiahung.is-a.dev"><img src="./assets/badges/portfolio.svg" alt="Portfolio" /></a>
+    <a href="https://vugiahung.tech"><img src="./assets/badges/portfolio.svg" alt="Portfolio" /></a>
   </p>
 
   <!-- Professional & Academic Presence (Matches Portfolio Top Row) -->
@@ -276,5 +276,5 @@ I am passionate about building resilient, high-performance systems spanning from
 </div>
 
 <div align="center">
-  <sub>Built by <a href="https://vugiahung.is-a.dev">Vũ Gia Hưng</a></sub>
+  <sub>Built by <a href="https://vugiahung.tech">Vũ Gia Hưng</a></sub>
 </div>
