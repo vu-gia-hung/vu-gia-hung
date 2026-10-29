@@ -248,7 +248,7 @@ I am passionate about building resilient, high-performance systems spanning from
 
   <!-- Direct Emails & Live Portfolio -->
   <p>
-    <a href="mailto:29vu07gia07hung@gmail.com"><img src="./assets/badges/personal-email.svg" alt="Personal Email" /></a>
+    <a href="mailto:vugiahung@vugiahung.tech"><img src="./assets/badges/personal-email.svg" alt="Personal Email" /></a>
     <a href="mailto:s4189753@rmit.edu.vn"><img src="./assets/badges/school-email.svg" alt="School Email" /></a>
     <a href="https://vugiahung.tech"><img src="./assets/badges/portfolio.svg" alt="Portfolio" /></a>
   </p>
