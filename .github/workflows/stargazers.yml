@@ -8,7 +8,7 @@ on:
     types: [started]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: stargazers-hall-of-fame
@@ -16,13 +16,15 @@ concurrency:
 
 jobs:
   update:
-    if: github.event_name != 'watch' || github.event.repository.owner.login == github.repository_owner
+    if: github.repository == 'vu-gia-hung/vu-gia-hung' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: profile-bot
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ssh-key: ${{ secrets.PROFILE_DEPLOY_KEY }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -31,7 +33,7 @@ jobs:
 
       - name: Update Hall of Fame
         env:
-          STARGAZER_TOKEN: ${{ secrets.STARGAZER_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/update-stargazers.js
 
       - name: Commit and push update

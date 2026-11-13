@@ -35,7 +35,7 @@ function requestJson(apiPath, token) {
     const request = https.get(`https://api.github.com${apiPath}`, {
       headers: {
         Accept: 'application/vnd.github.star+json',
-        Authorization: `Bearer ${token}`,
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
         'User-Agent': 'vu-gia-hung-profile-stargazers',
         'X-GitHub-Api-Version': API_VERSION
       }
@@ -45,7 +45,9 @@ function requestJson(apiPath, token) {
       response.on('data', chunk => { body += chunk; });
       response.on('end', () => {
         if (response.statusCode < 200 || response.statusCode >= 300) {
-          reject(new Error(`GitHub API ${response.statusCode} for ${apiPath}: ${body.slice(0, 240)}`));
+          const error = new Error(`GitHub API ${response.statusCode} for ${apiPath}: ${body.slice(0, 240)}`);
+          error.statusCode = response.statusCode;
+          reject(error);
           return;
         }
         try {
@@ -61,10 +63,22 @@ function requestJson(apiPath, token) {
   });
 }
 
+async function requestPublicJson(apiPath, token) {
+  try {
+    return await requestJson(apiPath, token);
+  } catch (error) {
+    // The workflow token may be denied access to a different public repository.
+    if (token && [403, 404].includes(error.statusCode)) {
+      return requestJson(apiPath);
+    }
+    throw error;
+  }
+}
+
 async function listPages(apiPathFactory, token) {
   const items = [];
   for (let page = 1; page <= 100; page += 1) {
-    const pageItems = await requestJson(apiPathFactory(page), token);
+    const pageItems = await requestPublicJson(apiPathFactory(page), token);
     if (!Array.isArray(pageItems)) {
       throw new Error('GitHub API returned an unexpected list response.');
     }
@@ -439,7 +453,6 @@ function createPreviewSnapshot(snapshot) {
 
 async function syncStargazers({ token, owner = OWNER } = {}) {
   const authToken = token || process.env.STARGAZER_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
-  if (!authToken) throw new Error('Missing STARGAZER_TOKEN (or GH_TOKEN/GITHUB_TOKEN).');
 
   const repoItems = await listPages(page => `/users/${encodeURIComponent(owner)}/repos?type=owner&per_page=${PER_PAGE}&page=${page}`, authToken);
   const repositories = repoItems
