@@ -68,7 +68,7 @@ async function requestPublicJson(apiPath, token) {
     return await requestJson(apiPath, token);
   } catch (error) {
     // The workflow token may be denied access to a different public repository.
-    if (token && [403, 404].includes(error.statusCode)) {
+    if (token && [401, 403, 404].includes(error.statusCode)) {
       return requestJson(apiPath);
     }
     throw error;
