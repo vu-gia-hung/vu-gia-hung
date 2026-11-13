@@ -33,8 +33,13 @@ jobs:
 
       - name: Update Hall of Fame
         env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/update-stargazers.js
+          STARGAZER_TOKEN: ${{ secrets.STARGAZER_READ_TOKEN }}
+        run: |
+          if [ -z "$STARGAZER_TOKEN" ]; then
+            echo "::error::Set STARGAZER_READ_TOKEN in the profile-bot environment."
+            exit 1
+          fi
+          node scripts/update-stargazers.js
 
       - name: Commit and push update
         run: |
