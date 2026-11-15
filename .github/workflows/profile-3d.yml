@@ -8,14 +8,16 @@ on:
 
 jobs:
   build:
+    if: github.repository == 'vu-gia-hung/vu-gia-hung' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
+    environment: profile-bot
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          persist-credentials: false
 
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
@@ -32,11 +34,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-activity-graph.js
 
-      - name: Clean up unused 3D themes
+      - name: Check out main for publishing
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: profile-publish
+          fetch-depth: 0
+          ssh-key: ${{ secrets.PROFILE_DEPLOY_KEY }}
+
+      - name: Copy generated profile images
         run: |
-          find profile-3d-contrib/ -type f ! -name 'profile-night-view.svg' ! -name 'profile-blue.svg' -delete
+          cp profile-3d-contrib/profile-{night-view,blue}.svg profile-publish/profile-3d-contrib/
+          cp assets/{activity-graph,trophies}-{dark,light}.svg profile-publish/assets/
 
       - name: Commit & Push changes
+        working-directory: profile-publish
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -45,5 +57,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: auto update 3d graph, activity graph and trophies"
+            bash scripts/push-main.sh
           fi
-          bash scripts/push-main.sh
