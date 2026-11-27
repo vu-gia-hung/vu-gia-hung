@@ -1,7 +1,11 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T12:28:49.658Z",
+  "updatedAt": "2026-11-27T21:59:33.136Z",
   "repositories": [
+    {
+      "name": "aegis-vbs-2027",
+      "url": "https://github.com/vu-gia-hung/aegis-vbs-2027"
+    },
     {
       "name": "arduino-bluetooth-robot-car",
       "url": "https://github.com/vu-gia-hung/arduino-bluetooth-robot-car"
@@ -26,9 +30,14 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/88011861?v=4",
       "htmlUrl": "https://github.com/vu-gia-hung",
       "firstStarredAt": "2026-09-29T03:53:23.000Z",
-      "lastSeenAt": "2026-11-27T12:28:49.658Z",
+      "lastSeenAt": "2026-11-27T21:59:33.136Z",
       "isCurrentlyStarred": true,
       "repositories": [
+        {
+          "name": "aegis-vbs-2027",
+          "url": "https://github.com/vu-gia-hung/aegis-vbs-2027",
+          "starredAt": "2026-11-27T16:32:55.000Z"
+        },
         {
           "name": "arduino-bluetooth-robot-car",
           "url": "https://github.com/vu-gia-hung/arduino-bluetooth-robot-car",
@@ -57,7 +66,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/76028730?v=4",
       "htmlUrl": "https://github.com/mncuchiinhuttt",
       "firstStarredAt": "2026-09-29T17:11:38.000Z",
-      "lastSeenAt": "2026-11-27T12:28:49.658Z",
+      "lastSeenAt": "2026-11-27T21:59:33.136Z",
       "isCurrentlyStarred": true,
       "repositories": [
         {
@@ -88,7 +97,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/45002770?v=4",
       "htmlUrl": "https://github.com/koaminh",
       "firstStarredAt": "2026-09-30T01:44:53.000Z",
-      "lastSeenAt": "2026-11-27T12:28:49.658Z",
+      "lastSeenAt": "2026-11-27T21:59:33.136Z",
       "isCurrentlyStarred": true,
       "repositories": [
         {
